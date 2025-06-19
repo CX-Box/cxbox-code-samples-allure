@@ -1,0 +1,118 @@
+13:28:08.858 [main] TRACE API_NO_LOGIN_LOGGER - starting test: Required Message validation test for multiple fields. uuid: [engine:junit-jupiter]/[class:application.Samples.List.CheckBoxOnListTest]/[method:fieldLevelValidation()] 
+13:28:08.867 [LittleProxy-0-ProxyToServerWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Response: 21b8640f-e0eb-4c82-9754-f8a30e720aaf 
+PUT http://localhost:81/api/v1/data/myexample78/myExampleBc78/1101832
+200 
+Response Body: {"success":true,"data":{"postActions":[],"record":{"id":"1101832","vstamp":1,"customField":true}}}
+ 
+13:28:08.882 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 22926d91-83d9-4f8d-9cab-c9cae873447b 
+GET http://localhost:81/api/v1/row-meta/myexample78/myExampleBc78/1101832
+ 
+13:28:08.889 [LittleProxy-0-ProxyToServerWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Response: 22926d91-83d9-4f8d-9cab-c9cae873447b 
+GET http://localhost:81/api/v1/row-meta/myexample78/myExampleBc78/1101832
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"save","preInvoke":{"type":"confirm","message":"You want to save the value ?"},"showOnlyIcon":false,"scope":"record","autoSaveBefore":true}],"fields":[{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1101832","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":1,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"customField","disabled":false,"forceActive":true,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":true,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+13:28:09.265 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 05a1608d-b16e-4db3-b8b9-dfa60e43f9c8 
+GET http://localhost:81/api/v1/auth/oidc.json
+ 
+13:28:09.267 [LittleProxy-0-ProxyToServerWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Response: 05a1608d-b16e-4db3-b8b9-dfa60e43f9c8 
+GET http://localhost:81/api/v1/auth/oidc.json
+200 
+Response Body: {"realm":"cxbox","auth-server-url":"http://code-samples.cxbox.org/auth","ssl-require":"none","resource":"cxbox-oidc-client","public-client":true,"cors":true}
+ 
+13:28:10.490 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: 2f467e5a-e89b-403f-b40b-ce5d648f8c96 
+GET http://localhost:81/api/v1/auth/oidc.json
+ 
+13:28:10.491 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: 2f467e5a-e89b-403f-b40b-ce5d648f8c96 
+GET http://localhost:81/api/v1/auth/oidc.json
+200 
+Response Body: {"realm":"cxbox","auth-server-url":"http://code-samples.cxbox.org/auth","ssl-require":"none","resource":"cxbox-oidc-client","public-client":true,"cors":true}
+ 
+13:28:12.024 [LittleProxy-0-ClientToProxyWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Request: 72fcc7cd-da7c-4a10-850c-b77aba9fe095 
+GET http://localhost:81/api/v1/notification/check-new-notification
+ 
+13:28:12.024 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 6a117148-798d-4b4a-8db7-0e646864db89 
+GET http://localhost:81/api/v1/data/InputBasic/InputBasic?_page=1&_limit=5
+ 
+13:28:12.031 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: 72fcc7cd-da7c-4a10-850c-b77aba9fe095 
+GET http://localhost:81/api/v1/notification/check-new-notification
+200 
+Response Body: {"success":true,"data":0}
+ 
+13:28:12.032 [LittleProxy-0-ProxyToServerWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Response: 6a117148-798d-4b4a-8db7-0e646864db89 
+GET http://localhost:81/api/v1/data/InputBasic/InputBasic?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1101565","vstamp":0,"customField":"test data"}],"hasNext":false}
+ 
+13:28:12.061 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 286d8250-630d-4be2-859c-1803c8a08b88 
+GET http://localhost:81/api/v1/row-meta/InputBasic/InputBasic/1101565
+ 
+13:28:12.061 [LittleProxy-0-ClientToProxyWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Request: 76ed20db-b02a-47d2-87f6-d5eae0019080 
+GET http://localhost:81/api/v1/count/InputBasic/InputBasic?
+ 
+13:28:12.066 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: 76ed20db-b02a-47d2-87f6-d5eae0019080 
+GET http://localhost:81/api/v1/count/InputBasic/InputBasic?
+200 
+Response Body: {"success":true,"data":1}
+ 
+13:28:12.067 [LittleProxy-0-ProxyToServerWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Response: 286d8250-630d-4be2-859c-1803c8a08b88 
+GET http://localhost:81/api/v1/row-meta/InputBasic/InputBasic/1101565
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"save","showOnlyIcon":false,"scope":"record","autoSaveBefore":true}],"fields":[{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1101565","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"customField","disabled":false,"forceActive":true,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"test data","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+13:28:15.707 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: eb52c382-1c5b-4508-bf05-396f6b6a32d6 
+GET http://localhost:81/api/v1/data/myexample289/myExampleBc289?_page=1&_limit=5
+ 
+13:28:15.714 [LittleProxy-0-ProxyToServerWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Response: eb52c382-1c5b-4508-bf05-396f6b6a32d6 
+GET http://localhost:81/api/v1/data/myexample289/myExampleBc289?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1101843","vstamp":0,"customField":null,"customFieldAdditional":null}],"hasNext":false}
+ 
+13:28:15.745 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: bbeb763a-7729-4f90-ba04-50c1058273f8 
+GET http://localhost:81/api/v1/row-meta/myexample289/myExampleBc289/1101843
+ 
+13:28:15.745 [LittleProxy-0-ClientToProxyWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Request: dac2a581-8708-429e-bc4c-c3b561bb001d 
+GET http://localhost:81/api/v1/count/myexample289/myExampleBc289?
+ 
+13:28:15.750 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: dac2a581-8708-429e-bc4c-c3b561bb001d 
+GET http://localhost:81/api/v1/count/myexample289/myExampleBc289?
+200 
+Response Body: {"success":true,"data":1}
+ 
+13:28:15.750 [LittleProxy-0-ProxyToServerWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Response: bbeb763a-7729-4f90-ba04-50c1058273f8 
+GET http://localhost:81/api/v1/row-meta/myexample289/myExampleBc289/1101843
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"save","showOnlyIcon":false,"scope":"record","autoSaveBefore":true}],"fields":[{"key":"customFieldAdditional","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"placeholder":"Can contain only 'True'","currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1101843","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"customField","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"placeholder":"Can contain only 'True'","currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+13:28:19.517 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 8f03c031-5c69-4b73-9573-d6e702b72c50 
+GET http://localhost:81/api/v1/row-meta/myexample289/myExampleBc289/1101843
+ 
+13:28:19.949 [LittleProxy-0-ProxyToServerWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Response: 8f03c031-5c69-4b73-9573-d6e702b72c50 
+GET http://localhost:81/api/v1/row-meta/myexample289/myExampleBc289/1101843
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"save","showOnlyIcon":false,"scope":"record","autoSaveBefore":true}],"fields":[{"key":"customFieldAdditional","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"placeholder":"Can contain only 'True'","currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1101843","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"customField","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"placeholder":"Can contain only 'True'","currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+13:28:30.415 [main] TRACE API_NO_LOGIN_LOGGER - ending test: Required Message validation test for multiple fields. uuid: [engine:junit-jupiter]/[class:application.Samples.List.CheckBoxOnListTest]/[method:fieldLevelValidation()] 
