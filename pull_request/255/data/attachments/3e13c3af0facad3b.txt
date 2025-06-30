@@ -1,0 +1,142 @@
+11:28:35.351 [main] TRACE API_NO_LOGIN_LOGGER - starting test: Test sorting at List. uuid: [engine:junit-jupiter]/[class:application.Samples.DictionaryAdministrationTest]/[method:sortingList()] 
+11:28:35.714 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: 9fb4741c-7cb4-4250-8140-462c17a54b93 
+GET http://localhost:81/api/v1/auth/oidc.json
+ 
+11:28:35.716 [LittleProxy-0-ProxyToServerWorker-4] TRACE API_NO_LOGIN_LOGGER - 
+Response: 9fb4741c-7cb4-4250-8140-462c17a54b93 
+GET http://localhost:81/api/v1/auth/oidc.json
+200 
+Response Body: {"realm":"cxbox","auth-server-url":"http://code-samples.cxbox.org/auth","ssl-require":"none","resource":"cxbox-oidc-client","public-client":true,"cors":true}
+ 
+11:28:37.200 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: 8ffc3817-dcaa-4dbd-99e1-1b7a863257c8 
+GET http://localhost:81/api/v1/auth/oidc.json
+ 
+11:28:37.202 [LittleProxy-0-ProxyToServerWorker-4] TRACE API_NO_LOGIN_LOGGER - 
+Response: 8ffc3817-dcaa-4dbd-99e1-1b7a863257c8 
+GET http://localhost:81/api/v1/auth/oidc.json
+200 
+Response Body: {"realm":"cxbox","auth-server-url":"http://code-samples.cxbox.org/auth","ssl-require":"none","resource":"cxbox-oidc-client","public-client":true,"cors":true}
+ 
+11:28:38.739 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: 6b98f8ab-2b8e-447b-a988-6f1a483b8da8 
+GET http://localhost:81/api/v1/data/InputBasic/InputBasic?_page=1&_limit=5
+ 
+11:28:38.740 [LittleProxy-0-ClientToProxyWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Request: 6bdd51bf-0438-4b15-aad0-2f0a8026ee7b 
+GET http://localhost:81/api/v1/notification/check-new-notification
+ 
+11:28:38.749 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: 6bdd51bf-0438-4b15-aad0-2f0a8026ee7b 
+GET http://localhost:81/api/v1/notification/check-new-notification
+200 
+Response Body: {"success":true,"data":0}
+ 
+11:28:38.752 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: 6b98f8ab-2b8e-447b-a988-6f1a483b8da8 
+GET http://localhost:81/api/v1/data/InputBasic/InputBasic?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1100972","vstamp":0,"customField":"test data"}],"hasNext":false}
+ 
+11:28:38.792 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: 1589dfb1-2852-4007-836b-1907e8da4132 
+GET http://localhost:81/api/v1/row-meta/InputBasic/InputBasic/1100972
+ 
+11:28:38.792 [LittleProxy-0-ClientToProxyWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Request: f91ae5c0-11fa-4be2-a29f-e028a5c4d765 
+GET http://localhost:81/api/v1/count/InputBasic/InputBasic?
+ 
+11:28:38.798 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: f91ae5c0-11fa-4be2-a29f-e028a5c4d765 
+GET http://localhost:81/api/v1/count/InputBasic/InputBasic?
+200 
+Response Body: {"success":true,"data":1}
+ 
+11:28:38.798 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: 1589dfb1-2852-4007-836b-1907e8da4132 
+GET http://localhost:81/api/v1/row-meta/InputBasic/InputBasic/1100972
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"save","showOnlyIcon":false,"scope":"record","autoSaveBefore":true}],"fields":[{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1100972","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"customField","disabled":false,"forceActive":true,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"test data","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+11:28:42.199 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: 00bd1e88-0a2a-4f23-8487-b5a84d9275f6 
+GET http://localhost:81/api/v1/data/myexample357/myexample357?_page=1&_limit=1000&_sort.0.asc=type
+ 
+11:28:42.206 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: 00bd1e88-0a2a-4f23-8487-b5a84d9275f6 
+GET http://localhost:81/api/v1/data/myexample357/myexample357?_page=1&_limit=1000&_sort.0.asc=type
+200 
+Response Body: {"success":true,"data":[{"id":"1100727","vstamp":0,"key":"LOW","value":"Low","active":true,"type":"CLIENT_IMPORTANCE","displayOrder":3,"description":""},{"id":"1100726","vstamp":0,"key":"MIDDLE","value":"Middle","active":true,"type":"CLIENT_IMPORTANCE","displayOrder":2,"description":""},{"id":"1100725","vstamp":0,"key":"HIGH","value":"High","active":true,"type":"CLIENT_IMPORTANCE","displayOrder":1,"description":""},{"id":"1100724","vstamp":0,"key":"UPPER_MIDDLE","value":"Upper Middle","active":true,"type":"CUSTOM_DICTIONARY","displayOrder":4,"description":""},{"id":"1100723","vstamp":0,"key":"LOW","value":"Low","active":true,"type":"CUSTOM_DICTIONARY","displayOrder":3,"description":""},{"id":"1100722","vstamp":0,"key":"MIDDLE","value":"Middle","active":true,"type":"CUSTOM_DICTIONARY","displayOrder":2,"description":""},{"id":"1100721","vstamp":0,"key":"HIGH","value":"High","active":true,"type":"CUSTOM_DICTIONARY","displayOrder":1,"description":""},{"id":"1100730","vstamp":0,"key":"LOW","value":"Low","active":true,"type":"CUSTOM_DICTIONARY_FILTRATION","displayOrder":3,"description":""},{"id":"1100729","vstamp":0,"key":"MIDDLE","value":"Middle","active":true,"type":"CUSTOM_DICTIONARY_FILTRATION","displayOrder":2,"description":""},{"id":"1100728","vstamp":0,"key":"HIGH","value":"High","active":true,"type":"CUSTOM_DICTIONARY_FILTRATION","displayOrder":1,"description":""},{"id":"1100740","vstamp":0,"key":"K","value":"K","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","displayOrder":10,"description":""},{"id":"1100739","vstamp":0,"key":"I","value":"I","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","displayOrder":9,"description":""},{"id":"1100738","vstamp":0,"key":"H","value":"H","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","displayOrder":8,"description":""},{"id":"1100737","vstamp":0,"key":"G","value":"G","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","displayOrder":7,"description":""},{"id":"1100736","vstamp":0,"key":"F","value":"F","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","displayOrder":6,"description":""},{"id":"1100735","vstamp":0,"key":"E","value":"E","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","displayOrder":5,"description":""},{"id":"1100734","vstamp":0,"key":"D","value":"D","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","displayOrder":4,"description":""},{"id":"1100733","vstamp":0,"key":"C","value":"C","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","displayOrder":3,"description":""},{"id":"1100732","vstamp":0,"key":"B","value":"B","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","displayOrder":2,"description":""},{"id":"1100731","vstamp":0,"key":"A","value":"A","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","displayOrder":1,"description":""},{"id":"1100743","vstamp":0,"key":"LOW","value":"Low","active":true,"type":"CUSTOM_DICTIONARY_SORTING","displayOrder":3,"description":""},{"id":"1100742","vstamp":0,"key":"MIDDLE","value":"Middle","active":true,"type":"CUSTOM_DICTIONARY_SORTING","displayOrder":2,"description":""},{"id":"1100741","vstamp":0,"key":"HIGH","value":"High","active":true,"type":"CUSTOM_DICTIONARY_SORTING","displayOrder":1,"description":""},{"id":"1100746","vstamp":0,"key":"LOW","value":"Low","active":true,"type":"CUSTOM_DICTIONARY_SORTING_EXAMPLE","displayOrder":3,"description":""},{"id":"1100745","vstamp":0,"key":"MIDDLE","value":"Middle","active":true,"type":"CUSTOM_DICTIONARY_SORTING_EXAMPLE","displayOrder":2,"description":""},{"id":"1100744","vstamp":0,"key":"HIGH","value":"High","active":true,"type":"CUSTOM_DICTIONARY_SORTING_EXAMPLE","displayOrder":1,"description":""},{"id":"1100715","vstamp":0,"key":"BUSINESS_ADMIN","value":"Business Administration","active":true,"type":"INTERNAL_ROLE","displayOrder":3,"description":""},{"id":"1100714","vstamp":0,"key":"CXBOX_USER","value":"Cxbox User","active":true,"type":"INTERNAL_ROLE","displayOrder":2,"description":""},{"id":"1100713","vstamp":0,"key":"ADMIN","value":"Administration","active":true,"type":"INTERNAL_ROLE","displayOrder":1,"description":""},{"id":"1100720","vstamp":0,"key":"NEW_YORK","value":"New York","active":true,"type":"REGIONS","displayOrder":3,"description":""},{"id":"1100719","vstamp":0,"key":"SYKTYVKAR","value":"Syktyvkar","active":true,"type":"REGIONS","displayOrder":2,"description":""},{"id":"1100718","vstamp":0,"key":"KOSTROMA","value":"Kostroma","active":true,"type":"REGIONS","displayOrder":1,"description":""},{"id":"1100717","vstamp":0,"key":"SAINT_PETERBURG","value":"St. Petersburg","active":true,"type":"REGIONS","displayOrder":null,"description":""},{"id":"1100716","vstamp":0,"key":"MOSCOW","value":"Moscow","active":true,"type":"REGIONS","displayOrder":null,"description":""}],"hasNext":false}
+ 
+11:28:42.320 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: c9f36eb7-81c3-4906-9f20-838b52659b51 
+GET http://localhost:81/api/v1/row-meta/myexample357/myexample357/1100727
+ 
+11:28:42.320 [LittleProxy-0-ClientToProxyWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Request: c052de60-9c48-4e2d-b8a4-59ab76ddbcf5 
+GET http://localhost:81/api/v1/count/myexample357/myexample357?
+ 
+11:28:42.325 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: c052de60-9c48-4e2d-b8a4-59ab76ddbcf5 
+GET http://localhost:81/api/v1/count/myexample357/myexample357?
+200 
+Response Body: {"success":true,"data":34}
+ 
+11:28:42.327 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: c9f36eb7-81c3-4906-9f20-838b52659b51 
+GET http://localhost:81/api/v1/row-meta/myexample357/myexample357/1100727
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"clear-cache","text":"Clear Cache","showOnlyIcon":false,"scope":"bc","autoSaveBefore":true},{"type":"export_liquibase","text":"Export","showOnlyIcon":false,"scope":"bc","autoSaveBefore":true},{"type":"create","text":"Create","icon":"plus","showOnlyIcon":true,"scope":"bc","autoSaveBefore":false},{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true},{"type":"delete","text":"Delete","icon":"delete","showOnlyIcon":true,"scope":"record","autoSaveBefore":false}],"fields":[{"key":"displayOrder","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":3,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"active","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":true,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"description","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":"","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1100727","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"type","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":"CLIENT_IMPORTANCE","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"value","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":"Low","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"key","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":"LOW","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+11:28:42.715 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: b549efd3-4a25-496e-9eeb-74efd5a4dccf 
+GET http://localhost:81/api/v1/row-meta-new/myexample357/myexample357?_action=create
+ 
+11:28:42.725 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: b549efd3-4a25-496e-9eeb-74efd5a4dccf 
+GET http://localhost:81/api/v1/row-meta-new/myexample357/myexample357?_action=create
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"clear-cache","text":"Clear Cache","showOnlyIcon":false,"scope":"bc","autoSaveBefore":true},{"type":"export_liquibase","text":"Export","showOnlyIcon":false,"scope":"bc","autoSaveBefore":true},{"type":"cancel-create","text":"Cancel","icon":"close","showOnlyIcon":true,"scope":"record","autoSaveBefore":false},{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true}],"fields":[{"key":"displayOrder","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"active","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":true,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"description","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1102335","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":-1,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"type","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"value","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"key","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]},"postActions":[]}}
+ 
+11:28:42.880 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: 7db35e15-49c3-4d70-867d-932071cee295 
+GET http://localhost:81/api/v1/data/myexample357/myexample357/1102335/dictionaryTypeDescPick?_page=1&_limit=5
+ 
+11:28:42.880 [LittleProxy-0-ClientToProxyWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Request: dc8161cb-78fb-4c64-8b34-d364364e844e 
+GET http://localhost:81/api/v1/row-meta/myexample357/myexample357/1102335
+ 
+11:28:42.891 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: dc8161cb-78fb-4c64-8b34-d364364e844e 
+GET http://localhost:81/api/v1/row-meta/myexample357/myexample357/1102335
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"clear-cache","text":"Clear Cache","showOnlyIcon":false,"scope":"bc","autoSaveBefore":true},{"type":"export_liquibase","text":"Export","showOnlyIcon":false,"scope":"bc","autoSaveBefore":true},{"type":"cancel-create","text":"Cancel","icon":"close","showOnlyIcon":true,"scope":"record","autoSaveBefore":false},{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true}],"fields":[{"key":"displayOrder","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"active","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":true,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"description","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1102335","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":-1,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"type","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"value","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"key","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+11:28:42.895 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: 7db35e15-49c3-4d70-867d-932071cee295 
+GET http://localhost:81/api/v1/data/myexample357/myexample357/1102335/dictionaryTypeDescPick?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1100744","vstamp":0,"type":"CUSTOM_DICTIONARY_SORTING_EXAMPLE"},{"id":"1100741","vstamp":0,"type":"CUSTOM_DICTIONARY_SORTING"},{"id":"1100731","vstamp":0,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION"},{"id":"1100728","vstamp":0,"type":"CUSTOM_DICTIONARY_FILTRATION"},{"id":"1100725","vstamp":0,"type":"CLIENT_IMPORTANCE"}],"hasNext":true}
+ 
+11:28:42.942 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: d2b49e62-f784-453d-a3c3-ab471103fdc2 
+GET http://localhost:81/api/v1/row-meta/myexample357/myexample357/1102335/dictionaryTypeDescPick/1100744
+ 
+11:28:42.942 [LittleProxy-0-ClientToProxyWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Request: b19e4a60-3c4c-4dc5-b870-7a10126b1ba1 
+GET http://localhost:81/api/v1/count/myexample357/myexample357/1102335/dictionaryTypeDescPick?
+ 
+11:28:42.950 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: b19e4a60-3c4c-4dc5-b870-7a10126b1ba1 
+GET http://localhost:81/api/v1/count/myexample357/myexample357/1102335/dictionaryTypeDescPick?
+200 
+Response Body: {"success":true,"data":8}
+ 
+11:28:42.952 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: d2b49e62-f784-453d-a3c3-ab471103fdc2 
+GET http://localhost:81/api/v1/row-meta/myexample357/myexample357/1102335/dictionaryTypeDescPick/1100744
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"create","text":"Create","icon":"plus","showOnlyIcon":true,"scope":"bc","autoSaveBefore":false},{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true},{"type":"delete","text":"Delete","icon":"delete","showOnlyIcon":true,"scope":"record","autoSaveBefore":false}],"fields":[{"key":"id","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1100744","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"type","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"CUSTOM_DICTIONARY_SORTING_EXAMPLE","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+11:28:53.049 [main] TRACE API_NO_LOGIN_LOGGER - ending test: Test sorting at List. uuid: [engine:junit-jupiter]/[class:application.Samples.DictionaryAdministrationTest]/[method:sortingList()] 
