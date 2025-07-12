@@ -1,0 +1,92 @@
+00:39:24.172 [main] TRACE API_NO_LOGIN_LOGGER - starting test: Required Message validation test for multiple fields. uuid: [engine:junit-jupiter]/[class:application.Samples.Form.InputOnFormTest]/[method:fieldLevelValidation()] 
+00:39:24.552 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: 89b264f1-a902-49b4-9a17-998431528342 
+GET http://localhost:81/api/v1/auth/oidc.json
+ 
+00:39:24.555 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: 89b264f1-a902-49b4-9a17-998431528342 
+GET http://localhost:81/api/v1/auth/oidc.json
+200 
+Response Body: {"realm":"cxbox","auth-server-url":"http://code-samples.cxbox.org/auth","ssl-require":"none","resource":"cxbox-oidc-client","public-client":true,"cors":true}
+ 
+00:39:25.861 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: 5888e835-b773-4df8-b0a3-200c63240bc1 
+GET http://localhost:81/api/v1/auth/oidc.json
+ 
+00:39:25.863 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: 5888e835-b773-4df8-b0a3-200c63240bc1 
+GET http://localhost:81/api/v1/auth/oidc.json
+200 
+Response Body: {"realm":"cxbox","auth-server-url":"http://code-samples.cxbox.org/auth","ssl-require":"none","resource":"cxbox-oidc-client","public-client":true,"cors":true}
+ 
+00:39:27.257 [LittleProxy-0-ClientToProxyWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Request: 85bafc10-fcd7-4f3b-b594-4962e2cb2c16 
+GET http://localhost:81/api/v1/data/InputBasic/InputBasic?_page=1&_limit=5
+ 
+00:39:27.258 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: 2924fc4c-3d18-4743-89c3-76461df757f1 
+GET http://localhost:81/api/v1/notification/check-new-notification
+ 
+00:39:27.268 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: 2924fc4c-3d18-4743-89c3-76461df757f1 
+GET http://localhost:81/api/v1/notification/check-new-notification
+200 
+Response Body: {"success":true,"data":0}
+ 
+00:39:27.271 [LittleProxy-0-ProxyToServerWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Response: 85bafc10-fcd7-4f3b-b594-4962e2cb2c16 
+GET http://localhost:81/api/v1/data/InputBasic/InputBasic?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1100306","vstamp":0,"customField":"test data"}],"hasNext":false}
+ 
+00:39:27.314 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: c6797fb8-1fea-4a48-8cd2-6b0eb72e954e 
+GET http://localhost:81/api/v1/row-meta/InputBasic/InputBasic/1100306
+ 
+00:39:27.314 [LittleProxy-0-ClientToProxyWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Request: ee88d36d-9d9c-4e22-b0db-6207ed4a7d26 
+GET http://localhost:81/api/v1/count/InputBasic/InputBasic
+ 
+00:39:27.319 [LittleProxy-0-ProxyToServerWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Response: ee88d36d-9d9c-4e22-b0db-6207ed4a7d26 
+GET http://localhost:81/api/v1/count/InputBasic/InputBasic
+200 
+Response Body: {"success":true,"data":1}
+ 
+00:39:27.320 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: c6797fb8-1fea-4a48-8cd2-6b0eb72e954e 
+GET http://localhost:81/api/v1/row-meta/InputBasic/InputBasic/1100306
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true}],"fields":[{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1100306","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"customField","disabled":false,"forceActive":true,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"test data","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+00:39:27.805 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: 37939111-2e1b-4fcc-b412-e7b3dfa33c07 
+GET http://localhost:81/api/v1/data/myexample326/myExampleBc326?_page=1&_limit=5
+ 
+00:39:27.812 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: 37939111-2e1b-4fcc-b412-e7b3dfa33c07 
+GET http://localhost:81/api/v1/data/myexample326/myExampleBc326?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1100307","vstamp":0,"customField":"Test data","customFieldAdditional":"Test data"}],"hasNext":false}
+ 
+00:39:27.843 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: 21b20038-e8d5-44ec-8d5c-f46d5e0a54a5 
+GET http://localhost:81/api/v1/row-meta/myexample326/myExampleBc326/1100307
+ 
+00:39:27.843 [LittleProxy-0-ClientToProxyWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Request: 5c050030-9af7-40a9-845c-d177967df1e6 
+GET http://localhost:81/api/v1/count/myexample326/myExampleBc326
+ 
+00:39:27.848 [LittleProxy-0-ProxyToServerWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Response: 5c050030-9af7-40a9-845c-d177967df1e6 
+GET http://localhost:81/api/v1/count/myexample326/myExampleBc326
+200 
+Response Body: {"success":true,"data":1}
+ 
+00:39:27.849 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: 21b20038-e8d5-44ec-8d5c-f46d5e0a54a5 
+GET http://localhost:81/api/v1/row-meta/myexample326/myExampleBc326/1100307
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true}],"fields":[{"key":"customFieldAdditional","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"placeholder":"Only letters","currentValue":"Test data","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1100307","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"customField","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"placeholder":"Only letters","currentValue":"Test data","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+00:39:39.732 [main] TRACE API_NO_LOGIN_LOGGER - ending test: Required Message validation test for multiple fields. uuid: [engine:junit-jupiter]/[class:application.Samples.Form.InputOnFormTest]/[method:fieldLevelValidation()] 
