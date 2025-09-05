@@ -1,0 +1,274 @@
+08:05:00.004 [main] TRACE API_NO_LOGIN_LOGGER - starting test: Test for creating admin value. uuid: [engine:junit-jupiter]/[class:application.Samples.DictionaryAdministrationTest]/[method:create()] 
+08:05:00.351 [LittleProxy-0-ClientToProxyWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Request: 9b7d2e9a-7eef-473c-b191-60821a47df72 
+GET http://localhost:81/api/v1/auth/oidc.json
+ 
+08:05:00.354 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: 9b7d2e9a-7eef-473c-b191-60821a47df72 
+GET http://localhost:81/api/v1/auth/oidc.json
+200 
+Response Body: {"realm":"cxbox","auth-server-url":"http://code-samples.cxbox.org/auth","ssl-require":"none","resource":"cxbox-oidc-client","public-client":true,"cors":true}
+ 
+08:05:01.575 [LittleProxy-0-ClientToProxyWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Request: 0053d034-616e-4aec-9f24-d36f2beed60f 
+GET http://localhost:81/api/v1/auth/oidc.json
+ 
+08:05:01.577 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: 0053d034-616e-4aec-9f24-d36f2beed60f 
+GET http://localhost:81/api/v1/auth/oidc.json
+200 
+Response Body: {"realm":"cxbox","auth-server-url":"http://code-samples.cxbox.org/auth","ssl-require":"none","resource":"cxbox-oidc-client","public-client":true,"cors":true}
+ 
+08:05:02.974 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 5becb14e-1f66-4e8c-ac2b-f64fd0ad6034 
+GET http://localhost:81/api/v1/notification/check-new-notification
+ 
+08:05:02.974 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: 98ec3142-2c8c-4be4-ab33-6d1dd25aec4e 
+GET http://localhost:81/api/v1/data/InputBasic/InputBasic?_page=1&_limit=5
+ 
+08:05:02.980 [LittleProxy-0-ProxyToServerWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Response: 5becb14e-1f66-4e8c-ac2b-f64fd0ad6034 
+GET http://localhost:81/api/v1/notification/check-new-notification
+200 
+Response Body: {"success":true,"data":0}
+ 
+08:05:02.982 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: 98ec3142-2c8c-4be4-ab33-6d1dd25aec4e 
+GET http://localhost:81/api/v1/data/InputBasic/InputBasic?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1100670","vstamp":0,"customField":"test data"}],"hasNext":false}
+ 
+08:05:03.000 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 528ea0a3-be06-4f78-83c6-bad9f0ae2836 
+GET http://localhost:81/api/v1/count/InputBasic/InputBasic
+ 
+08:05:03.000 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: bacb235b-40ad-4e60-a0db-aee6a1932603 
+GET http://localhost:81/api/v1/row-meta/InputBasic/InputBasic/1100670
+ 
+08:05:03.006 [LittleProxy-0-ProxyToServerWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Response: 528ea0a3-be06-4f78-83c6-bad9f0ae2836 
+GET http://localhost:81/api/v1/count/InputBasic/InputBasic
+200 
+Response Body: {"success":true,"data":1}
+ 
+08:05:03.007 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: bacb235b-40ad-4e60-a0db-aee6a1932603 
+GET http://localhost:81/api/v1/row-meta/InputBasic/InputBasic/1100670
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true}],"fields":[{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1100670","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"customField","disabled":false,"forceActive":true,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"test data","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+08:05:06.580 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: b0dd0d2a-dd2a-4905-ac39-b836c4e2fd07 
+GET http://localhost:81/api/v1/data/myexample357/dictionary?_page=1&_limit=1000&_sort.0.asc=type&_sort.1.desc=displayOrder
+ 
+08:05:06.587 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: b0dd0d2a-dd2a-4905-ac39-b836c4e2fd07 
+GET http://localhost:81/api/v1/data/myexample357/dictionary?_page=1&_limit=1000&_sort.0.asc=type&_sort.1.desc=displayOrder
+200 
+Response Body: {"success":true,"data":[{"key":"LOW","value":"Low","active":true,"type":"CLIENT_IMPORTANCE","dictionaryTypeId":1100059,"displayOrder":3,"description":"","id":"1100061","vstamp":0},{"key":"TEST","value":"Test","active":true,"type":"CLIENT_IMPORTANCE","dictionaryTypeId":1100059,"displayOrder":2,"description":null,"id":"1101787","vstamp":1},{"key":"MIDDLE","value":"Middle","active":true,"type":"CLIENT_IMPORTANCE","dictionaryTypeId":1100059,"displayOrder":2,"description":"","id":"1100060","vstamp":0},{"key":"HIGH","value":"High","active":true,"type":"CLIENT_IMPORTANCE","dictionaryTypeId":1100059,"displayOrder":1,"description":"","id":"1100059","vstamp":0},{"key":"UPPER_MIDDLE","value":"Upper Middle","active":true,"type":"CUSTOM_DICTIONARY","dictionaryTypeId":1100055,"displayOrder":4,"description":"","id":"1100058","vstamp":0},{"key":"LOW","value":"Low","active":true,"type":"CUSTOM_DICTIONARY","dictionaryTypeId":1100055,"displayOrder":3,"description":"","id":"1100057","vstamp":0},{"key":"MIDDLE","value":"Middle","active":true,"type":"CUSTOM_DICTIONARY","dictionaryTypeId":1100055,"displayOrder":2,"description":"","id":"1100056","vstamp":0},{"key":"HIGH","value":"High","active":true,"type":"CUSTOM_DICTIONARY","dictionaryTypeId":1100055,"displayOrder":1,"description":"","id":"1100055","vstamp":0},{"key":"LOW","value":"Low","active":true,"type":"CUSTOM_DICTIONARY_FILTRATION","dictionaryTypeId":1100062,"displayOrder":3,"description":"","id":"1100064","vstamp":0},{"key":"MIDDLE","value":"Middle","active":true,"type":"CUSTOM_DICTIONARY_FILTRATION","dictionaryTypeId":1100062,"displayOrder":2,"description":"","id":"1100063","vstamp":0},{"key":"HIGH","value":"High","active":true,"type":"CUSTOM_DICTIONARY_FILTRATION","dictionaryTypeId":1100062,"displayOrder":1,"description":"","id":"1100062","vstamp":0},{"key":"K","value":"K","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","dictionaryTypeId":1100065,"displayOrder":10,"description":"","id":"1100074","vstamp":0},{"key":"I","value":"I","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","dictionaryTypeId":1100065,"displayOrder":9,"description":"","id":"1100073","vstamp":0},{"key":"H","value":"H","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","dictionaryTypeId":1100065,"displayOrder":8,"description":"","id":"1100072","vstamp":0},{"key":"G","value":"G","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","dictionaryTypeId":1100065,"displayOrder":7,"description":"","id":"1100071","vstamp":0},{"key":"F","value":"F","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","dictionaryTypeId":1100065,"displayOrder":6,"description":"","id":"1100070","vstamp":0},{"key":"E","value":"E","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","dictionaryTypeId":1100065,"displayOrder":5,"description":"","id":"1100069","vstamp":0},{"key":"D","value":"D","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","dictionaryTypeId":1100065,"displayOrder":4,"description":"","id":"1100068","vstamp":0},{"key":"C","value":"C","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","dictionaryTypeId":1100065,"displayOrder":3,"description":"","id":"1100067","vstamp":0},{"key":"B","value":"B","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","dictionaryTypeId":1100065,"displayOrder":2,"description":"","id":"1100066","vstamp":0},{"key":"A","value":"A","active":true,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION","dictionaryTypeId":1100065,"displayOrder":1,"description":"","id":"1100065","vstamp":0},{"key":"LOW","value":"Low","active":true,"type":"CUSTOM_DICTIONARY_SORTING","dictionaryTypeId":1100075,"displayOrder":3,"description":"","id":"1100077","vstamp":0},{"key":"TEST","value":"Test","active":true,"type":"CUSTOM_DICTIONARY_SORTING","dictionaryTypeId":1100075,"displayOrder":2,"description":null,"id":"1101788","vstamp":1},{"key":"MIDDLE","value":"Middle","active":true,"type":"CUSTOM_DICTIONARY_SORTING","dictionaryTypeId":1100075,"displayOrder":2,"description":"","id":"1100076","vstamp":0},{"key":"HIGH","value":"High","active":true,"type":"CUSTOM_DICTIONARY_SORTING","dictionaryTypeId":1100075,"displayOrder":1,"description":"","id":"1100075","vstamp":0},{"key":"LOW","value":"Low","active":true,"type":"CUSTOM_DICTIONARY_SORTING_EXAMPLE","dictionaryTypeId":1100078,"displayOrder":3,"description":"","id":"1100080","vstamp":0},{"key":"MIDDLE","value":"Middle","active":true,"type":"CUSTOM_DICTIONARY_SORTING_EXAMPLE","dictionaryTypeId":1100078,"displayOrder":2,"description":"","id":"1100079","vstamp":0},{"key":"HIGH","value":"High","active":true,"type":"CUSTOM_DICTIONARY_SORTING_EXAMPLE","dictionaryTypeId":1100078,"displayOrder":1,"description":"","id":"1100078","vstamp":0},{"key":"CUSTOM_FIELD4300_DICTIONARY5","value":"CustomField4300Dictionary5","active":true,"type":"CUSTOM_FIELD4300_DICTIONARY","dictionaryTypeId":1100081,"displayOrder":5,"description":"","id":"1100085","vstamp":0},{"key":"CUSTOM_FIELD4300_DICTIONARY4","value":"CustomField4300Dictionary4","active":true,"type":"CUSTOM_FIELD4300_DICTIONARY","dictionaryTypeId":1100081,"displayOrder":4,"description":"","id":"1100084","vstamp":0},{"key":"CUSTOM_FIELD4300_DICTIONARY3","value":"CustomField4300Dictionary3","active":true,"type":"CUSTOM_FIELD4300_DICTIONARY","dictionaryTypeId":1100081,"displayOrder":3,"description":"","id":"1100083","vstamp":0},{"key":"CUSTOM_FIELD4300_DICTIONARY2","value":"CustomField4300Dictionary2","active":true,"type":"CUSTOM_FIELD4300_DICTIONARY","dictionaryTypeId":1100081,"displayOrder":2,"description":"","id":"1100082","vstamp":0},{"key":"CUSTOM_FIELD4300_DICTIONARY1","value":"CustomField4300Dictionary1","active":true,"type":"CUSTOM_FIELD4300_DICTIONARY","dictionaryTypeId":1100081,"displayOrder":1,"description":"","id":"1100081","vstamp":0},{"key":"BUSINESS_ADMIN","value":"Business Administration","active":true,"type":"INTERNAL_ROLE","dictionaryTypeId":1100047,"displayOrder":3,"description":"","id":"1100049","vstamp":0},{"key":"CXBOX_USER","value":"Cxbox User","active":true,"type":"INTERNAL_ROLE","dictionaryTypeId":1100047,"displayOrder":2,"description":"","id":"1100048","vstamp":0},{"key":"ADMIN","value":"Administration","active":true,"type":"INTERNAL_ROLE","dictionaryTypeId":1100047,"displayOrder":1,"description":"","id":"1100047","vstamp":0},{"key":"SAINT_PETERBURG","value":"St. Petersburg","active":true,"type":"REGIONS","dictionaryTypeId":1100050,"displayOrder":null,"description":"","id":"1100051","vstamp":0},{"key":"MOSCOW","value":"Moscow","active":true,"type":"REGIONS","dictionaryTypeId":1100050,"displayOrder":null,"description":"","id":"1100050","vstamp":0},{"key":"NEW_YORK","value":"New York","active":true,"type":"REGIONS","dictionaryTypeId":1100050,"displayOrder":3,"description":"","id":"1100054","vstamp":0},{"key":"SYKTYVKAR","value":"Syktyvkar","active":true,"type":"REGIONS","dictionaryTypeId":1100050,"displayOrder":2,"description":"","id":"1100053","vstamp":0},{"key":"KOSTROMA","value":"Kostroma","active":true,"type":"REGIONS","dictionaryTypeId":1100050,"displayOrder":1,"description":"","id":"1100052","vstamp":0}],"hasNext":false}
+ 
+08:05:06.720 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: 37cd467c-3162-47f9-80bc-a444e6b457d7 
+GET http://localhost:81/api/v1/data/myexample357/dictionary/1100061/dictionaryType?_page=1&_limit=5
+ 
+08:05:06.720 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 56b3dcbd-e51a-4f3d-9ab7-2e0e46720934 
+GET http://localhost:81/api/v1/row-meta/myexample357/dictionary/1100061
+ 
+08:05:06.720 [LittleProxy-0-ClientToProxyWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Request: a0de992b-28dd-4139-8089-ea94eddd891a 
+GET http://localhost:81/api/v1/count/myexample357/dictionary
+ 
+08:05:06.727 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: a0de992b-28dd-4139-8089-ea94eddd891a 
+GET http://localhost:81/api/v1/count/myexample357/dictionary
+200 
+Response Body: {"success":true,"data":41}
+ 
+08:05:06.729 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: 37cd467c-3162-47f9-80bc-a444e6b457d7 
+GET http://localhost:81/api/v1/data/myexample357/dictionary/1100061/dictionaryType?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1100081","vstamp":0,"type":"CUSTOM_FIELD4300_DICTIONARY"},{"id":"1100078","vstamp":0,"type":"CUSTOM_DICTIONARY_SORTING_EXAMPLE"},{"id":"1100075","vstamp":0,"type":"CUSTOM_DICTIONARY_SORTING"},{"id":"1100065","vstamp":0,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION"},{"id":"1100062","vstamp":0,"type":"CUSTOM_DICTIONARY_FILTRATION"}],"hasNext":true}
+ 
+08:05:06.730 [LittleProxy-0-ProxyToServerWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Response: 56b3dcbd-e51a-4f3d-9ab7-2e0e46720934 
+GET http://localhost:81/api/v1/row-meta/myexample357/dictionary/1100061
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"create","text":"Create","icon":"plus","showOnlyIcon":true,"scope":"bc","autoSaveBefore":false},{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true},{"type":"delete","text":"Delete","icon":"delete","showOnlyIcon":true,"scope":"record","autoSaveBefore":false},{"type":"clear_cache","text":"Clear Cache","showOnlyIcon":false,"scope":"bc","autoSaveBefore":true},{"type":"export_liquibase","text":"Export","showOnlyIcon":false,"scope":"bc","autoSaveBefore":true}],"fields":[{"key":"dictionaryTypeId","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":1100059,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"displayOrder","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":true,"currentValue":3,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"description","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":true,"currentValue":"","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"active","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":true,"currentValue":true,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1100061","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"type","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":true,"currentValue":"CLIENT_IMPORTANCE","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"value","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":true,"currentValue":"Low","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"key","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":true,"currentValue":"LOW","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+08:05:06.772 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: a65a2bca-8d76-44eb-b40d-27440ac1a309 
+GET http://localhost:81/api/v1/row-meta/myexample357/dictionary/1100061/dictionaryType/1100081
+ 
+08:05:06.772 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: 1af7f33a-6e65-4b6a-9183-bc8753963237 
+GET http://localhost:81/api/v1/count/myexample357/dictionary/1100061/dictionaryType
+ 
+08:05:06.781 [LittleProxy-0-ProxyToServerWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Response: a65a2bca-8d76-44eb-b40d-27440ac1a309 
+GET http://localhost:81/api/v1/row-meta/myexample357/dictionary/1100061/dictionaryType/1100081
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"create","text":"Create","icon":"plus","showOnlyIcon":true,"scope":"bc","autoSaveBefore":false},{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true},{"type":"delete","text":"Delete","icon":"delete","showOnlyIcon":true,"scope":"record","autoSaveBefore":false}],"fields":[{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1100081","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"type","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":true,"currentValue":"CUSTOM_FIELD4300_DICTIONARY","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+08:05:06.782 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: 1af7f33a-6e65-4b6a-9183-bc8753963237 
+GET http://localhost:81/api/v1/count/myexample357/dictionary/1100061/dictionaryType
+200 
+Response Body: {"success":true,"data":9}
+ 
+08:05:07.165 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: 8472b268-8c20-4eec-963d-71109a7e4be9 
+GET http://localhost:81/api/v1/row-meta-new/myexample357/dictionary?_action=create
+ 
+08:05:07.179 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: 8472b268-8c20-4eec-963d-71109a7e4be9 
+GET http://localhost:81/api/v1/row-meta-new/myexample357/dictionary?_action=create
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true},{"type":"cancel-create","text":"Cancel","icon":"close","showOnlyIcon":true,"scope":"record","autoSaveBefore":false},{"type":"clear_cache","text":"Clear Cache","showOnlyIcon":false,"scope":"bc","autoSaveBefore":true},{"type":"export_liquibase","text":"Export","showOnlyIcon":false,"scope":"bc","autoSaveBefore":true}],"fields":[{"key":"dictionaryTypeId","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"displayOrder","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":true,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"description","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":true,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"active","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":true,"currentValue":true,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1101790","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":-1,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"type","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":true,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"value","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":true,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"key","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":true,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]},"postActions":[]}}
+ 
+08:05:07.322 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 0b810173-357d-49ea-894f-fd1cf6f3361a 
+GET http://localhost:81/api/v1/row-meta/myexample357/dictionary/1101790
+ 
+08:05:07.322 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: 04835fc1-49eb-4f4d-81a1-82fc16a7a35f 
+GET http://localhost:81/api/v1/data/myexample357/dictionary/1101790/dictionaryType?_page=1&_limit=5
+ 
+08:05:07.332 [LittleProxy-0-ProxyToServerWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Response: 0b810173-357d-49ea-894f-fd1cf6f3361a 
+GET http://localhost:81/api/v1/row-meta/myexample357/dictionary/1101790
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true},{"type":"cancel-create","text":"Cancel","icon":"close","showOnlyIcon":true,"scope":"record","autoSaveBefore":false},{"type":"clear_cache","text":"Clear Cache","showOnlyIcon":false,"scope":"bc","autoSaveBefore":true},{"type":"export_liquibase","text":"Export","showOnlyIcon":false,"scope":"bc","autoSaveBefore":true}],"fields":[{"key":"dictionaryTypeId","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"displayOrder","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":true,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"description","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":true,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"active","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":true,"currentValue":true,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1101790","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":-1,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"type","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":true,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"value","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":true,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"key","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":true,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+08:05:07.335 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: 04835fc1-49eb-4f4d-81a1-82fc16a7a35f 
+GET http://localhost:81/api/v1/data/myexample357/dictionary/1101790/dictionaryType?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1100081","vstamp":0,"type":"CUSTOM_FIELD4300_DICTIONARY"},{"id":"1100078","vstamp":0,"type":"CUSTOM_DICTIONARY_SORTING_EXAMPLE"},{"id":"1100075","vstamp":0,"type":"CUSTOM_DICTIONARY_SORTING"},{"id":"1100065","vstamp":0,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION"},{"id":"1100062","vstamp":0,"type":"CUSTOM_DICTIONARY_FILTRATION"}],"hasNext":true}
+ 
+08:05:07.364 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: da846cd8-6dfb-49ac-aa3e-e7ccc9c6c4fa 
+GET http://localhost:81/api/v1/row-meta/myexample357/dictionary/1101790/dictionaryType/1100081
+ 
+08:05:07.364 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 8bd0cbce-49f8-4c50-ae58-42e5ae8dafec 
+GET http://localhost:81/api/v1/count/myexample357/dictionary/1101790/dictionaryType
+ 
+08:05:07.373 [LittleProxy-0-ProxyToServerWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Response: 8bd0cbce-49f8-4c50-ae58-42e5ae8dafec 
+GET http://localhost:81/api/v1/count/myexample357/dictionary/1101790/dictionaryType
+200 
+Response Body: {"success":true,"data":9}
+ 
+08:05:07.376 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: da846cd8-6dfb-49ac-aa3e-e7ccc9c6c4fa 
+GET http://localhost:81/api/v1/row-meta/myexample357/dictionary/1101790/dictionaryType/1100081
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"create","text":"Create","icon":"plus","showOnlyIcon":true,"scope":"bc","autoSaveBefore":false},{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true},{"type":"delete","text":"Delete","icon":"delete","showOnlyIcon":true,"scope":"record","autoSaveBefore":false}],"fields":[{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1100081","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"type","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":true,"currentValue":"CUSTOM_FIELD4300_DICTIONARY","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+08:05:07.489 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: f3c9eeb0-acc5-457e-97e5-379f7c925d75 
+GET http://localhost:81/api/v1/data/myexample357/dictionary/1101790/dictionaryType?_page=1&_limit=5
+ 
+08:05:07.498 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: f3c9eeb0-acc5-457e-97e5-379f7c925d75 
+GET http://localhost:81/api/v1/data/myexample357/dictionary/1101790/dictionaryType?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1100081","vstamp":0,"type":"CUSTOM_FIELD4300_DICTIONARY"},{"id":"1100078","vstamp":0,"type":"CUSTOM_DICTIONARY_SORTING_EXAMPLE"},{"id":"1100075","vstamp":0,"type":"CUSTOM_DICTIONARY_SORTING"},{"id":"1100065","vstamp":0,"type":"CUSTOM_DICTIONARY_NEW_FILTRATION"},{"id":"1100062","vstamp":0,"type":"CUSTOM_DICTIONARY_FILTRATION"}],"hasNext":true}
+ 
+08:05:07.530 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: 5e937319-cd33-4fd8-a5b0-85930ff9cab0 
+GET http://localhost:81/api/v1/row-meta/myexample357/dictionary/1101790/dictionaryType/1100081
+ 
+08:05:07.530 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: a18837d2-b04d-4210-852d-4b881fe4a028 
+GET http://localhost:81/api/v1/count/myexample357/dictionary/1101790/dictionaryType
+ 
+08:05:07.539 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: 5e937319-cd33-4fd8-a5b0-85930ff9cab0 
+GET http://localhost:81/api/v1/row-meta/myexample357/dictionary/1101790/dictionaryType/1100081
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"create","text":"Create","icon":"plus","showOnlyIcon":true,"scope":"bc","autoSaveBefore":false},{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true},{"type":"delete","text":"Delete","icon":"delete","showOnlyIcon":true,"scope":"record","autoSaveBefore":false}],"fields":[{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1100081","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"type","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":true,"currentValue":"CUSTOM_FIELD4300_DICTIONARY","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+08:05:07.542 [LittleProxy-0-ProxyToServerWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Response: a18837d2-b04d-4210-852d-4b881fe4a028 
+GET http://localhost:81/api/v1/count/myexample357/dictionary/1101790/dictionaryType
+200 
+Response Body: {"success":true,"data":9}
+ 
+08:05:07.900 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 54e5a07b-6d87-4a11-b7aa-b5a2d16c69c5 
+GET http://localhost:81/api/v1/data/myexample357/dictionary/1101790/dictionaryType?_page=2&_limit=5
+ 
+08:05:07.909 [LittleProxy-0-ProxyToServerWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Response: 54e5a07b-6d87-4a11-b7aa-b5a2d16c69c5 
+GET http://localhost:81/api/v1/data/myexample357/dictionary/1101790/dictionaryType?_page=2&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1100059","vstamp":0,"type":"CLIENT_IMPORTANCE"},{"id":"1100055","vstamp":0,"type":"CUSTOM_DICTIONARY"},{"id":"1100050","vstamp":0,"type":"REGIONS"},{"id":"1100047","vstamp":0,"type":"INTERNAL_ROLE"}],"hasNext":false}
+ 
+08:05:07.937 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: b243acd9-2307-4190-b809-53c56fbd4fff 
+GET http://localhost:81/api/v1/row-meta/myexample357/dictionary/1101790/dictionaryType/1100059
+ 
+08:05:07.937 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: f96b0b88-8c9b-45c9-94b8-ce4e866c8d47 
+GET http://localhost:81/api/v1/count/myexample357/dictionary/1101790/dictionaryType
+ 
+08:05:07.946 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: f96b0b88-8c9b-45c9-94b8-ce4e866c8d47 
+GET http://localhost:81/api/v1/count/myexample357/dictionary/1101790/dictionaryType
+200 
+Response Body: {"success":true,"data":9}
+ 
+08:05:07.949 [LittleProxy-0-ProxyToServerWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Response: b243acd9-2307-4190-b809-53c56fbd4fff 
+GET http://localhost:81/api/v1/row-meta/myexample357/dictionary/1101790/dictionaryType/1100059
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"create","text":"Create","icon":"plus","showOnlyIcon":true,"scope":"bc","autoSaveBefore":false},{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true},{"type":"delete","text":"Delete","icon":"delete","showOnlyIcon":true,"scope":"record","autoSaveBefore":false}],"fields":[{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1100059","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"type","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":true,"currentValue":"CLIENT_IMPORTANCE","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+08:05:08.700 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: f61880d8-30fe-422a-aa7e-915d6eea88f2 
+PUT http://localhost:81/api/v1/data/myexample357/dictionary/1101790
+Request Body: {"data":{"type":"CLIENT_IMPORTANCE","dictionaryTypeId":"1100059","key":"TEST","value":"Test","displayOrder":2,"vstamp":-1}}
+ 
+08:05:08.716 [LittleProxy-0-ProxyToServerWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Response: f61880d8-30fe-422a-aa7e-915d6eea88f2 
+PUT http://localhost:81/api/v1/data/myexample357/dictionary/1101790
+418 
+Response Body: {"success":false,"data":null,"errorMessage":null,"error":{"entity":{"bcName":"dictionary","id":"1101790","fields":{"key":"Key already exists for type CLIENT_IMPORTANCE"}}}}
+ 
+08:05:08.876 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 880f3ced-4ef0-400a-a120-f30659718aaf 
+POST http://localhost:81/api/v1/custom-action/myexample357/dictionary/1101790?_action=clear_cache&scope=bc&_sort.0.asc=type&_sort.1.desc=displayOrder
+Request Body: {"data":{"type":"CLIENT_IMPORTANCE","dictionaryTypeId":"1100059","key":"TEST","value":"Test","displayOrder":2,"vstamp":-1}}
+ 
+08:05:08.891 [LittleProxy-0-ProxyToServerWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Response: 880f3ced-4ef0-400a-a120-f30659718aaf 
+POST http://localhost:81/api/v1/custom-action/myexample357/dictionary/1101790?_action=clear_cache&scope=bc&_sort.0.asc=type&_sort.1.desc=displayOrder
+418 
+Response Body: {"success":false,"data":null,"errorMessage":null,"error":{"entity":{"bcName":"dictionary","id":"1101790","fields":{"key":"Key already exists for type CLIENT_IMPORTANCE"}}}}
+ 
+08:05:09.148 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: e1d98c0d-69ad-4459-b01a-78ac3c607709 
+GET http://localhost:81/api/v1/data/myexample357/myexample356?_page=1&_limit=5
+ 
+08:05:09.156 [LittleProxy-0-ProxyToServerWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Response: e1d98c0d-69ad-4459-b01a-78ac3c607709 
+GET http://localhost:81/api/v1/data/myexample357/myexample356?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1100497","vstamp":0,"customFieldDictionary":"High"}],"hasNext":false}
+ 
+08:05:09.163 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: ecb89bf0-ccf0-4035-b4d5-6027b5b6ceb2 
+GET http://localhost:81/api/v1/row-meta/myexample357/myexample356/1100497
+ 
+08:05:09.170 [LittleProxy-0-ProxyToServerWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Response: ecb89bf0-ccf0-4035-b4d5-6027b5b6ceb2 
+GET http://localhost:81/api/v1/row-meta/myexample357/myexample356/1100497
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true}],"fields":[{"key":"customFieldDictionary","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"dictionaryName":"CLIENT_IMPORTANCE","currentValue":"High","values":[{"value":"High","options":{}},{"value":"Middle","options":{}},{"value":"Test","options":{}},{"value":"Low","options":{}}],"filterValues":[{"value":"High","options":{}},{"value":"Middle","options":{}},{"value":"Test","options":{}},{"value":"Low","options":{}}],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1100497","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+08:05:19.603 [main] TRACE API_NO_LOGIN_LOGGER - ending test: Test for creating admin value. uuid: [engine:junit-jupiter]/[class:application.Samples.DictionaryAdministrationTest]/[method:create()] 
