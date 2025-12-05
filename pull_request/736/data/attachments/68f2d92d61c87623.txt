@@ -1,0 +1,112 @@
+09:26:13.095 [main] TRACE API_NO_LOGIN_LOGGER - starting test: The DrillDown test. uuid: [engine:junit-jupiter]/[class:application.Samples.Form.InputOnFormTest]/[method:drillDown()] 
+09:26:13.484 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: 12144ce8-9571-4d27-aaad-ad2ea4aea0fa 
+GET http://localhost:81/api/v1/auth/oidc.json
+ 
+09:26:13.485 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: 12144ce8-9571-4d27-aaad-ad2ea4aea0fa 
+GET http://localhost:81/api/v1/auth/oidc.json
+200 
+Response Body: {"realm":"cxbox","auth-server-url":"http://code-samples.cxbox.org/auth","ssl-require":"none","resource":"cxbox-oidc-client","public-client":true,"cors":true}
+ 
+09:26:15.026 [LittleProxy-0-ClientToProxyWorker-4] TRACE API_NO_LOGIN_LOGGER - 
+Request: 8bd0cad6-8fd6-4ed3-a8f4-2d2752467117 
+GET http://localhost:81/api/v1/auth/oidc.json
+ 
+09:26:15.029 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: 8bd0cad6-8fd6-4ed3-a8f4-2d2752467117 
+GET http://localhost:81/api/v1/auth/oidc.json
+200 
+Response Body: {"realm":"cxbox","auth-server-url":"http://code-samples.cxbox.org/auth","ssl-require":"none","resource":"cxbox-oidc-client","public-client":true,"cors":true}
+ 
+09:26:16.137 [LittleProxy-0-ClientToProxyWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Request: 5a7814c3-6e1d-4eef-b161-1d408baaf0fa 
+GET http://localhost:81/api/v1/notification/check-new-notification
+ 
+09:26:16.137 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: ccbd367e-04c3-4fe9-9bb7-124c29f52a5d 
+GET http://localhost:81/api/v1/data/InputBasic/InputBasic?_page=1&_limit=5
+ 
+09:26:16.146 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: 5a7814c3-6e1d-4eef-b161-1d408baaf0fa 
+GET http://localhost:81/api/v1/notification/check-new-notification
+200 
+Response Body: {"success":true,"data":0}
+ 
+09:26:16.147 [LittleProxy-0-ProxyToServerWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Response: ccbd367e-04c3-4fe9-9bb7-124c29f52a5d 
+GET http://localhost:81/api/v1/data/InputBasic/InputBasic?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1100477","vstamp":0,"customField":"test data"}],"hasNext":false}
+ 
+09:26:16.199 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: 3fd668a1-48a9-4dda-9761-44807fe25e78 
+GET http://localhost:81/api/v1/count/InputBasic/InputBasic
+ 
+09:26:16.199 [LittleProxy-0-ClientToProxyWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Request: b1cffe12-31aa-4c7b-af6a-1129afe815b2 
+GET http://localhost:81/api/v1/row-meta/InputBasic/InputBasic/1100477
+ 
+09:26:16.204 [LittleProxy-0-ProxyToServerWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Response: 3fd668a1-48a9-4dda-9761-44807fe25e78 
+GET http://localhost:81/api/v1/count/InputBasic/InputBasic
+200 
+Response Body: {"success":true,"data":1}
+ 
+09:26:16.205 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: b1cffe12-31aa-4c7b-af6a-1129afe815b2 
+GET http://localhost:81/api/v1/row-meta/InputBasic/InputBasic/1100477
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true}],"fields":[{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1100477","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"customField","disabled":false,"forceActive":true,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"test data","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+09:26:16.513 [LittleProxy-0-ClientToProxyWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Request: c4556a7d-dd2e-406e-8cc4-50e69832782e 
+GET http://localhost:81/api/v1/data/InputDrilldown/InputDrilldown?_page=1&_limit=5
+ 
+09:26:16.520 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: c4556a7d-dd2e-406e-8cc4-50e69832782e 
+GET http://localhost:81/api/v1/data/InputDrilldown/InputDrilldown?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1100480","vstamp":0,"customField":"test data","customField2":"test data"}],"hasNext":false}
+ 
+09:26:16.550 [LittleProxy-0-ClientToProxyWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Request: cf0b6a34-36f9-48d1-a26a-cfaade064764 
+GET http://localhost:81/api/v1/count/InputDrilldown/InputDrilldown
+ 
+09:26:16.550 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: de8a5428-5c97-4626-9467-1a115d0b4b34 
+GET http://localhost:81/api/v1/row-meta/InputDrilldown/InputDrilldown/1100480
+ 
+09:26:16.556 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: cf0b6a34-36f9-48d1-a26a-cfaade064764 
+GET http://localhost:81/api/v1/count/InputDrilldown/InputDrilldown
+200 
+Response Body: {"success":true,"data":1}
+ 
+09:26:16.557 [LittleProxy-0-ProxyToServerWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Response: de8a5428-5c97-4626-9467-1a115d0b4b34 
+GET http://localhost:81/api/v1/row-meta/InputDrilldown/InputDrilldown/1100480
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true}],"fields":[{"key":"customField2","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"drillDown":"/screen/InputDrilldown/view/InputDrilldowninfo/InputDrilldown/1100480","drillDownType":"inner","currentValue":"test data","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1100480","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"customField","disabled":false,"forceActive":true,"ephemeral":false,"hidden":false,"required":true,"filterable":false,"sortable":false,"drillDown":"/screen/InputDrilldown/view/InputDrilldownform/InputDrilldown/1100480","drillDownType":"inner","currentValue":"test data","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+09:26:17.014 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: 3983725d-bad7-49e8-8c31-e626ea102a60 
+GET http://localhost:81/api/v1/data/InputDrilldown/InputDrilldown/1100480?_page=1&_limit=5
+ 
+09:26:17.022 [LittleProxy-0-ProxyToServerWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Response: 3983725d-bad7-49e8-8c31-e626ea102a60 
+GET http://localhost:81/api/v1/data/InputDrilldown/InputDrilldown/1100480?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1100480","vstamp":0,"customField":"test data","customField2":"test data"}]}
+ 
+09:26:17.028 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: c2b99190-1351-4e31-9d7f-c955283a0622 
+GET http://localhost:81/api/v1/row-meta/InputDrilldown/InputDrilldown/1100480
+ 
+09:26:17.034 [LittleProxy-0-ProxyToServerWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Response: c2b99190-1351-4e31-9d7f-c955283a0622 
+GET http://localhost:81/api/v1/row-meta/InputDrilldown/InputDrilldown/1100480
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true}],"fields":[{"key":"customField2","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"drillDown":"/screen/InputDrilldown/view/InputDrilldowninfo/InputDrilldown/1100480","drillDownType":"inner","currentValue":"test data","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1100480","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"customField","disabled":false,"forceActive":true,"ephemeral":false,"hidden":false,"required":true,"filterable":false,"sortable":false,"drillDown":"/screen/InputDrilldown/view/InputDrilldownform/InputDrilldown/1100480","drillDownType":"inner","currentValue":"test data","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+09:26:17.058 [main] TRACE API_NO_LOGIN_LOGGER - ending test: The DrillDown test. uuid: [engine:junit-jupiter]/[class:application.Samples.Form.InputOnFormTest]/[method:drillDown()] 
