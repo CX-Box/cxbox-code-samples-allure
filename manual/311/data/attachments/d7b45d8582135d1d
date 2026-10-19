@@ -1,0 +1,122 @@
+09:47:50.022 [main] TRACE API_NO_LOGIN_LOGGER - starting test: Create inline, save, delete. uuid: [engine:junit-jupiter]/[class:application.Samples.Popup.PickListPopupRowActionsTest]/[method:createInlineAndDelete()] 
+09:47:50.358 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: aa748039-3d72-4cb1-b6f6-9030ee213277 
+GET http://localhost:81/api/v1/auth/oidc.json
+ 
+09:47:50.360 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: aa748039-3d72-4cb1-b6f6-9030ee213277 
+GET http://localhost:81/api/v1/auth/oidc.json
+200 
+Response Body: {"client_id":"cxbox-oidc-client","scope":"openid profile","authority":"http://localhost:81/auth/realms/cxbox"}
+ 
+09:47:51.407 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: 9c753b66-cf7c-4ac1-8cef-0a3899cdeed2 
+GET http://localhost:81/api/v1/notification/check-new-notification
+ 
+09:47:51.408 [LittleProxy-0-ClientToProxyWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Request: 5b220aca-0b75-45b1-a489-bbbb330b4a05 
+GET http://localhost:81/api/v1/data/client/myexample6103?_page=1&_limit=5
+ 
+09:47:51.413 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: 9c753b66-cf7c-4ac1-8cef-0a3899cdeed2 
+GET http://localhost:81/api/v1/notification/check-new-notification
+200 
+Response Body: {"success":true,"data":0}
+ 
+09:47:51.414 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: 5b220aca-0b75-45b1-a489-bbbb330b4a05 
+GET http://localhost:81/api/v1/data/client/myexample6103?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1100191","vstamp":0,"fullName":null,"address":null,"importance":null,"status":null,"dateStart":null}],"hasNext":false}
+ 
+09:47:51.503 [LittleProxy-0-ClientToProxyWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Request: ce343b73-8d17-4141-816f-b530c9d52787 
+GET http://localhost:81/api/v1/count/client/myexample6103
+ 
+09:47:51.503 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: 5df3eae9-170c-4b7b-a8e3-f9ab9a44554f 
+GET http://localhost:81/api/v1/row-meta/client/myexample6103/1100191
+ 
+09:47:51.509 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: ce343b73-8d17-4141-816f-b530c9d52787 
+GET http://localhost:81/api/v1/count/client/myexample6103
+200 
+Response Body: {"success":true,"data":1}
+ 
+09:47:51.512 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: 5df3eae9-170c-4b7b-a8e3-f9ab9a44554f 
+GET http://localhost:81/api/v1/row-meta/client/myexample6103/1100191
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true},{"type":"cancel-create","text":"Cancel","icon":"close","showOnlyIcon":true,"scope":"record","autoSaveBefore":false},{"type":"create","text":"Add","icon":"plus","showOnlyIcon":true,"scope":"bc","autoSaveBefore":false},{"type":"delete","text":"Delete","icon":"delete","showOnlyIcon":true,"scope":"record","autoSaveBefore":false}],"fields":[{"key":"address","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"dateStart","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"importance","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":false,"dictionaryName":"CLIENT_IMPORTANCE","currentValue":null,"values":[{"value":"High","options":{}},{"value":"Middle","options":{}},{"value":"Low","options":{}}],"filterValues":[{"value":"High","options":{}},{"value":"Middle","options":{}},{"value":"Low","options":{}}],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"fullName","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":true,"currentValue":"1100191","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"status","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"dictionaryName":"status","currentValue":null,"values":[{"value":"New","options":{}},{"value":"Inactive","options":{}},{"value":"In progress","options":{}}],"filterValues":[{"value":"New","options":{}},{"value":"Inactive","options":{}},{"value":"In progress","options":{}}],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+09:47:51.850 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: b2755aa3-7ce4-4295-9448-57cb9024d232 
+GET http://localhost:81/api/v1/data/myexample3092/myexample3072?_page=1&_limit=5
+ 
+09:47:51.858 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: b2755aa3-7ce4-4295-9448-57cb9024d232 
+GET http://localhost:81/api/v1/data/myexample3092/myexample3072?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1101866","vstamp":0,"customField":"Test data","customFieldId":1101864,"customFieldInlinePicklist":"Test data Inline","customFieldInlinePicklistId":1101865}],"hasNext":false}
+ 
+09:47:51.951 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: d75cce90-145a-4fb0-abe6-7012d66f4398 
+GET http://localhost:81/api/v1/count/myexample3092/myexample3072
+ 
+09:47:51.951 [LittleProxy-0-ClientToProxyWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Request: 407da825-0f0f-4083-a3b6-e538d5dd4767 
+GET http://localhost:81/api/v1/row-meta/myexample3092/myexample3072/1101866
+ 
+09:47:51.957 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: d75cce90-145a-4fb0-abe6-7012d66f4398 
+GET http://localhost:81/api/v1/count/myexample3092/myexample3072
+200 
+Response Body: {"success":true,"data":1}
+ 
+09:47:51.958 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: 407da825-0f0f-4083-a3b6-e538d5dd4767 
+GET http://localhost:81/api/v1/row-meta/myexample3092/myexample3072/1101866
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true}],"fields":[{"key":"customFieldId","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":1101864,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"customFieldInlinePicklist","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":true,"currentValue":"Test data Inline","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1101866","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"customField","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":true,"currentValue":"Test data","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"customFieldInlinePicklistId","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":1101865,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+09:47:52.997 [LittleProxy-0-ClientToProxyWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Request: 21c4437b-d660-44f7-bad0-8bb70a02a60f 
+GET http://localhost:81/api/v1/data/myexample3092/myexample3072/1101866/myEntity3072PickPickListPopup?_page=1&_limit=5
+ 
+09:47:53.005 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: 21c4437b-d660-44f7-bad0-8bb70a02a60f 
+GET http://localhost:81/api/v1/data/myexample3092/myexample3072/1101866/myEntity3072PickPickListPopup?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1103882","vstamp":1,"customFieldPick":"Popup form 24023"},{"id":"1103876","vstamp":1,"customFieldPick":"Popup form 17192"},{"id":"1101864","vstamp":0,"customFieldPick":"Test data"}],"hasNext":false}
+ 
+09:47:53.068 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: 574257ff-02d6-4d98-b1c1-58bc58be9ac7 
+GET http://localhost:81/api/v1/row-meta/myexample3092/myexample3072/1101866/myEntity3072PickPickListPopup/1103882
+ 
+09:47:53.068 [LittleProxy-0-ClientToProxyWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Request: c1df41b7-a34a-42ff-ba26-d9946c8b8a70 
+GET http://localhost:81/api/v1/count/myexample3092/myexample3072/1101866/myEntity3072PickPickListPopup
+ 
+09:47:53.075 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: c1df41b7-a34a-42ff-ba26-d9946c8b8a70 
+GET http://localhost:81/api/v1/count/myexample3092/myexample3072/1101866/myEntity3072PickPickListPopup
+200 
+Response Body: {"success":true,"data":3}
+ 
+09:47:53.075 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: 574257ff-02d6-4d98-b1c1-58bc58be9ac7 
+GET http://localhost:81/api/v1/row-meta/myexample3092/myexample3072/1101866/myEntity3072PickPickListPopup/1103882
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"create","text":"Add","icon":"plus","showOnlyIcon":true,"scope":"bc","autoSaveBefore":false},{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true},{"type":"cancel-create","text":"Cancel","icon":"close","showOnlyIcon":true,"scope":"record","autoSaveBefore":false},{"type":"delete","text":"Delete","icon":"delete","showOnlyIcon":true,"scope":"record","autoSaveBefore":false}],"fields":[{"key":"customFieldPick","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":true,"currentValue":"Popup form 24023","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":true,"currentValue":"1103882","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":1,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+09:47:53.823 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: 6c745b49-12f5-47ec-98b0-8a765472886b 
+GET http://localhost:81/api/v1/row-meta-new/myexample3092/myexample3072/1101866/myEntity3072PickPickListPopup?_action=create
+ 
+09:47:53.831 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: 6c745b49-12f5-47ec-98b0-8a765472886b 
+GET http://localhost:81/api/v1/row-meta-new/myexample3092/myexample3072/1101866/myEntity3072PickPickListPopup?_action=create
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true},{"type":"cancel-create","text":"Cancel","icon":"close","showOnlyIcon":true,"scope":"record","autoSaveBefore":false}],"fields":[{"key":"customFieldPick","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":true,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":true,"currentValue":"1103886","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":-1,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]},"postActions":[]}}
+ 
+09:48:12.465 [main] TRACE API_NO_LOGIN_LOGGER - ending test: Create inline, save, delete. uuid: [engine:junit-jupiter]/[class:application.Samples.Popup.PickListPopupRowActionsTest]/[method:createInlineAndDelete()] 

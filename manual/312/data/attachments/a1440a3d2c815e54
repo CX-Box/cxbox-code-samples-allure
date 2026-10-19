@@ -1,0 +1,387 @@
+10:12:01.459 [main] TRACE API_NO_LOGIN_LOGGER - starting test: The token expired while the tab was frozen: the websocket reconnects with a renewed token, no popup. uuid: [engine:junit-jupiter]/[class:application.Samples.Feature.signInAgain.WebSocketSessionTest]/[method:expiredToken_reconnectsWithRenewedToken()] 
+10:12:06.810 [LittleProxy-0-ClientToProxyWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Request: 2a524713-0d6a-4558-8f7d-7a516cf089de 
+GET http://localhost:81/api/v1/auth/oidc.json
+ 
+10:12:06.898 [LittleProxy-0-ProxyToServerWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Response: 2a524713-0d6a-4558-8f7d-7a516cf089de 
+GET http://localhost:81/api/v1/auth/oidc.json
+200 
+Response Body: {"client_id":"cxbox-oidc-client","scope":"openid profile","authority":"http://localhost:81/auth/realms/cxbox"}
+ 
+10:12:06.993 [LittleProxy-0-ClientToProxyWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Request: 13fe3806-8452-4234-a0ea-1ab69bbe51b7 
+GET http://localhost:81/auth/realms/cxbox/.well-known/openid-configuration
+ 
+10:12:07.282 [LittleProxy-0-ProxyToServerWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Response: 13fe3806-8452-4234-a0ea-1ab69bbe51b7 
+GET http://localhost:81/auth/realms/cxbox/.well-known/openid-configuration
+200 OK
+Response Body: {"issuer":"http://localhost:81/auth/realms/cxbox","authorization_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth","token_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token","introspection_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token/introspect","userinfo_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/userinfo","end_session_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/logout","frontchannel_logout_session_supported":true,"frontchannel_logout_supported":true,"jwks_uri":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/certs","check_session_iframe":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/login-status-iframe.html","grant_types_supported":["authorization_code","client_credentials","implicit","password","refresh_token","urn:ietf:params:oauth:grant-type:device_code","urn:ietf:params:oauth:grant-type:token-exchange","urn:ietf:params:oauth:grant-type:uma-ticket","urn:openid:params:grant-type:ciba"],"acr_values_supported":["0","1"],"response_types_supported":["code","none","id_token","token","id_token token","code id_token","code token","code id_token token"],"subject_types_supported":["public","pairwise"],"prompt_values_supported":["none","login","consent"],"id_token_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"id_token_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"id_token_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"userinfo_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512","none"],"userinfo_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"userinfo_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"request_object_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512","none"],"request_object_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"request_object_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"response_modes_supported":["query","fragment","form_post","query.jwt","fragment.jwt","form_post.jwt","jwt"],"registration_endpoint":"http://localhost:81/auth/realms/cxbox/clients-registrations/openid-connect","token_endpoint_auth_methods_supported":["private_key_jwt","client_secret_basic","client_secret_post","tls_client_auth","client_secret_jwt"],"token_endpoint_auth_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"introspection_endpoint_auth_methods_supported":["private_key_jwt","client_secret_basic","client_secret_post","tls_client_auth","client_secret_jwt"],"introspection_endpoint_auth_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"authorization_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"authorization_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"authorization_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"claims_supported":["iss","sub","aud","exp","iat","auth_time","name","given_name","family_name","preferred_username","email","acr","azp","nonce"],"claim_types_supported":["normal"],"claims_parameter_supported":true,"scopes_supported":["openid","acr","roles","basic","microprofile-jwt","service_account","web-origins","address","email","profile","offline_access","phone"],"request_parameter_supported":true,"request_uri_parameter_supported":true,"require_request_uri_registration":true,"code_challenge_methods_supported":["plain","S256"],"tls_client_certificate_bound_access_tokens":true,"dpop_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","ES256","RS256","ES512","PS256","PS512","RS512"],"revocation_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/revoke","revocation_endpoint_auth_methods_supported":["private_key_jwt","client_secret_basic","client_secret_post","tls_client_auth","client_secret_jwt"],"revocation_endpoint_auth_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"backchannel_logout_supported":true,"backchannel_logout_session_supported":true,"device_authorization_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth/device","backchannel_token_delivery_modes_supported":["poll","ping"],"backchannel_authentication_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/ciba/auth","backchannel_authentication_request_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","ES256","RS256","ES512","PS256","PS512","RS512"],"require_pushed_authorization_requests":false,"pushed_authorization_request_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/par/request","mtls_endpoint_aliases":{"token_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token","revocation_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/revoke","introspection_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token/introspect","device_authorization_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth/device","registration_endpoint":"http://localhost:81/auth/realms/cxbox/clients-registrations/openid-connect","userinfo_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/userinfo","pushed_authorization_request_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/par/request","backchannel_authentication_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/ciba/auth"},"authorization_response_iss_parameter_supported":true}
+ 
+10:12:07.316 [LittleProxy-0-ClientToProxyWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Request: 7eb0256f-5b7c-42f4-a2ff-92f1f7d0e7a5 
+GET http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth?client_id=cxbox-oidc-client&redirect_uri=http%3A%2F%2Flocalhost%3A81%2Fui%2F%23%2F%3Fsign_in_callback%3Dredirect&response_type=code&scope=openid+profile&state=cefdc8a1689149a5a9cdac1832d7c122&code_challenge=TSNyn9ufOIQTZDWCN6pRp4uqf1mfT0awjkDFsRFvLRA&code_challenge_method=S256
+ 
+10:12:07.834 [LittleProxy-0-ProxyToServerWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Response: 7eb0256f-5b7c-42f4-a2ff-92f1f7d0e7a5 
+GET http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth?client_id=cxbox-oidc-client&redirect_uri=http%3A%2F%2Flocalhost%3A81%2Fui%2F%23%2F%3Fsign_in_callback%3Dredirect&response_type=code&scope=openid+profile&state=cefdc8a1689149a5a9cdac1832d7c122&code_challenge=TSNyn9ufOIQTZDWCN6pRp4uqf1mfT0awjkDFsRFvLRA&code_challenge_method=S256
+200 OK
+Response Body: <!DOCTYPE html>
+<html class="login-pf" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sign in to Cxbox Code Samples</title>
+    <link rel="icon" href="/auth/resources/aa21v/login/keycloak.v2/img/favicon.ico" />
+            <link href="/auth/resources/aa21v/common/keycloak/vendor/patternfly-v5/patternfly.min.css" rel="stylesheet" />
+            <link href="/auth/resources/aa21v/common/keycloak/vendor/patternfly-v5/patternfly-addons.css" rel="stylesheet" />
+            <link href="/auth/resources/aa21v/login/keycloak.v2/css/styles.css" rel="stylesheet" />
+    <script type="importmap">
+        {
+            "imports": {
+                "rfc4648": "/auth/resources/aa21v/common/keycloak/vendor/rfc4648/rfc4648.js"
+            }
+        }
+    </script>
+      <script type="module" async blocking="render">
+          const DARK_MODE_CLASS = "pf-v5-theme-dark";
+          const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+          updateDarkMode(mediaQuery.matches);
+          mediaQuery.addEventListener("change", (event) => updateDarkMode(event.matches));
+
+          function updateDarkMode(isEnabled) {
+            const { classList } = document.documentElement;
+
+            if (isEnabled) {
+              classList.add(DARK_MODE_CLASS);
+            } else {
+              classList.remove(DARK_MODE_CLASS);
+            }
+          }
+      </script>
+    <script type="module" src="/auth/resources/aa21v/login/keycloak.v2/js/passwordVisibility.js"></script>
+    <script type="module">
+        import { startSessionPolling } from "/auth/resources/aa21v/login/keycloak.v2/js/authChecker.js";
+
+        startSessionPolling(
+            "/auth/realms/cxbox/login-actions/restart?client_id=cxbox-oidc-client&tab_id=3KHxqySJEwM&client_data=eyJydSI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODEvdWkvIy8_c2lnbl9pbl9jYWxsYmFjaz1yZWRpcmVjdCIsInJ0IjoiY29kZSIsInN0IjoiY2VmZGM4YTE2ODkxNDlhNWE5Y2RhYzE4MzJkN2MxMjIifQ&skip_logout=true"
+        );
+    </script>
+    <script type="module">
+        document.addEventListener("click", (event) => {
+            const link = event.target.closest("a[data-once-link]");
+
+            if (!link) {
+                return;
+            }
+
+            if (link.getAttribute("aria-disabled") === "true") {
+                event.preventDefault();
+                return;
+            }
+
+            const { disabledClass } = link.dataset;
+
+            if (disabledClass) {
+                link.classList.add(...disabledClass.trim().split(/\s+/));
+            }
+
+            link.setAttribute("role", "link");
+            link.setAttribute("aria-disabled", "true");
+        });
+    </script>
+        <script type="module">
+            import { checkAuthSession } from "/auth/resources/aa21v/login/keycloak.v2/js/authChecker.js";
+
+            checkAuthSession(
+                "cSHVfohF4iNQvNPg7Z859SXkkrn4w8AnPN8lsVmDHkQ"
+            );
+        </script>
+    <script>
+      // Workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=1404468
+      const isFirefox = true;
+    </script>
+</head>
+
+<body id="keycloak-bg" class="" data-page-id="login-login">
+<div class="pf-v5-c-login">
+  <div class="pf-v5-c-login__container">
+    <header id="kc-header" class="pf-v5-c-login__header">
+      <div id="kc-header-wrapper"
+              class="pf-v5-c-brand"><div><b>Cxbox Code Samples</b> <p></p></div><div style="text-transform:lowercase"><a href="https://github.com/CX-Box/cxbox-code-samples" rel="nofollow">Github</a></div><p style="text-transform:lowercase"> username: demo / password: demo</p></div>
+    </header>
+    <main class="pf-v5-c-login__main">
+      <div class="pf-v5-c-login__main-header">
+        <h1 class="pf-v5-c-title pf-m-3xl" id="kc-page-title"><!-- template: login.ftl -->
+
+        Sign in to your account
+
+</h1>
+      </div>
+      <div class="pf-v5-c-login__main-body">
+
+
+<!-- template: login.ftl -->
+
+        <div id="kc-form">
+          <div id="kc-form-wrapper">
+                <form id="kc-form-login" class="pf-v5-c-form pf-v5-u-w-100" onsubmit="login.disabled = true; return true;" action="http://localhost:81/auth/realms/cxbox/login-actions/authenticate?session_code=JzXdNYKQfCQKkpX6mKFUYHYTUBfdxUWeWVkD2y_Mxb4&amp;execution=d8a0295d-da0e-4952-ab06-e27788ccf192&amp;client_id=cxbox-oidc-client&amp;tab_id=3KHxqySJEwM&amp;client_data=eyJydSI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODEvdWkvIy8_c2lnbl9pbl9jYWxsYmFjaz1yZWRpcmVjdCIsInJ0IjoiY29kZSIsInN0IjoiY2VmZGM4YTE2ODkxNDlhNWE5Y2RhYzE4MzJkN2MxMjIifQ" method="post" novalidate="novalidate">
+
+<div class="pf-v5-c-form__group">
+    <div class="pf-v5-c-form__group-label pf-v5-u-pb-xs">
+        <label for="username" class="pf-v5-c-form__label">
+        <span class="pf-v5-c-form__label-text">
+                                        Username or email
+
+        </span>
+        </label>
+    </div>
+
+    <span class="pf-v5-c-form-control ">
+        <input id="username" name="username" value="" type="text" autocomplete="username" autofocus
+                
+                aria-invalid=""/>
+    </span>
+
+    <div id="input-error-container-username">
+    </div>
+</div>
+
+
+<div class="pf-v5-c-form__group">
+    <div class="pf-v5-c-form__group-label pf-v5-u-pb-xs">
+        <label for="password" class="pf-v5-c-form__label">
+        <span class="pf-v5-c-form__label-text">
+            Password
+        </span>
+        </label>
+    </div>
+
+    <div class="pf-v5-c-input-group">
+      <div class="pf-v5-c-input-group__item pf-m-fill">
+        <span class="pf-v5-c-form-control ">
+          <input id="password" name="password" value="" type="password" autocomplete="current-password" 
+                  aria-invalid=""/>
+        </span>
+      </div>
+      <div class="pf-v5-c-input-group__item">
+        <button class="pf-v5-c-button pf-m-control" type="button" aria-label="Show password"
+                aria-controls="password" data-password-toggle
+                data-icon-show="fa-eye fas" data-icon-hide="fa-eye-slash fas"
+                data-label-show="Show password" data-label-hide="Hide password" id="password-show-password">
+            <i class="fa-eye fas" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <div class="pf-v5-c-form__helper-text" aria-live="polite">
+        <div class="pf-v5-c-helper-text pf-v5-u-display-flex pf-v5-u-justify-content-space-between">
+        </div>
+    </div>
+
+
+    <div id="input-error-container-password">
+    </div>
+</div>
+
+
+                    <input type="hidden" id="id-hidden-input" name="credentialId" />
+  <div class="pf-v5-c-form__group">
+    <div class="pf-v5-c-form__actions pf-v5-u-pt-xs pf-v5-u-flex-wrap">
+  <button class="pf-v5-c-button pf-m-primary pf-m-block " name="login" id="kc-login"
+          type="submit" >
+  Sign In
+  </button>
+    </div>
+  </div>
+                </form>
+            </div>
+        </div>
+
+
+
+          <div class="pf-v5-c-login__main-footer">
+<!-- template: login.ftl -->
+
+
+
+          </div>
+      </div>
+
+        <div class="pf-v5-c-login__main-footer">
+        </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>
+
+ 
+10:12:08.548 [LittleProxy-0-ClientToProxyWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Request: 02618217-3667-43da-b1a7-a76c3a081820 
+POST http://localhost:81/auth/realms/cxbox/login-actions/authenticate?session_code=JzXdNYKQfCQKkpX6mKFUYHYTUBfdxUWeWVkD2y_Mxb4&execution=d8a0295d-da0e-4952-ab06-e27788ccf192&client_id=cxbox-oidc-client&tab_id=3KHxqySJEwM&client_data=eyJydSI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODEvdWkvIy8_c2lnbl9pbl9jYWxsYmFjaz1yZWRpcmVjdCIsInJ0IjoiY29kZSIsInN0IjoiY2VmZGM4YTE2ODkxNDlhNWE5Y2RhYzE4MzJkN2MxMjIifQ
+Request Body: username=demo&password=demo&credentialId=
+ 
+10:12:08.847 [LittleProxy-0-ProxyToServerWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Response: 02618217-3667-43da-b1a7-a76c3a081820 
+POST http://localhost:81/auth/realms/cxbox/login-actions/authenticate?session_code=JzXdNYKQfCQKkpX6mKFUYHYTUBfdxUWeWVkD2y_Mxb4&execution=d8a0295d-da0e-4952-ab06-e27788ccf192&client_id=cxbox-oidc-client&tab_id=3KHxqySJEwM&client_data=eyJydSI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODEvdWkvIy8_c2lnbl9pbl9jYWxsYmFjaz1yZWRpcmVjdCIsInJ0IjoiY29kZSIsInN0IjoiY2VmZGM4YTE2ODkxNDlhNWE5Y2RhYzE4MzJkN2MxMjIifQ
+302 Found
+ 
+10:12:09.168 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 4446a51b-aae7-4294-a275-95680e2ed799 
+GET http://localhost:81/api/v1/auth/oidc.json
+ 
+10:12:09.179 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: 4446a51b-aae7-4294-a275-95680e2ed799 
+GET http://localhost:81/api/v1/auth/oidc.json
+200 
+Response Body: {"client_id":"cxbox-oidc-client","scope":"openid profile","authority":"http://localhost:81/auth/realms/cxbox"}
+ 
+10:12:09.205 [LittleProxy-0-ClientToProxyWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Request: 158460ab-3321-4820-8549-8dfacac2456d 
+GET http://localhost:81/auth/realms/cxbox/.well-known/openid-configuration
+ 
+10:12:09.221 [LittleProxy-0-ProxyToServerWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Response: 158460ab-3321-4820-8549-8dfacac2456d 
+GET http://localhost:81/auth/realms/cxbox/.well-known/openid-configuration
+200 OK
+Response Body: {"issuer":"http://localhost:81/auth/realms/cxbox","authorization_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth","token_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token","introspection_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token/introspect","userinfo_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/userinfo","end_session_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/logout","frontchannel_logout_session_supported":true,"frontchannel_logout_supported":true,"jwks_uri":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/certs","check_session_iframe":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/login-status-iframe.html","grant_types_supported":["authorization_code","client_credentials","implicit","password","refresh_token","urn:ietf:params:oauth:grant-type:device_code","urn:ietf:params:oauth:grant-type:token-exchange","urn:ietf:params:oauth:grant-type:uma-ticket","urn:openid:params:grant-type:ciba"],"acr_values_supported":["0","1"],"response_types_supported":["code","none","id_token","token","id_token token","code id_token","code token","code id_token token"],"subject_types_supported":["public","pairwise"],"prompt_values_supported":["none","login","consent"],"id_token_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"id_token_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"id_token_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"userinfo_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512","none"],"userinfo_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"userinfo_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"request_object_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512","none"],"request_object_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"request_object_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"response_modes_supported":["query","fragment","form_post","query.jwt","fragment.jwt","form_post.jwt","jwt"],"registration_endpoint":"http://localhost:81/auth/realms/cxbox/clients-registrations/openid-connect","token_endpoint_auth_methods_supported":["private_key_jwt","client_secret_basic","client_secret_post","tls_client_auth","client_secret_jwt"],"token_endpoint_auth_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"introspection_endpoint_auth_methods_supported":["private_key_jwt","client_secret_basic","client_secret_post","tls_client_auth","client_secret_jwt"],"introspection_endpoint_auth_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"authorization_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"authorization_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"authorization_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"claims_supported":["iss","sub","aud","exp","iat","auth_time","name","given_name","family_name","preferred_username","email","acr","azp","nonce"],"claim_types_supported":["normal"],"claims_parameter_supported":true,"scopes_supported":["openid","acr","roles","basic","microprofile-jwt","service_account","web-origins","address","email","profile","offline_access","phone"],"request_parameter_supported":true,"request_uri_parameter_supported":true,"require_request_uri_registration":true,"code_challenge_methods_supported":["plain","S256"],"tls_client_certificate_bound_access_tokens":true,"dpop_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","ES256","RS256","ES512","PS256","PS512","RS512"],"revocation_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/revoke","revocation_endpoint_auth_methods_supported":["private_key_jwt","client_secret_basic","client_secret_post","tls_client_auth","client_secret_jwt"],"revocation_endpoint_auth_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"backchannel_logout_supported":true,"backchannel_logout_session_supported":true,"device_authorization_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth/device","backchannel_token_delivery_modes_supported":["poll","ping"],"backchannel_authentication_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/ciba/auth","backchannel_authentication_request_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","ES256","RS256","ES512","PS256","PS512","RS512"],"require_pushed_authorization_requests":false,"pushed_authorization_request_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/par/request","mtls_endpoint_aliases":{"token_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token","revocation_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/revoke","introspection_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token/introspect","device_authorization_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth/device","registration_endpoint":"http://localhost:81/auth/realms/cxbox/clients-registrations/openid-connect","userinfo_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/userinfo","pushed_authorization_request_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/par/request","backchannel_authentication_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/ciba/auth"},"authorization_response_iss_parameter_supported":true}
+ 
+10:12:09.226 [LittleProxy-0-ClientToProxyWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Request: 55f323db-9985-402c-8e65-2c1accf6acbd 
+POST http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token
+Request Body: grant_type=authorization_code&redirect_uri=http%3A%2F%2Flocalhost%3A81%2Fui%2F%23%2F%3Fsign_in_callback%3Dredirect&code=cdcf34d0-2920-3400-07e8-eaf46d68dc9f.94d299fd-ec68-a4da-e661-23bd902c5ed4.4a726c64-c69e-4ec8-8df1-bdb983a902c3&code_verifier=24fef9b7c26949aeaa0f25e4b182ba6b2cee621bb8444f5b8442c4515937c70178c2ddb230984108b1f654ef51f98b89&client_id=cxbox-oidc-client
+ 
+10:12:09.329 [LittleProxy-0-ProxyToServerWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Response: 55f323db-9985-402c-8e65-2c1accf6acbd 
+POST http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token
+200 OK
+Response Body: {"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJLLWh6SGo5NkNhMVkzaFNPZmpPQjFQVGVNZXhZbGRIclc3czJha3ZqNnpjIn0.eyJleHAiOjE3OTI0MDQ4NDksImlhdCI6MTc5MjQwNDcyOSwiYXV0aF90aW1lIjoxNzkyNDA0NzI4LCJqdGkiOiJvbnJ0YWM6YjE4NjU1MWMtMmIwNi01NTkzLWIwM2QtZGUxYTJmZTQyMTQxIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MS9hdXRoL3JlYWxtcy9jeGJveCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJmNjgxMGMzZC1iMDI3LTQwN2EtOTJiMy01MGRkNDc5YjZiYjciLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJjeGJveC1vaWRjLWNsaWVudCIsInNpZCI6Ijk0ZDI5OWZkLWVjNjgtYTRkYS1lNjYxLTIzYmQ5MDJjNWVkNCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImN4Ym94LW9pZGMtY2xpZW50Ijp7InJvbGVzIjpbIkNYQk9YX1VTRVIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJKb2huIFNub3ciLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW1vIiwiZ2l2ZW5fbmFtZSI6IkpvaG4iLCJmYW1pbHlfbmFtZSI6IlNub3ciLCJlbWFpbCI6ImRlbW9AbG9jYWwuY29tIn0.YpnbAiyP6Jv1clF8ifj7_RyE_4vMouW8DcpZxLG9GzC2dcAWVp9x9XTbGjfTBwzrTHlnvSuNvHH_xxY8SRJoBf19kNwjBB8WHQ2Xzn7C-uJ84pNmNh3lD2TbL0Px3ObAfS5qHZJklb1mrrynmPD2-dsdTJ8MK70C0SHRsWgb-yoH4P6Fy8yUkxlPIozHGscQ7_J9a6si616yUXu7HnCgcxpdJ6xURSRCatkGnj-qiSba67WLRqTEoa8HW_hkEp7oYOEwSWvtgP6qLqNe8HC34UhBc6H5X0HnUxuMWvv0yGA-bvErvDS9KAG6IkU1D5GmpAB5U7pwJsZDkUVoJQ8iIA","expires_in":120,"refresh_expires_in":1800,"refresh_token":"eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI3YTRlODcwZi0wOWM1LTRlMzAtYWZhYi0xNDdlMzkyZmNhOTMifQ.eyJleHAiOjE3OTI0MDY1MjksImlhdCI6MTc5MjQwNDcyOSwianRpIjoiNDAzNTY2YzMtZDU0ZS04MmMxLTE4MmEtYzc5OTgzNWUyNjI2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MS9hdXRoL3JlYWxtcy9jeGJveCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODEvYXV0aC9yZWFsbXMvY3hib3giLCJzdWIiOiJmNjgxMGMzZC1iMDI3LTQwN2EtOTJiMy01MGRkNDc5YjZiYjciLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoiY3hib3gtb2lkYy1jbGllbnQiLCJzaWQiOiI5NGQyOTlmZC1lYzY4LWE0ZGEtZTY2MS0yM2JkOTAyYzVlZDQiLCJzY29wZSI6Im9wZW5pZCBhY3Igcm9sZXMgYmFzaWMgd2ViLW9yaWdpbnMgZW1haWwgcHJvZmlsZSIsInJldXNlX2lkIjoiNjBhMzYzNzctNDljNS00OTg2LTlmNGUtODZiYTUxMDdjMzVmIn0.v4sbIEjDzjJcijFilqzVoCrjhFuVrW7NXOfmOVZ_fc8iFjfu6mcZJIUiik0ZouGExQozgTCgQl_UFMpucgC0Tg","token_type":"Bearer","id_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJLLWh6SGo5NkNhMVkzaFNPZmpPQjFQVGVNZXhZbGRIclc3czJha3ZqNnpjIn0.eyJleHAiOjE3OTI0MDQ4NDksImlhdCI6MTc5MjQwNDcyOSwiYXV0aF90aW1lIjoxNzkyNDA0NzI4LCJqdGkiOiI2MzFlZDA3YS01Njc0LTVmNDctNWM3Mi0wOTNjZmM2ZmU5NDQiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxL2F1dGgvcmVhbG1zL2N4Ym94IiwiYXVkIjoiY3hib3gtb2lkYy1jbGllbnQiLCJzdWIiOiJmNjgxMGMzZC1iMDI3LTQwN2EtOTJiMy01MGRkNDc5YjZiYjciLCJ0eXAiOiJJRCIsImF6cCI6ImN4Ym94LW9pZGMtY2xpZW50Iiwic2lkIjoiOTRkMjk5ZmQtZWM2OC1hNGRhLWU2NjEtMjNiZDkwMmM1ZWQ0IiwiYXRfaGFzaCI6IjRlc2Q3SHliYnRwV3dIcVA1emJzdWciLCJhY3IiOiIxIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiSm9obiBTbm93IiwicHJlZmVycmVkX3VzZXJuYW1lIjoiZGVtbyIsImdpdmVuX25hbWUiOiJKb2huIiwiZmFtaWx5X25hbWUiOiJTbm93IiwiZW1haWwiOiJkZW1vQGxvY2FsLmNvbSJ9.SCEyUSVSzwS13JPCZV_74w456C_BQoEekYEqIH70xwuZwoD50lUWydSJrtRSHVp8_vF1foKz6PIKjzo2D4gaxDKljAg8dNed6uJaW3MTaCdapQttiHVlrG5o-tYPr4M3penqEGfRHsAs-BG4pg2m-fhycPGevVyRZkiaFthj4THt9xEodawMAnrK454zCwAHU4BjMU_1ZDHiNjR361dc-mHtkMnvg7sHBiDw0nCDUvaeEHbt5elgEcioMmDZTrLAygtvA6IbcQ8AaRnfThbyRNqhzUby10Wnuqz-PpnBzdddX86zOTfkPg93luXYJfIi7ONC_fdiMr0ZvxAav_dHpA","not-before-policy":0,"session_state":"94d299fd-ec68-a4da-e661-23bd902c5ed4","scope":"openid email profile"}
+ 
+10:12:12.105 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 8467959c-241b-44e3-b255-20edbdfa9136 
+GET http://localhost:81/api/v1/notification/check-new-notification
+ 
+10:12:12.108 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: 12bb7593-4e04-471a-abbd-eab4100400b7 
+GET http://localhost:81/api/v1/data/client/myexample6103?_page=1&_limit=5
+ 
+10:12:12.189 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: 8467959c-241b-44e3-b255-20edbdfa9136 
+GET http://localhost:81/api/v1/notification/check-new-notification
+200 
+Response Body: {"success":true,"data":0}
+ 
+10:12:12.433 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: 12bb7593-4e04-471a-abbd-eab4100400b7 
+GET http://localhost:81/api/v1/data/client/myexample6103?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1100191","vstamp":0,"fullName":null,"address":null,"importance":null,"status":null,"dateStart":null}],"hasNext":false}
+ 
+10:12:12.477 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 091500d3-826d-422f-b579-60c10df84865 
+GET http://localhost:81/api/v1/row-meta/client/myexample6103/1100191
+ 
+10:12:12.479 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: 3ef3211a-2bf9-463c-9c45-2efca266432c 
+GET http://localhost:81/api/v1/count/client/myexample6103
+ 
+10:12:12.515 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: 3ef3211a-2bf9-463c-9c45-2efca266432c 
+GET http://localhost:81/api/v1/count/client/myexample6103
+200 
+Response Body: {"success":true,"data":1}
+ 
+10:12:12.615 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: 091500d3-826d-422f-b579-60c10df84865 
+GET http://localhost:81/api/v1/row-meta/client/myexample6103/1100191
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true},{"type":"cancel-create","text":"Cancel","icon":"close","showOnlyIcon":true,"scope":"record","autoSaveBefore":false},{"type":"create","text":"Add","icon":"plus","showOnlyIcon":true,"scope":"bc","autoSaveBefore":false},{"type":"delete","text":"Delete","icon":"delete","showOnlyIcon":true,"scope":"record","autoSaveBefore":false}],"fields":[{"key":"address","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"dateStart","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"importance","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":false,"dictionaryName":"CLIENT_IMPORTANCE","currentValue":null,"values":[{"value":"High","options":{}},{"value":"Middle","options":{}},{"value":"Low","options":{}}],"filterValues":[{"value":"High","options":{}},{"value":"Middle","options":{}},{"value":"Low","options":{}}],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"fullName","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":true,"currentValue":"1100191","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"status","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"dictionaryName":"status","currentValue":null,"values":[{"value":"New","options":{}},{"value":"Inactive","options":{}},{"value":"In progress","options":{}}],"filterValues":[{"value":"New","options":{}},{"value":"Inactive","options":{}},{"value":"In progress","options":{}}],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+10:12:12.866 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 96ab83c3-45b3-4af4-8eab-1f57268e2afe 
+GET http://localhost:81/api/v1/data/InputBasic/InputBasic?_page=1&_limit=5
+ 
+10:12:12.952 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: 96ab83c3-45b3-4af4-8eab-1f57268e2afe 
+GET http://localhost:81/api/v1/data/InputBasic/InputBasic?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1100497","vstamp":0,"customField":"test data"}],"hasNext":false}
+ 
+10:12:12.974 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: c8cc6003-648b-4f36-a2a0-668d9a2c9398 
+GET http://localhost:81/api/v1/row-meta/InputBasic/InputBasic/1100497
+ 
+10:12:12.972 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 905655b7-c96e-480f-bd8a-ed91cbd7fb9f 
+GET http://localhost:81/api/v1/count/InputBasic/InputBasic
+ 
+10:12:13.006 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: 905655b7-c96e-480f-bd8a-ed91cbd7fb9f 
+GET http://localhost:81/api/v1/count/InputBasic/InputBasic
+200 
+Response Body: {"success":true,"data":1}
+ 
+10:12:13.027 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: c8cc6003-648b-4f36-a2a0-668d9a2c9398 
+GET http://localhost:81/api/v1/row-meta/InputBasic/InputBasic/1100497
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true}],"fields":[{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1100497","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"customField","disabled":false,"forceActive":true,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"test data","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+10:12:16.422 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: 63ed7e70-210e-4c3d-a267-09ba3e8c0d59 
+POST http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token
+Request Body: grant_type=refresh_token&refresh_token=eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI3YTRlODcwZi0wOWM1LTRlMzAtYWZhYi0xNDdlMzkyZmNhOTMifQ.eyJleHAiOjE3OTI0MDY1MjksImlhdCI6MTc5MjQwNDcyOSwianRpIjoiNDAzNTY2YzMtZDU0ZS04MmMxLTE4MmEtYzc5OTgzNWUyNjI2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MS9hdXRoL3JlYWxtcy9jeGJveCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODEvYXV0aC9yZWFsbXMvY3hib3giLCJzdWIiOiJmNjgxMGMzZC1iMDI3LTQwN2EtOTJiMy01MGRkNDc5YjZiYjciLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoiY3hib3gtb2lkYy1jbGllbnQiLCJzaWQiOiI5NGQyOTlmZC1lYzY4LWE0ZGEtZTY2MS0yM2JkOTAyYzVlZDQiLCJzY29wZSI6Im9wZW5pZCBhY3Igcm9sZXMgYmFzaWMgd2ViLW9yaWdpbnMgZW1haWwgcHJvZmlsZSIsInJldXNlX2lkIjoiNjBhMzYzNzctNDljNS00OTg2LTlmNGUtODZiYTUxMDdjMzVmIn0.v4sbIEjDzjJcijFilqzVoCrjhFuVrW7NXOfmOVZ_fc8iFjfu6mcZJIUiik0ZouGExQozgTCgQl_UFMpucgC0Tg&scope=openid+email+profile&client_id=cxbox-oidc-client
+ 
+10:12:16.482 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: 63ed7e70-210e-4c3d-a267-09ba3e8c0d59 
+POST http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token
+200 OK
+Response Body: {"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJLLWh6SGo5NkNhMVkzaFNPZmpPQjFQVGVNZXhZbGRIclc3czJha3ZqNnpjIn0.eyJleHAiOjE3OTI0MDQ4NTYsImlhdCI6MTc5MjQwNDczNiwiYXV0aF90aW1lIjoxNzkyNDA0NzI4LCJqdGkiOiJvbnJ0cnQ6Yzk4ODBkMzQtMzJmOC00OGVkLTc4NzgtM2FlZWI2NDRiYTRhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MS9hdXRoL3JlYWxtcy9jeGJveCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJmNjgxMGMzZC1iMDI3LTQwN2EtOTJiMy01MGRkNDc5YjZiYjciLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJjeGJveC1vaWRjLWNsaWVudCIsInNpZCI6Ijk0ZDI5OWZkLWVjNjgtYTRkYS1lNjYxLTIzYmQ5MDJjNWVkNCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImN4Ym94LW9pZGMtY2xpZW50Ijp7InJvbGVzIjpbIkNYQk9YX1VTRVIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJKb2huIFNub3ciLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW1vIiwiZ2l2ZW5fbmFtZSI6IkpvaG4iLCJmYW1pbHlfbmFtZSI6IlNub3ciLCJlbWFpbCI6ImRlbW9AbG9jYWwuY29tIn0.CrY-crHT4mcK5QoXfnSFS1RRoSPc_dSOL5-XF3-WZWL7Q9AyFdzBNQkQAbrrubCjaLcpBD_aTQ8s8S_drhfhJ-DanrHOsTWXB4yDKrAE_K3gc8vg7P4DaadU-gGNwexeZ1dKtQVdpVpKaUD0TVmdQTP3PFm1FGTSyLj02nApUKqHLjTPUKV8_76EAT-Zf8kIkYothiXO70brfjNtw_j_Ewo_3nHe--ESHif5U41JTK4lMooSd8mNtwFD6D5Gum5G5RPdIIUUUwAQ9Edn0V4P-aKRjwy57MCx3tNpfyD-8jONym7aZ3CtDqaFA2QR6lhCnvC97vxMdcpfUAG7t7Fsqw","expires_in":120,"refresh_expires_in":1800,"refresh_token":"eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI3YTRlODcwZi0wOWM1LTRlMzAtYWZhYi0xNDdlMzkyZmNhOTMifQ.eyJleHAiOjE3OTI0MDY1MzYsImlhdCI6MTc5MjQwNDczNiwianRpIjoiZDllMmQ5ZTQtMWJmOC1iMDBkLTA1NzQtZmZkYjZlOGMwZTFhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MS9hdXRoL3JlYWxtcy9jeGJveCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODEvYXV0aC9yZWFsbXMvY3hib3giLCJzdWIiOiJmNjgxMGMzZC1iMDI3LTQwN2EtOTJiMy01MGRkNDc5YjZiYjciLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoiY3hib3gtb2lkYy1jbGllbnQiLCJzaWQiOiI5NGQyOTlmZC1lYzY4LWE0ZGEtZTY2MS0yM2JkOTAyYzVlZDQiLCJzY29wZSI6Im9wZW5pZCBhY3Igcm9sZXMgYmFzaWMgd2ViLW9yaWdpbnMgZW1haWwgcHJvZmlsZSIsInJldXNlX2lkIjoiNjBhMzYzNzctNDljNS00OTg2LTlmNGUtODZiYTUxMDdjMzVmIn0.skMxqNcvv6qmF_cVUp7lkC2iWdDspoHTc7iglaLX2zZwrFnfDMVgcWf5mIAj-3XptRj_kc1AKp8lgaj3RkU1hQ","token_type":"Bearer","id_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJLLWh6SGo5NkNhMVkzaFNPZmpPQjFQVGVNZXhZbGRIclc3czJha3ZqNnpjIn0.eyJleHAiOjE3OTI0MDQ4NTYsImlhdCI6MTc5MjQwNDczNiwiYXV0aF90aW1lIjoxNzkyNDA0NzI4LCJqdGkiOiI2NTY2NmQ5MS1kN2Y1LTgxODMtNDM0MS1hM2IyZTZmZWVlNTQiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxL2F1dGgvcmVhbG1zL2N4Ym94IiwiYXVkIjoiY3hib3gtb2lkYy1jbGllbnQiLCJzdWIiOiJmNjgxMGMzZC1iMDI3LTQwN2EtOTJiMy01MGRkNDc5YjZiYjciLCJ0eXAiOiJJRCIsImF6cCI6ImN4Ym94LW9pZGMtY2xpZW50Iiwic2lkIjoiOTRkMjk5ZmQtZWM2OC1hNGRhLWU2NjEtMjNiZDkwMmM1ZWQ0IiwiYXRfaGFzaCI6Inp4ekl4Mmg3eG1HQ1VBWndMclFvZlEiLCJhY3IiOiIxIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiSm9obiBTbm93IiwicHJlZmVycmVkX3VzZXJuYW1lIjoiZGVtbyIsImdpdmVuX25hbWUiOiJKb2huIiwiZmFtaWx5X25hbWUiOiJTbm93IiwiZW1haWwiOiJkZW1vQGxvY2FsLmNvbSJ9.hS6WmCiEjPRyV0DQltrDNWCrcHmHwy5Hx5hhIODwnzv2R6lyzeQDOfacwR28SxaDZY2_iElHqK-pzJKUZ5G6JlWrwu-YijAfoJJUfJB3ynvAMwU6z5Ja0HmZnEZcKcr9KmGGNQIUxfFPnH2d-6XcKC8NWMW6D9OGUFN6I2jUTVC2lfzd7BSbAPHTjerFOYuGGQMoM-T6VsWVk-eAte-IE-nvx64qzsDwJtNIzgq61zcTkl00oZEaf1WMZRu2sfD36EwWEWCE-HHceEOSYC1tubA9SGgN2ZVMWjagl8ag08G7rOR-2daXbc9xdgNU9J_hK29ncKwx--Ms08vYckHsCg","not-before-policy":0,"session_state":"94d299fd-ec68-a4da-e661-23bd902c5ed4","scope":"openid email profile"}
+ 
+10:13:16.495 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: b5a020a4-6822-414e-8c99-93145783557c 
+POST http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token
+Request Body: grant_type=refresh_token&refresh_token=eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI3YTRlODcwZi0wOWM1LTRlMzAtYWZhYi0xNDdlMzkyZmNhOTMifQ.eyJleHAiOjE3OTI0MDY1MzYsImlhdCI6MTc5MjQwNDczNiwianRpIjoiZDllMmQ5ZTQtMWJmOC1iMDBkLTA1NzQtZmZkYjZlOGMwZTFhIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MS9hdXRoL3JlYWxtcy9jeGJveCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODEvYXV0aC9yZWFsbXMvY3hib3giLCJzdWIiOiJmNjgxMGMzZC1iMDI3LTQwN2EtOTJiMy01MGRkNDc5YjZiYjciLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoiY3hib3gtb2lkYy1jbGllbnQiLCJzaWQiOiI5NGQyOTlmZC1lYzY4LWE0ZGEtZTY2MS0yM2JkOTAyYzVlZDQiLCJzY29wZSI6Im9wZW5pZCBhY3Igcm9sZXMgYmFzaWMgd2ViLW9yaWdpbnMgZW1haWwgcHJvZmlsZSIsInJldXNlX2lkIjoiNjBhMzYzNzctNDljNS00OTg2LTlmNGUtODZiYTUxMDdjMzVmIn0.skMxqNcvv6qmF_cVUp7lkC2iWdDspoHTc7iglaLX2zZwrFnfDMVgcWf5mIAj-3XptRj_kc1AKp8lgaj3RkU1hQ&scope=openid+email+profile&client_id=cxbox-oidc-client
+ 
+10:13:16.520 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: b5a020a4-6822-414e-8c99-93145783557c 
+POST http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token
+200 OK
+Response Body: {"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJLLWh6SGo5NkNhMVkzaFNPZmpPQjFQVGVNZXhZbGRIclc3czJha3ZqNnpjIn0.eyJleHAiOjE3OTI0MDQ5MTYsImlhdCI6MTc5MjQwNDc5NiwiYXV0aF90aW1lIjoxNzkyNDA0NzI4LCJqdGkiOiJvbnJ0cnQ6ZTJkMzkxZTUtZGYwOS05ZDRkLWI2MGMtNTg5MTI4NDVmNmM1IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MS9hdXRoL3JlYWxtcy9jeGJveCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJmNjgxMGMzZC1iMDI3LTQwN2EtOTJiMy01MGRkNDc5YjZiYjciLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJjeGJveC1vaWRjLWNsaWVudCIsInNpZCI6Ijk0ZDI5OWZkLWVjNjgtYTRkYS1lNjYxLTIzYmQ5MDJjNWVkNCIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImN4Ym94LW9pZGMtY2xpZW50Ijp7InJvbGVzIjpbIkNYQk9YX1VTRVIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJKb2huIFNub3ciLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW1vIiwiZ2l2ZW5fbmFtZSI6IkpvaG4iLCJmYW1pbHlfbmFtZSI6IlNub3ciLCJlbWFpbCI6ImRlbW9AbG9jYWwuY29tIn0.no0bvGKGofpb8SyHyvi6aROOQYSRVQPRKO0LSWlJ93MIdRs7dxq7h5J1KoOreZ46vznJQviczzwXOcxnRCnpjdQ2MD1yp1cqLKUzoJqSx5pthu-faR3EUgeUqSeNrrXgR4mGG2EqmsGcY1n7_EIwuoDxfXXQQuCaMbEXDd7bVp91ELhoEfq7wRJq4yftBu0pNXfMVRIA586tW8BYUiS8LwbuQ4rPaY6SBP0HVwPyT7lLM9Jnu-cFrD1qZKNOSDacUxAflQLXbZLHzz-_TX-yt8lZpTLDJyVeThLsBpvxD5KIqpqD9b2nRtY05_TPdbS2pr_nm02JU1Tgg4rhBQ5PsA","expires_in":120,"refresh_expires_in":1800,"refresh_token":"eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI3YTRlODcwZi0wOWM1LTRlMzAtYWZhYi0xNDdlMzkyZmNhOTMifQ.eyJleHAiOjE3OTI0MDY1OTYsImlhdCI6MTc5MjQwNDc5NiwianRpIjoiNDE5MWU3NTItMzQ2MC0yNmJiLTg1MzgtOGY3YTQ4NGQzNmZkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MS9hdXRoL3JlYWxtcy9jeGJveCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODEvYXV0aC9yZWFsbXMvY3hib3giLCJzdWIiOiJmNjgxMGMzZC1iMDI3LTQwN2EtOTJiMy01MGRkNDc5YjZiYjciLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoiY3hib3gtb2lkYy1jbGllbnQiLCJzaWQiOiI5NGQyOTlmZC1lYzY4LWE0ZGEtZTY2MS0yM2JkOTAyYzVlZDQiLCJzY29wZSI6Im9wZW5pZCBhY3Igcm9sZXMgYmFzaWMgd2ViLW9yaWdpbnMgZW1haWwgcHJvZmlsZSIsInJldXNlX2lkIjoiNjBhMzYzNzctNDljNS00OTg2LTlmNGUtODZiYTUxMDdjMzVmIn0.mKGA_GS5aFIkGPJ0JFQNopyBs9L45k0L3EqTB0JzcDJk8_KpzRrLAeNGkTS038cFTVBtGqLq72aOFr-GNND4uQ","token_type":"Bearer","id_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJLLWh6SGo5NkNhMVkzaFNPZmpPQjFQVGVNZXhZbGRIclc3czJha3ZqNnpjIn0.eyJleHAiOjE3OTI0MDQ5MTYsImlhdCI6MTc5MjQwNDc5NiwiYXV0aF90aW1lIjoxNzkyNDA0NzI4LCJqdGkiOiIyYjQ3ZWRjNi0yNGNiLWZiZjYtNjA3MC0xNjU5MjNmYTA2ZjciLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxL2F1dGgvcmVhbG1zL2N4Ym94IiwiYXVkIjoiY3hib3gtb2lkYy1jbGllbnQiLCJzdWIiOiJmNjgxMGMzZC1iMDI3LTQwN2EtOTJiMy01MGRkNDc5YjZiYjciLCJ0eXAiOiJJRCIsImF6cCI6ImN4Ym94LW9pZGMtY2xpZW50Iiwic2lkIjoiOTRkMjk5ZmQtZWM2OC1hNGRhLWU2NjEtMjNiZDkwMmM1ZWQ0IiwiYXRfaGFzaCI6ImxSQzQtM1NwbGxtYlJ2b1p6X0JKbWciLCJhY3IiOiIxIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiSm9obiBTbm93IiwicHJlZmVycmVkX3VzZXJuYW1lIjoiZGVtbyIsImdpdmVuX25hbWUiOiJKb2huIiwiZmFtaWx5X25hbWUiOiJTbm93IiwiZW1haWwiOiJkZW1vQGxvY2FsLmNvbSJ9.PPFWYrlvez_Wn8y564fY503hTMl8eqC5IQbMsfY5mWPBNpnIK_irq6zqs_R4V4EB7JmUnZpo3XF9u0Ckv9ScvLMupYMleyP0hWtloZRHWjPaUGDH73SGKW2DYahqNKo_kZDw1vThmoK5rQ0ZqS-4ZWKkbFO0ae61kwhRC0Ydrh1S5j8-QPUWNYIy8aeAnzBCnFYQMNlq4eSehmmQeISmqALTletmanIgc05ytWK9Sui2s40oZADwFjw5Jkz6rnX8Met9B2GajPd1EI-w9Jhn8DpqBiqOnORNU9Y4Bdf6S1bEnCyjRuUqu3OU1zFkOWXIPvArIC5Hs9JatisIFRJvWg","not-before-policy":0,"session_state":"94d299fd-ec68-a4da-e661-23bd902c5ed4","scope":"openid email profile"}
+ 
+10:13:34.667 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: 44e37418-f103-4043-9e57-f85e8cdf8661 
+GET http://localhost:81/auth/realms/cxbox/protocol/openid-connect/logout?client_id=cxbox-oidc-client&post_logout_redirect_uri=http%3A%2F%2Flocalhost%3A81%2Fui%2F%23%2F&redirect_uri=http%3A%2F%2Flocalhost%3A81%2Fui%2F%23%2F&id_token_hint=eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJLLWh6SGo5NkNhMVkzaFNPZmpPQjFQVGVNZXhZbGRIclc3czJha3ZqNnpjIn0.eyJleHAiOjE3OTI0MDQ5MTYsImlhdCI6MTc5MjQwNDc5NiwiYXV0aF90aW1lIjoxNzkyNDA0NzI4LCJqdGkiOiIyYjQ3ZWRjNi0yNGNiLWZiZjYtNjA3MC0xNjU5MjNmYTA2ZjciLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxL2F1dGgvcmVhbG1zL2N4Ym94IiwiYXVkIjoiY3hib3gtb2lkYy1jbGllbnQiLCJzdWIiOiJmNjgxMGMzZC1iMDI3LTQwN2EtOTJiMy01MGRkNDc5YjZiYjciLCJ0eXAiOiJJRCIsImF6cCI6ImN4Ym94LW9pZGMtY2xpZW50Iiwic2lkIjoiOTRkMjk5ZmQtZWM2OC1hNGRhLWU2NjEtMjNiZDkwMmM1ZWQ0IiwiYXRfaGFzaCI6ImxSQzQtM1NwbGxtYlJ2b1p6X0JKbWciLCJhY3IiOiIxIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiSm9obiBTbm93IiwicHJlZmVycmVkX3VzZXJuYW1lIjoiZGVtbyIsImdpdmVuX25hbWUiOiJKb2huIiwiZmFtaWx5X25hbWUiOiJTbm93IiwiZW1haWwiOiJkZW1vQGxvY2FsLmNvbSJ9.PPFWYrlvez_Wn8y564fY503hTMl8eqC5IQbMsfY5mWPBNpnIK_irq6zqs_R4V4EB7JmUnZpo3XF9u0Ckv9ScvLMupYMleyP0hWtloZRHWjPaUGDH73SGKW2DYahqNKo_kZDw1vThmoK5rQ0ZqS-4ZWKkbFO0ae61kwhRC0Ydrh1S5j8-QPUWNYIy8aeAnzBCnFYQMNlq4eSehmmQeISmqALTletmanIgc05ytWK9Sui2s40oZADwFjw5Jkz6rnX8Met9B2GajPd1EI-w9Jhn8DpqBiqOnORNU9Y4Bdf6S1bEnCyjRuUqu3OU1zFkOWXIPvArIC5Hs9JatisIFRJvWg
+ 
+10:13:34.701 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: 44e37418-f103-4043-9e57-f85e8cdf8661 
+GET http://localhost:81/auth/realms/cxbox/protocol/openid-connect/logout?client_id=cxbox-oidc-client&post_logout_redirect_uri=http%3A%2F%2Flocalhost%3A81%2Fui%2F%23%2F&redirect_uri=http%3A%2F%2Flocalhost%3A81%2Fui%2F%23%2F&id_token_hint=eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJLLWh6SGo5NkNhMVkzaFNPZmpPQjFQVGVNZXhZbGRIclc3czJha3ZqNnpjIn0.eyJleHAiOjE3OTI0MDQ5MTYsImlhdCI6MTc5MjQwNDc5NiwiYXV0aF90aW1lIjoxNzkyNDA0NzI4LCJqdGkiOiIyYjQ3ZWRjNi0yNGNiLWZiZjYtNjA3MC0xNjU5MjNmYTA2ZjciLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxL2F1dGgvcmVhbG1zL2N4Ym94IiwiYXVkIjoiY3hib3gtb2lkYy1jbGllbnQiLCJzdWIiOiJmNjgxMGMzZC1iMDI3LTQwN2EtOTJiMy01MGRkNDc5YjZiYjciLCJ0eXAiOiJJRCIsImF6cCI6ImN4Ym94LW9pZGMtY2xpZW50Iiwic2lkIjoiOTRkMjk5ZmQtZWM2OC1hNGRhLWU2NjEtMjNiZDkwMmM1ZWQ0IiwiYXRfaGFzaCI6ImxSQzQtM1NwbGxtYlJ2b1p6X0JKbWciLCJhY3IiOiIxIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiSm9obiBTbm93IiwicHJlZmVycmVkX3VzZXJuYW1lIjoiZGVtbyIsImdpdmVuX25hbWUiOiJKb2huIiwiZmFtaWx5X25hbWUiOiJTbm93IiwiZW1haWwiOiJkZW1vQGxvY2FsLmNvbSJ9.PPFWYrlvez_Wn8y564fY503hTMl8eqC5IQbMsfY5mWPBNpnIK_irq6zqs_R4V4EB7JmUnZpo3XF9u0Ckv9ScvLMupYMleyP0hWtloZRHWjPaUGDH73SGKW2DYahqNKo_kZDw1vThmoK5rQ0ZqS-4ZWKkbFO0ae61kwhRC0Ydrh1S5j8-QPUWNYIy8aeAnzBCnFYQMNlq4eSehmmQeISmqALTletmanIgc05ytWK9Sui2s40oZADwFjw5Jkz6rnX8Met9B2GajPd1EI-w9Jhn8DpqBiqOnORNU9Y4Bdf6S1bEnCyjRuUqu3OU1zFkOWXIPvArIC5Hs9JatisIFRJvWg
+302 Found
+ 
+10:13:35.487 [LittleProxy-0-ClientToProxyWorker-1] TRACE API_NO_LOGIN_LOGGER - 
+Request: e57e8e89-aabd-4b09-ad77-0ee91b10b69f 
+GET http://localhost:81/api/v1/auth/oidc.json
+ 
+10:13:35.497 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: e57e8e89-aabd-4b09-ad77-0ee91b10b69f 
+GET http://localhost:81/api/v1/auth/oidc.json
+200 
+Response Body: {"client_id":"cxbox-oidc-client","scope":"openid profile","authority":"http://localhost:81/auth/realms/cxbox"}
+ 
+10:13:35.513 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: a2fed5b3-7797-48e9-8f2e-29daec8691fc 
+GET http://localhost:81/auth/realms/cxbox/.well-known/openid-configuration
+ 
+10:13:35.521 [LittleProxy-0-ProxyToServerWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Response: a2fed5b3-7797-48e9-8f2e-29daec8691fc 
+GET http://localhost:81/auth/realms/cxbox/.well-known/openid-configuration
+200 OK
+Response Body: {"issuer":"http://localhost:81/auth/realms/cxbox","authorization_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth","token_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token","introspection_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token/introspect","userinfo_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/userinfo","end_session_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/logout","frontchannel_logout_session_supported":true,"frontchannel_logout_supported":true,"jwks_uri":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/certs","check_session_iframe":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/login-status-iframe.html","grant_types_supported":["authorization_code","client_credentials","implicit","password","refresh_token","urn:ietf:params:oauth:grant-type:device_code","urn:ietf:params:oauth:grant-type:token-exchange","urn:ietf:params:oauth:grant-type:uma-ticket","urn:openid:params:grant-type:ciba"],"acr_values_supported":["0","1"],"response_types_supported":["code","none","id_token","token","id_token token","code id_token","code token","code id_token token"],"subject_types_supported":["public","pairwise"],"prompt_values_supported":["none","login","consent"],"id_token_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"id_token_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"id_token_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"userinfo_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512","none"],"userinfo_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"userinfo_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"request_object_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512","none"],"request_object_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"request_object_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"response_modes_supported":["query","fragment","form_post","query.jwt","fragment.jwt","form_post.jwt","jwt"],"registration_endpoint":"http://localhost:81/auth/realms/cxbox/clients-registrations/openid-connect","token_endpoint_auth_methods_supported":["private_key_jwt","client_secret_basic","client_secret_post","tls_client_auth","client_secret_jwt"],"token_endpoint_auth_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"introspection_endpoint_auth_methods_supported":["private_key_jwt","client_secret_basic","client_secret_post","tls_client_auth","client_secret_jwt"],"introspection_endpoint_auth_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"authorization_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"authorization_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"authorization_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"claims_supported":["iss","sub","aud","exp","iat","auth_time","name","given_name","family_name","preferred_username","email","acr","azp","nonce"],"claim_types_supported":["normal"],"claims_parameter_supported":true,"scopes_supported":["openid","acr","roles","basic","microprofile-jwt","service_account","web-origins","address","email","profile","offline_access","phone"],"request_parameter_supported":true,"request_uri_parameter_supported":true,"require_request_uri_registration":true,"code_challenge_methods_supported":["plain","S256"],"tls_client_certificate_bound_access_tokens":true,"dpop_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","ES256","RS256","ES512","PS256","PS512","RS512"],"revocation_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/revoke","revocation_endpoint_auth_methods_supported":["private_key_jwt","client_secret_basic","client_secret_post","tls_client_auth","client_secret_jwt"],"revocation_endpoint_auth_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"backchannel_logout_supported":true,"backchannel_logout_session_supported":true,"device_authorization_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth/device","backchannel_token_delivery_modes_supported":["poll","ping"],"backchannel_authentication_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/ciba/auth","backchannel_authentication_request_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","ES256","RS256","ES512","PS256","PS512","RS512"],"require_pushed_authorization_requests":false,"pushed_authorization_request_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/par/request","mtls_endpoint_aliases":{"token_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token","revocation_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/revoke","introspection_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token/introspect","device_authorization_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth/device","registration_endpoint":"http://localhost:81/auth/realms/cxbox/clients-registrations/openid-connect","userinfo_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/userinfo","pushed_authorization_request_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/par/request","backchannel_authentication_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/ciba/auth"},"authorization_response_iss_parameter_supported":true}
+ 
+10:13:35.532 [main] TRACE API_NO_LOGIN_LOGGER - ending test: The token expired while the tab was frozen: the websocket reconnects with a renewed token, no popup. uuid: [engine:junit-jupiter]/[class:application.Samples.Feature.signInAgain.WebSocketSessionTest]/[method:expiredToken_reconnectsWithRenewedToken()] 

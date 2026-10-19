@@ -1,0 +1,692 @@
+09:47:55.633 [main] TRACE API_NO_LOGIN_LOGGER - starting test: Full text search. uuid: [engine:junit-jupiter]/[class:application.Samples.CardList.CardListPropertiesTest]/[method:fullTextSearch()] 
+09:47:56.870 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: d5159f0f-62b8-43d4-ac54-de635890b960 
+GET http://localhost:81/api/v1/auth/oidc.json
+ 
+09:47:56.872 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: d5159f0f-62b8-43d4-ac54-de635890b960 
+GET http://localhost:81/api/v1/auth/oidc.json
+200 
+Response Body: {"client_id":"cxbox-oidc-client","scope":"openid profile","authority":"http://localhost:81/auth/realms/cxbox"}
+ 
+09:47:56.886 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: dbd58eb0-be16-4cf9-a729-669cc5cb4cf7 
+GET http://localhost:81/auth/realms/cxbox/.well-known/openid-configuration
+ 
+09:47:56.889 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: dbd58eb0-be16-4cf9-a729-669cc5cb4cf7 
+GET http://localhost:81/auth/realms/cxbox/.well-known/openid-configuration
+200 OK
+Response Body: {"issuer":"http://localhost:81/auth/realms/cxbox","authorization_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth","token_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token","introspection_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token/introspect","userinfo_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/userinfo","end_session_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/logout","frontchannel_logout_session_supported":true,"frontchannel_logout_supported":true,"jwks_uri":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/certs","check_session_iframe":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/login-status-iframe.html","grant_types_supported":["authorization_code","client_credentials","implicit","password","refresh_token","urn:ietf:params:oauth:grant-type:device_code","urn:ietf:params:oauth:grant-type:token-exchange","urn:ietf:params:oauth:grant-type:uma-ticket","urn:openid:params:grant-type:ciba"],"acr_values_supported":["0","1"],"response_types_supported":["code","none","id_token","token","id_token token","code id_token","code token","code id_token token"],"subject_types_supported":["public","pairwise"],"prompt_values_supported":["none","login","consent"],"id_token_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"id_token_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"id_token_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"userinfo_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512","none"],"userinfo_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"userinfo_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"request_object_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512","none"],"request_object_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"request_object_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"response_modes_supported":["query","fragment","form_post","query.jwt","fragment.jwt","form_post.jwt","jwt"],"registration_endpoint":"http://localhost:81/auth/realms/cxbox/clients-registrations/openid-connect","token_endpoint_auth_methods_supported":["private_key_jwt","client_secret_basic","client_secret_post","tls_client_auth","client_secret_jwt"],"token_endpoint_auth_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"introspection_endpoint_auth_methods_supported":["private_key_jwt","client_secret_basic","client_secret_post","tls_client_auth","client_secret_jwt"],"introspection_endpoint_auth_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"authorization_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"authorization_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"authorization_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"claims_supported":["iss","sub","aud","exp","iat","auth_time","name","given_name","family_name","preferred_username","email","acr","azp","nonce"],"claim_types_supported":["normal"],"claims_parameter_supported":true,"scopes_supported":["openid","acr","roles","basic","microprofile-jwt","service_account","web-origins","address","email","profile","offline_access","phone"],"request_parameter_supported":true,"request_uri_parameter_supported":true,"require_request_uri_registration":true,"code_challenge_methods_supported":["plain","S256"],"tls_client_certificate_bound_access_tokens":true,"dpop_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","ES256","RS256","ES512","PS256","PS512","RS512"],"revocation_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/revoke","revocation_endpoint_auth_methods_supported":["private_key_jwt","client_secret_basic","client_secret_post","tls_client_auth","client_secret_jwt"],"revocation_endpoint_auth_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"backchannel_logout_supported":true,"backchannel_logout_session_supported":true,"device_authorization_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth/device","backchannel_token_delivery_modes_supported":["poll","ping"],"backchannel_authentication_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/ciba/auth","backchannel_authentication_request_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","ES256","RS256","ES512","PS256","PS512","RS512"],"require_pushed_authorization_requests":false,"pushed_authorization_request_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/par/request","mtls_endpoint_aliases":{"token_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token","revocation_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/revoke","introspection_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token/introspect","device_authorization_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth/device","registration_endpoint":"http://localhost:81/auth/realms/cxbox/clients-registrations/openid-connect","userinfo_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/userinfo","pushed_authorization_request_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/par/request","backchannel_authentication_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/ciba/auth"},"authorization_response_iss_parameter_supported":true}
+ 
+09:47:56.900 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: c03e585f-9dc1-4e99-bc46-4e1c3ddff4d3 
+GET http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth?client_id=cxbox-oidc-client&redirect_uri=http%3A%2F%2Flocalhost%3A81%2Fui%2F%23%2F%3Fsign_in_callback%3Dredirect&response_type=code&scope=openid+profile&state=be3f9b58a21e4ad1801d3338f13b09ad&code_challenge=Z8wqTH_LhsMpMQN0rn6X3xyTqUeRJAlhthFhbZnPdIw&code_challenge_method=S256
+ 
+09:47:56.929 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: c03e585f-9dc1-4e99-bc46-4e1c3ddff4d3 
+GET http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth?client_id=cxbox-oidc-client&redirect_uri=http%3A%2F%2Flocalhost%3A81%2Fui%2F%23%2F%3Fsign_in_callback%3Dredirect&response_type=code&scope=openid+profile&state=be3f9b58a21e4ad1801d3338f13b09ad&code_challenge=Z8wqTH_LhsMpMQN0rn6X3xyTqUeRJAlhthFhbZnPdIw&code_challenge_method=S256
+200 OK
+Response Body: <!DOCTYPE html>
+<html class="login-pf" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sign in to Cxbox Code Samples</title>
+    <link rel="icon" href="/auth/resources/07ody/login/keycloak.v2/img/favicon.ico" />
+            <link href="/auth/resources/07ody/common/keycloak/vendor/patternfly-v5/patternfly.min.css" rel="stylesheet" />
+            <link href="/auth/resources/07ody/common/keycloak/vendor/patternfly-v5/patternfly-addons.css" rel="stylesheet" />
+            <link href="/auth/resources/07ody/login/keycloak.v2/css/styles.css" rel="stylesheet" />
+    <script type="importmap">
+        {
+            "imports": {
+                "rfc4648": "/auth/resources/07ody/common/keycloak/vendor/rfc4648/rfc4648.js"
+            }
+        }
+    </script>
+      <script type="module" async blocking="render">
+          const DARK_MODE_CLASS = "pf-v5-theme-dark";
+          const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+          updateDarkMode(mediaQuery.matches);
+          mediaQuery.addEventListener("change", (event) => updateDarkMode(event.matches));
+
+          function updateDarkMode(isEnabled) {
+            const { classList } = document.documentElement;
+
+            if (isEnabled) {
+              classList.add(DARK_MODE_CLASS);
+            } else {
+              classList.remove(DARK_MODE_CLASS);
+            }
+          }
+      </script>
+    <script type="module" src="/auth/resources/07ody/login/keycloak.v2/js/passwordVisibility.js"></script>
+    <script type="module">
+        import { startSessionPolling } from "/auth/resources/07ody/login/keycloak.v2/js/authChecker.js";
+
+        startSessionPolling(
+            "/auth/realms/cxbox/login-actions/restart?client_id=cxbox-oidc-client&tab_id=XeopfloPurc&client_data=eyJydSI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODEvdWkvIy8_c2lnbl9pbl9jYWxsYmFjaz1yZWRpcmVjdCIsInJ0IjoiY29kZSIsInN0IjoiYmUzZjliNThhMjFlNGFkMTgwMWQzMzM4ZjEzYjA5YWQifQ&skip_logout=true"
+        );
+    </script>
+    <script type="module">
+        document.addEventListener("click", (event) => {
+            const link = event.target.closest("a[data-once-link]");
+
+            if (!link) {
+                return;
+            }
+
+            if (link.getAttribute("aria-disabled") === "true") {
+                event.preventDefault();
+                return;
+            }
+
+            const { disabledClass } = link.dataset;
+
+            if (disabledClass) {
+                link.classList.add(...disabledClass.trim().split(/\s+/));
+            }
+
+            link.setAttribute("role", "link");
+            link.setAttribute("aria-disabled", "true");
+        });
+    </script>
+        <script type="module">
+            import { checkAuthSession } from "/auth/resources/07ody/login/keycloak.v2/js/authChecker.js";
+
+            checkAuthSession(
+                "XTNXr/MmLoaul29NunV9gOLTlQgTHwy7lqrRBkodhlw"
+            );
+        </script>
+    <script>
+      // Workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=1404468
+      const isFirefox = true;
+    </script>
+</head>
+
+<body id="keycloak-bg" class="" data-page-id="login-login">
+<div class="pf-v5-c-login">
+  <div class="pf-v5-c-login__container">
+    <header id="kc-header" class="pf-v5-c-login__header">
+      <div id="kc-header-wrapper"
+              class="pf-v5-c-brand"><div><b>Cxbox Code Samples</b> <p></p></div><div style="text-transform:lowercase"><a href="https://github.com/CX-Box/cxbox-code-samples" rel="nofollow">Github</a></div><p style="text-transform:lowercase"> username: demo / password: demo</p></div>
+    </header>
+    <main class="pf-v5-c-login__main">
+      <div class="pf-v5-c-login__main-header">
+        <h1 class="pf-v5-c-title pf-m-3xl" id="kc-page-title"><!-- template: login.ftl -->
+
+        Sign in to your account
+
+</h1>
+      </div>
+      <div class="pf-v5-c-login__main-body">
+
+
+<!-- template: login.ftl -->
+
+        <div id="kc-form">
+          <div id="kc-form-wrapper">
+                <form id="kc-form-login" class="pf-v5-c-form pf-v5-u-w-100" onsubmit="login.disabled = true; return true;" action="http://localhost:81/auth/realms/cxbox/login-actions/authenticate?session_code=pp3r_sRbQ3gz5B11dru7s_whyflbLWpWiDYmQg-U1jI&amp;execution=8945e9fd-45cd-43d0-85a4-9ff65d6b2a44&amp;client_id=cxbox-oidc-client&amp;tab_id=XeopfloPurc&amp;client_data=eyJydSI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODEvdWkvIy8_c2lnbl9pbl9jYWxsYmFjaz1yZWRpcmVjdCIsInJ0IjoiY29kZSIsInN0IjoiYmUzZjliNThhMjFlNGFkMTgwMWQzMzM4ZjEzYjA5YWQifQ" method="post" novalidate="novalidate">
+
+<div class="pf-v5-c-form__group">
+    <div class="pf-v5-c-form__group-label pf-v5-u-pb-xs">
+        <label for="username" class="pf-v5-c-form__label">
+        <span class="pf-v5-c-form__label-text">
+                                        Username or email
+
+        </span>
+        </label>
+    </div>
+
+    <span class="pf-v5-c-form-control ">
+        <input id="username" name="username" value="" type="text" autocomplete="username" autofocus
+                
+                aria-invalid=""/>
+    </span>
+
+    <div id="input-error-container-username">
+    </div>
+</div>
+
+
+<div class="pf-v5-c-form__group">
+    <div class="pf-v5-c-form__group-label pf-v5-u-pb-xs">
+        <label for="password" class="pf-v5-c-form__label">
+        <span class="pf-v5-c-form__label-text">
+            Password
+        </span>
+        </label>
+    </div>
+
+    <div class="pf-v5-c-input-group">
+      <div class="pf-v5-c-input-group__item pf-m-fill">
+        <span class="pf-v5-c-form-control ">
+          <input id="password" name="password" value="" type="password" autocomplete="current-password" 
+                  aria-invalid=""/>
+        </span>
+      </div>
+      <div class="pf-v5-c-input-group__item">
+        <button class="pf-v5-c-button pf-m-control" type="button" aria-label="Show password"
+                aria-controls="password" data-password-toggle
+                data-icon-show="fa-eye fas" data-icon-hide="fa-eye-slash fas"
+                data-label-show="Show password" data-label-hide="Hide password" id="password-show-password">
+            <i class="fa-eye fas" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <div class="pf-v5-c-form__helper-text" aria-live="polite">
+        <div class="pf-v5-c-helper-text pf-v5-u-display-flex pf-v5-u-justify-content-space-between">
+        </div>
+    </div>
+
+
+    <div id="input-error-container-password">
+    </div>
+</div>
+
+
+                    <input type="hidden" id="id-hidden-input" name="credentialId" />
+  <div class="pf-v5-c-form__group">
+    <div class="pf-v5-c-form__actions pf-v5-u-pt-xs pf-v5-u-flex-wrap">
+  <button class="pf-v5-c-button pf-m-primary pf-m-block " name="login" id="kc-login"
+          type="submit" >
+  Sign In
+  </button>
+    </div>
+  </div>
+                </form>
+            </div>
+        </div>
+
+
+
+          <div class="pf-v5-c-login__main-footer">
+<!-- template: login.ftl -->
+
+
+
+          </div>
+      </div>
+
+        <div class="pf-v5-c-login__main-footer">
+        </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>
+
+ 
+09:47:57.339 [LittleProxy-0-ClientToProxyWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Request: 52cf9178-3357-4f6b-9a53-df0f9a8a25fe 
+POST http://localhost:81/auth/realms/cxbox/login-actions/authenticate?session_code=pp3r_sRbQ3gz5B11dru7s_whyflbLWpWiDYmQg-U1jI&execution=8945e9fd-45cd-43d0-85a4-9ff65d6b2a44&client_id=cxbox-oidc-client&tab_id=XeopfloPurc&client_data=eyJydSI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODEvdWkvIy8_c2lnbl9pbl9jYWxsYmFjaz1yZWRpcmVjdCIsInJ0IjoiY29kZSIsInN0IjoiYmUzZjliNThhMjFlNGFkMTgwMWQzMzM4ZjEzYjA5YWQifQ
+Request Body: username=demo&password=demo&credentialId=
+ 
+09:47:57.411 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: 52cf9178-3357-4f6b-9a53-df0f9a8a25fe 
+POST http://localhost:81/auth/realms/cxbox/login-actions/authenticate?session_code=pp3r_sRbQ3gz5B11dru7s_whyflbLWpWiDYmQg-U1jI&execution=8945e9fd-45cd-43d0-85a4-9ff65d6b2a44&client_id=cxbox-oidc-client&tab_id=XeopfloPurc&client_data=eyJydSI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODEvdWkvIy8_c2lnbl9pbl9jYWxsYmFjaz1yZWRpcmVjdCIsInJ0IjoiY29kZSIsInN0IjoiYmUzZjliNThhMjFlNGFkMTgwMWQzMzM4ZjEzYjA5YWQifQ
+302 Found
+ 
+09:47:57.731 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 4b073fbd-d93f-405d-aa01-4f9c07dcc151 
+GET http://localhost:81/api/v1/auth/oidc.json
+ 
+09:47:57.732 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: 4b073fbd-d93f-405d-aa01-4f9c07dcc151 
+GET http://localhost:81/api/v1/auth/oidc.json
+200 
+Response Body: {"client_id":"cxbox-oidc-client","scope":"openid profile","authority":"http://localhost:81/auth/realms/cxbox"}
+ 
+09:47:57.742 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 7e0e996e-f7c1-4c69-9f11-e81158398c38 
+GET http://localhost:81/auth/realms/cxbox/.well-known/openid-configuration
+ 
+09:47:57.746 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: 7e0e996e-f7c1-4c69-9f11-e81158398c38 
+GET http://localhost:81/auth/realms/cxbox/.well-known/openid-configuration
+200 OK
+Response Body: {"issuer":"http://localhost:81/auth/realms/cxbox","authorization_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth","token_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token","introspection_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token/introspect","userinfo_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/userinfo","end_session_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/logout","frontchannel_logout_session_supported":true,"frontchannel_logout_supported":true,"jwks_uri":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/certs","check_session_iframe":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/login-status-iframe.html","grant_types_supported":["authorization_code","client_credentials","implicit","password","refresh_token","urn:ietf:params:oauth:grant-type:device_code","urn:ietf:params:oauth:grant-type:token-exchange","urn:ietf:params:oauth:grant-type:uma-ticket","urn:openid:params:grant-type:ciba"],"acr_values_supported":["0","1"],"response_types_supported":["code","none","id_token","token","id_token token","code id_token","code token","code id_token token"],"subject_types_supported":["public","pairwise"],"prompt_values_supported":["none","login","consent"],"id_token_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"id_token_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"id_token_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"userinfo_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512","none"],"userinfo_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"userinfo_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"request_object_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512","none"],"request_object_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"request_object_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"response_modes_supported":["query","fragment","form_post","query.jwt","fragment.jwt","form_post.jwt","jwt"],"registration_endpoint":"http://localhost:81/auth/realms/cxbox/clients-registrations/openid-connect","token_endpoint_auth_methods_supported":["private_key_jwt","client_secret_basic","client_secret_post","tls_client_auth","client_secret_jwt"],"token_endpoint_auth_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"introspection_endpoint_auth_methods_supported":["private_key_jwt","client_secret_basic","client_secret_post","tls_client_auth","client_secret_jwt"],"introspection_endpoint_auth_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"authorization_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"authorization_encryption_alg_values_supported":["ECDH-ES+A256KW","ECDH-ES+A192KW","ECDH-ES+A128KW","RSA-OAEP","RSA-OAEP-256","RSA1_5","ECDH-ES"],"authorization_encryption_enc_values_supported":["A256GCM","A192GCM","A128GCM","A128CBC-HS256","A192CBC-HS384","A256CBC-HS512"],"claims_supported":["iss","sub","aud","exp","iat","auth_time","name","given_name","family_name","preferred_username","email","acr","azp","nonce"],"claim_types_supported":["normal"],"claims_parameter_supported":true,"scopes_supported":["openid","acr","roles","basic","microprofile-jwt","service_account","web-origins","address","email","profile","offline_access","phone"],"request_parameter_supported":true,"request_uri_parameter_supported":true,"require_request_uri_registration":true,"code_challenge_methods_supported":["plain","S256"],"tls_client_certificate_bound_access_tokens":true,"dpop_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","ES256","RS256","ES512","PS256","PS512","RS512"],"revocation_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/revoke","revocation_endpoint_auth_methods_supported":["private_key_jwt","client_secret_basic","client_secret_post","tls_client_auth","client_secret_jwt"],"revocation_endpoint_auth_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","HS256","HS512","ES256","RS256","HS384","ES512","PS256","PS512","RS512"],"backchannel_logout_supported":true,"backchannel_logout_session_supported":true,"device_authorization_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth/device","backchannel_token_delivery_modes_supported":["poll","ping"],"backchannel_authentication_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/ciba/auth","backchannel_authentication_request_signing_alg_values_supported":["PS384","RS384","EdDSA","ES384","ES256","RS256","ES512","PS256","PS512","RS512"],"require_pushed_authorization_requests":false,"pushed_authorization_request_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/par/request","mtls_endpoint_aliases":{"token_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token","revocation_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/revoke","introspection_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token/introspect","device_authorization_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/auth/device","registration_endpoint":"http://localhost:81/auth/realms/cxbox/clients-registrations/openid-connect","userinfo_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/userinfo","pushed_authorization_request_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/par/request","backchannel_authentication_endpoint":"http://localhost:81/auth/realms/cxbox/protocol/openid-connect/ext/ciba/auth"},"authorization_response_iss_parameter_supported":true}
+ 
+09:47:57.749 [LittleProxy-0-ClientToProxyWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Request: 2ddcd42f-1ee3-41df-ae78-acd81caaaa47 
+POST http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token
+Request Body: grant_type=authorization_code&redirect_uri=http%3A%2F%2Flocalhost%3A81%2Fui%2F%23%2F%3Fsign_in_callback%3Dredirect&code=d9794dbe-2704-9ce7-973f-ce2f2ed4ef07.a2a1d474-1c4b-9310-c433-7956509d3faf.4a726c64-c69e-4ec8-8df1-bdb983a902c3&code_verifier=9fc0bc7814d14f5bb9aa3998e927b789250f074955e448988c49ee24239edd9c01b5c0f52ec8497682783b0a245902be&client_id=cxbox-oidc-client
+ 
+09:47:57.761 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: 2ddcd42f-1ee3-41df-ae78-acd81caaaa47 
+POST http://localhost:81/auth/realms/cxbox/protocol/openid-connect/token
+200 OK
+Response Body: {"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJLLWh6SGo5NkNhMVkzaFNPZmpPQjFQVGVNZXhZbGRIclc3czJha3ZqNnpjIn0.eyJleHAiOjE3OTI0MDMzOTcsImlhdCI6MTc5MjQwMzI3NywiYXV0aF90aW1lIjoxNzkyNDAzMjc3LCJqdGkiOiJvbnJ0YWM6NTM2N2UxOTUtNTQyMS1kZjRlLTY5MmEtZTA1Y2Y0N2I2NzMxIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MS9hdXRoL3JlYWxtcy9jeGJveCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJmNjgxMGMzZC1iMDI3LTQwN2EtOTJiMy01MGRkNDc5YjZiYjciLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJjeGJveC1vaWRjLWNsaWVudCIsInNpZCI6ImEyYTFkNDc0LTFjNGItOTMxMC1jNDMzLTc5NTY1MDlkM2ZhZiIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImN4Ym94LW9pZGMtY2xpZW50Ijp7InJvbGVzIjpbIkNYQk9YX1VTRVIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJKb2huIFNub3ciLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZW1vIiwiZ2l2ZW5fbmFtZSI6IkpvaG4iLCJmYW1pbHlfbmFtZSI6IlNub3ciLCJlbWFpbCI6ImRlbW9AbG9jYWwuY29tIn0.WNdgaqU6vVnzpVS1kZ84rUxrF8ir4Xrk8aTfxOkxB_Wr4dded56erAsf-9pxDBQ33NbfhyByWsP4-YRDbWwcmJN1pIc-qXFwovKcpTHEiqYTAyObBUH2X-lOU1iLsFnFv63xPR-NSXxUoZZDrz8bAUKPOrWyfTtVw25YO9y-BoBXo3rTs9HPsV9n7bfe1uDmfRFydJoDF9rtYg300rVxnyA32hj2x9dp-5TAMK-yQsiPaG-yVg9Ck4UcgiAlrteyoEkzdWxhU7a7RLvCPzrK3zqnHVrhSh0SXVmy8gBG5dwdprbKbrFQNo2bpi7DxDmjZz8zyQKYQZ3b-9t-k8Tq0w","expires_in":120,"refresh_expires_in":1800,"refresh_token":"eyJhbGciOiJIUzUxMiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4MWRlNzBkOS1hMjc1LTQ0OTEtOGFkZC04ZWZjZTdhZDIzNjkifQ.eyJleHAiOjE3OTI0MDUwNzcsImlhdCI6MTc5MjQwMzI3NywianRpIjoiMGJhMDM1MGEtNTA3Mi02YTJhLTY5NGMtOTE5ODQ5ZDhlOTJjIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MS9hdXRoL3JlYWxtcy9jeGJveCIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODEvYXV0aC9yZWFsbXMvY3hib3giLCJzdWIiOiJmNjgxMGMzZC1iMDI3LTQwN2EtOTJiMy01MGRkNDc5YjZiYjciLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoiY3hib3gtb2lkYy1jbGllbnQiLCJzaWQiOiJhMmExZDQ3NC0xYzRiLTkzMTAtYzQzMy03OTU2NTA5ZDNmYWYiLCJzY29wZSI6Im9wZW5pZCBhY3Igcm9sZXMgYmFzaWMgd2ViLW9yaWdpbnMgZW1haWwgcHJvZmlsZSIsInJldXNlX2lkIjoiODRlYjgzMTktZTQxNS00NmRhLWE0NmQtYzA5MWZjMGY1YjAzIn0.3eBQcLkhCrI2C9q1yP_xeDRMmzXXdnXg-ggOAtHGR5kS95mft1ALXvgF53SwloSuN03eovc7e_EIhzwFhTcOqw","token_type":"Bearer","id_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJLLWh6SGo5NkNhMVkzaFNPZmpPQjFQVGVNZXhZbGRIclc3czJha3ZqNnpjIn0.eyJleHAiOjE3OTI0MDMzOTcsImlhdCI6MTc5MjQwMzI3NywiYXV0aF90aW1lIjoxNzkyNDAzMjc3LCJqdGkiOiJjOWM1MmFhOS00NzJkLTg3MGUtYWYyMS02NWZkZGMwNWVkZTkiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxL2F1dGgvcmVhbG1zL2N4Ym94IiwiYXVkIjoiY3hib3gtb2lkYy1jbGllbnQiLCJzdWIiOiJmNjgxMGMzZC1iMDI3LTQwN2EtOTJiMy01MGRkNDc5YjZiYjciLCJ0eXAiOiJJRCIsImF6cCI6ImN4Ym94LW9pZGMtY2xpZW50Iiwic2lkIjoiYTJhMWQ0NzQtMWM0Yi05MzEwLWM0MzMtNzk1NjUwOWQzZmFmIiwiYXRfaGFzaCI6Inl4R3RtZWRhWS1GZWo0ZHNFT2c5UlEiLCJhY3IiOiIxIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiSm9obiBTbm93IiwicHJlZmVycmVkX3VzZXJuYW1lIjoiZGVtbyIsImdpdmVuX25hbWUiOiJKb2huIiwiZmFtaWx5X25hbWUiOiJTbm93IiwiZW1haWwiOiJkZW1vQGxvY2FsLmNvbSJ9.PpfQpy8QlzjiUAn9Lsp7Vi822GUH4MAbHFUDuOy4AZWPPZiDcrlBMH-q3bF82wA9Zny4Mcti8623luaNYvdWN7rkBFa89Rh_iRoWFu_lnONfRTRg28dhp3B1eIRKXAF8-xRBQ5xxl_QBKtpqTGdP2z9MBrFxxbQgvMha2aAJlfgp5746aQnvpkQAqhQRKjH7KYnjYwZ8CHeyDzuB2w83r9RQwQL2PD6bTjUraKiCjnjBYgjA3u6b6pTl4p-kZxVenm1eCuV1ZnTU9YDsARy_ntk_oBImSg_sA-jsVFVWcTXnq2jq1z63QL7pH8G7sAQR4NlEqdunJNQ8WOotGybrvg","not-before-policy":0,"session_state":"a2a1d474-1c4b-9310-c433-7956509d3faf","scope":"openid email profile"}
+ 
+09:47:58.579 [LittleProxy-0-ClientToProxyWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Request: 1973ff6e-218b-4459-85a1-bc8aeb402bf7 
+GET http://localhost:81/api/v1/notification/check-new-notification
+ 
+09:47:58.579 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 40fb1155-81a0-4700-84b5-c51a36709df2 
+GET http://localhost:81/api/v1/data/client/myexample6103?_page=1&_limit=5
+ 
+09:47:58.586 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: 1973ff6e-218b-4459-85a1-bc8aeb402bf7 
+GET http://localhost:81/api/v1/notification/check-new-notification
+200 
+Response Body: {"success":true,"data":0}
+ 
+09:47:58.588 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: 40fb1155-81a0-4700-84b5-c51a36709df2 
+GET http://localhost:81/api/v1/data/client/myexample6103?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1100191","vstamp":0,"fullName":null,"address":null,"importance":null,"status":null,"dateStart":null}],"hasNext":false}
+ 
+09:47:58.788 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: 278cfcfa-3ae7-460a-b01f-991cbcac02ed 
+GET http://localhost:81/api/v1/row-meta/client/myexample6103/1100191
+ 
+09:47:58.788 [LittleProxy-0-ClientToProxyWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Request: f529a6dd-106b-4def-b9c7-c39c68907c40 
+GET http://localhost:81/api/v1/count/client/myexample6103
+ 
+09:47:58.801 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: f529a6dd-106b-4def-b9c7-c39c68907c40 
+GET http://localhost:81/api/v1/count/client/myexample6103
+200 
+Response Body: {"success":true,"data":1}
+ 
+09:47:58.801 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: 278cfcfa-3ae7-460a-b01f-991cbcac02ed 
+GET http://localhost:81/api/v1/row-meta/client/myexample6103/1100191
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true},{"type":"cancel-create","text":"Cancel","icon":"close","showOnlyIcon":true,"scope":"record","autoSaveBefore":false},{"type":"create","text":"Add","icon":"plus","showOnlyIcon":true,"scope":"bc","autoSaveBefore":false},{"type":"delete","text":"Delete","icon":"delete","showOnlyIcon":true,"scope":"record","autoSaveBefore":false}],"fields":[{"key":"address","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"dateStart","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"importance","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":false,"dictionaryName":"CLIENT_IMPORTANCE","currentValue":null,"values":[{"value":"High","options":{}},{"value":"Middle","options":{}},{"value":"Low","options":{}}],"filterValues":[{"value":"High","options":{}},{"value":"Middle","options":{}},{"value":"Low","options":{}}],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"fullName","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":true,"filterable":true,"sortable":false,"currentValue":null,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":true,"currentValue":"1100191","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"status","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"dictionaryName":"status","currentValue":null,"values":[{"value":"New","options":{}},{"value":"Inactive","options":{}},{"value":"In progress","options":{}}],"filterValues":[{"value":"New","options":{}},{"value":"Inactive","options":{}},{"value":"In progress","options":{}}],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+09:47:59.177 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: b6e516ba-9024-473d-a8b3-5e7af162cfc2 
+GET http://localhost:81/api/v1/data/myexample5308/myexample5308?_page=1&_limit=5
+ 
+09:47:59.202 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: b6e516ba-9024-473d-a8b3-5e7af162cfc2 
+GET http://localhost:81/api/v1/data/myexample5308/myexample5308?_page=1&_limit=5
+200 
+Response Body: {"success":true,"data":[{"id":"1101502","vstamp":0,"document":"Certificate.png","documentId":"a790dd2e-f58b-4eb2-bfba-63cf5f30222b","customField":"Certificate","customFieldDescription":"Issued to the Main office"},{"id":"1101501","vstamp":0,"document":"Floor plan.png","documentId":"1107cc86-6010-4a38-9513-a6ebb44f0fea","customField":"Floor plan","customFieldDescription":"Second floor"},{"id":"1101500","vstamp":0,"document":"Price list.png","documentId":"803c6bba-7dc2-4cde-b3fe-2aa6ba1d0731","customField":"Price list","customFieldDescription":"Valid until December"},{"id":"1101499","vstamp":0,"document":"Invoice.pdf","documentId":"aca9f30d-4be4-4528-9339-1d273c629a54","customField":"Invoice","customFieldDescription":"Due in 10 days"},{"id":"1101498","vstamp":0,"document":"Meeting notes.txt","documentId":"305435fa-96e5-4267-b0dd-014c16377c07","customField":"Meeting notes","customFieldDescription":"Weekly sync"}],"hasNext":true}
+ 
+09:47:59.259 [LittleProxy-0-ClientToProxyWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Request: ba03ae54-a191-4f52-a515-ce633efb4035 
+GET http://localhost:81/api/v1/file?id=a790dd2e-f58b-4eb2-bfba-63cf5f30222b&preview=true
+ 
+09:47:59.259 [LittleProxy-0-ClientToProxyWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Request: 62655dca-5a1f-49dc-b785-7d91420f0ac1 
+GET http://localhost:81/api/v1/file?id=1107cc86-6010-4a38-9513-a6ebb44f0fea&preview=true
+ 
+09:47:59.260 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: ca5d5bb1-8ab2-4337-a6ca-f88585a01e27 
+GET http://localhost:81/api/v1/file?id=803c6bba-7dc2-4cde-b3fe-2aa6ba1d0731&preview=true
+ 
+09:47:59.260 [LittleProxy-0-ClientToProxyWorker-7] TRACE API_NO_LOGIN_LOGGER - 
+Request: 0578d459-a158-4831-bf8a-6a6382da46f2 
+GET http://localhost:81/api/v1/file?id=aca9f30d-4be4-4528-9339-1d273c629a54&preview=true
+ 
+09:47:59.270 [LittleProxy-0-ClientToProxyWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Request: cf5ebb67-c4e7-4623-8626-16e809b9ff27 
+GET http://localhost:81/api/v1/count/myexample5308/myexample5308
+ 
+09:47:59.272 [LittleProxy-0-ClientToProxyWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Request: fd4e18ca-cb0a-441c-b478-c832f2c66f45 
+GET http://localhost:81/api/v1/file?id=305435fa-96e5-4267-b0dd-014c16377c07&preview=true
+ 
+09:47:59.291 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: 62655dca-5a1f-49dc-b785-7d91420f0ac1 
+GET http://localhost:81/api/v1/file?id=1107cc86-6010-4a38-9513-a6ebb44f0fea&preview=true
+200 
+Response Body: �PNG
+
+   IHDR  X  X   1�  /LIDATx^����������3�d2�I�����n2;�9;���ٹ��^f�3gv��F�mX	�d����(�U4��qa�����!��Ae�p�x�E�5�4|�������OU���*�������4���>]]U�ϫ��[տ� ��o�  <! ��  �B �k! �5� �A p�  �F \# ��  �B �k! �5� �A p�  �F \# ��  �B �k! �5� �A p�  �F \# ��  �B �k! �5� �A p�  �F \# ��  �B �k! �5� �A p�  �F \# ��h�y�4v{�d������e_X�}�;M��Ʒ�f�
+���f_�&�����we��'�.?�0����+�˦>�W�Vv�_���4������5�ߢ �J8�}}m�������ɻ��\�W@g�W�Xly?��{���oQ��K"�� ����7�	]��+|��Z|-J �q�A8p:�����W儮���o�:��,;ԧ�:���5� |d���*��U����Cc��9��� Z����J�z��7���l���Ó���|��s${����_d�X~��9��4jk��&���Z�w�g�甅t�?�f������۞]�L�ɿ�o}'�܂� �	?Ȗ���?��730��pgvͺ��/ݟ�����:�&�����=_	g�����e�h��������d_�/��e�7��V��N곔5K���l����'�?|0_���W�Å�uh�ٛ9ҟ-~%?���������հ�����B��ۖx�f���jm��p��jq�7��M�q���o�0����-�e��ONǛ�hVQx9��?_�W.��7{�(�Z�E/7�����}7[��>c!�}��y���*���$����27���U�o����w竵��7���N��0{������1ċ4;�>W3��Y*��=t�W�x�� $�>�Z�U�i˯�g�R������;�W(<�������N���N�	ٯ=I�g�������W�:���F'�]/�����ivj}��:ug�[*�yl r�� �a���{�������o�h�Ȼ��S�_���>�,���8���v�Q��<{q
+�<|_%�V���{�Í���y0�/�_��1ċ4;�>W���p���]�#=R�B �A�b��#ʧ���ٲ|7�gc�����pZ��y�§����0���3��Tsf���̊�i}���.�ϩxZ�I/���G�>�x�f���u���R�f���`�>ϴ�;~a~��k�"�=G�a���;[�������#���,;�N�Nq�hu������x�/��;�V��{�RY|1.J�ooȶȟF�'��G��>:o���{�� �n�Y~\LH������ƯvN|b�:�����p����k����?TX��_����.����j�N��5����F��8�����w�"��k�������g`�>���	�?����Oܝ��I�q+�_�3�]���K�\���j�N����~vB���%O�����_�?bN!~&�^�}i�U�`��D�c%d����97����%��*a�����Vur��.�5���4'z�@R���L�=���a�NS��E�_7��W�)�3'��l5^�Ϟ��*>{x>�L(���cՈ	�NS�1����i�[������l�+z�Q����F���k��Ke�.y�K�� �R	B��P�˭�=��-a�c#׽9���xU?}y��u�>ݼ�luT��h�Zn�〞��������؛�/0���o��}X�)�>�gƫ����F���k��Ke�.��p$�e}��Z�9�������.s���$?����>��?�-(>>���b�G���3��ỗ�j85���S��������or��u����ڨ�;xwp���%��C �H:��;��G�,���:	� �̽#&�j85|��L��
+AX���p��]�v�9 L�7A��j�v��4�,~����H���fF��K���\�4
+ }�A���5��W�Xt��?y<��>�'4�Ԙ��(��9=����w���;��p���fF�?����2���RY�K A�AX��yE�����Zv�&����C#&ܳQO�����PQ|H�'��?p��#���y�j|��-ȶ�zĜ��_7xwڨG�73������$�r>�}�c_�\*�p�$(� ,N�=?�}"�\6��ߪ|| ����SƯ���?�v�ikG,���#�ga�MM��/F�-�fo�����/c��s�t�f�x7����oq���������O�8��
+*�v�潘�iUޣ�̨3�����?�g����
+�.ߚ��>��֖�Vur��.�U�� �V�{z�-��?<��p�����}��ÿo}��������cg?�Ei�c�����*��|jW3Uf~���ħ�hk�*�;xwp�x����A8�q�T6�{���D���1~�v�g/N�����f��<��-�Z���^�\*� }�k�Պ��]C��g�������bO���)��_���U��O3gV�3L�Q!�V����*N��5�un�x&����{��؛�>{o�IW-��}��=������3�mo��y��4�<����}i����/����zm��̵o4��>�0{dK>'.�E[�U�ܑk�Б��� �g������|��ǳ?~(����>yw��/ݟ?�Ƴ��V���`>��U�/ޟ���S�d��(����H�^��懕��;��/-�|����/ޗ�;\�����(���M�D�?��`g���?4'_8�o}'ϡ?]�]�L��Z�z�����l�`�E/��jx���py��������Ot�ZmTm����l��p��j��HABA ��G \# ��  �B �k! �5� �A p�  �F \# ��  �B �k! �5� �A p�  �F \# ��  �B �k! �5� �A p�  �F \# ��� ܺu�c  4�m�6�t��0���  h.$��n" i! ��  �B �k��n��8!�i] ܸ��K��Q;���&� <�?0�i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� <�=��SӧO���)����j��7J�pݞ�s� LN__��իo���K/�4�X�wΜ9?��ø��ek׮U�g����H����/r�����ڐ�K������ՙ�A���۷_v�e�**�DU5�̙���O���W/�*���ܾ�p>����}m``@U���ɓ���b�%��<�ܹs	�:��k^x�Ç~��6l����x��ڵ�|�/�0��<y�<�b��FЅ�Aqɋ;�O�SU]�~�T��v{}t�y.��8u��W\����>}ZU�HթS���2^\�����#5�}p^�X�%��gÿs��Q�0Ɵ{�n���^�f�a*���pm\}���+����'?�JhY���o��ѣ�V�
+��'O�<q���ӧ��}����s���x`ڴiaB�v�M7mܸ�<O|�G�K���7iҤ�Ż�+��u	����x�u���7�����	OX������ދ.�h�ܹo��fyZaӦM�;�	�	�C�9s&^��bZ���3τ���կJ���^���;/�첞����]wݥ^�>M.O�B�o���O~�Y�fMr뭷6�Im��A��o���\�BI�0'4Fּ���YA�7z=��o%e��͛��NY�rei%|re���@.��%K�˖-��#�<F���4Q�Ue��QU���<���gg	ߨ���q�jNR���<��b����/�?~|Q����q����8�衇FN��={���W��}���W0g�a*�L����w���{/̹�+d��KS�?|���_<n�9���Jxj800�w��u�օǰŜ��G�a�����x�� ����W�.~����H�+}r�_��qC�s�g���a�x]A���Q�e��eq�	O�V�X���ɓ;v�>}����Jȴ�)<��>�����ÿ����j͆�i!��c������r�E����U����G��ۚ&�(\�G}4�	?Qx�X�z4u�Ԇ�/����<�TL�81\�we���aN�d����hs�x�>{����Y#s,X��׬Y��͛��і�ixc��|ɿ��o��7l��~���a$��U�GU��E�ťbD=�ܲe˸�1CT���4+F�5*��'dj�X���oW��v[ϭ��V�����Y�֭[[�����A�
+� ,n۶�4E�1cF��{�n5�M���DV��-�-���J_��?�����o}�[��[n�%|�v��xZV�UqZ�_������<x�ĉqCGe�ȴi��H���;w�k6TL+?u++���j<<��Z��⴬�O$��m8^�IS`�a*L^��.����qC/��K��zzz�Ў�j,�(��%?~�x�;�;Fxv�_��xZV�UqZ�_���3gΔe\�[<0=v�XiJ.��k6TLSo�͆W>z��#�Js+N�F�����A[�@��݃e
+�uX���x� ,�}�㼾�%_�`A��%�\2n���Դ����Ӳh����4�T���	WqZ���;n�<�T����Bq�f�7^���8u@:��E�X�S�|ǎ����kͦU�GU��E�ťx��x�^գ�+���B×FG��5�F�2��0�P���j|ٲe��
+��`��@��3���ixc�/���C��oyPM�x��8-~����x�K�4���2ztx�;�C�ϝ;w\t�̨Ӳ�ߨ�qC�@&D>b��k�ݰa�|���?|���#��Y��<�ָ�}���ߴi�����c�u�օ�愞ܼy�C�B<x0\�U�V͘1CV��P�"o��U��jZ�{T�i��W^�=��S���%�G���'�.]*o�h�3ěM��E�w�}���+���k����Ӳ�ߨ�qC�@�e�����ba<~�(����ö��;ʜ]�v]~��<���v^_�/y<��=��+V4+��6i6��O�e��#V�ףC֮]+G����;�+N+��#oܐy.��)�Ӝ9s.���o��ٳg7�3L�u�G�?r��ʕ+gΜ9iҤ��ޫ��*<�T��;v����5k��ɓå�2e�7�n�={����]�-�(煊��ᴊ��*��/_>mڴ������u<�b�����/��暐@ű*�+��X�E��i�����Ş�Ӛ}�v���AX�F�$i�����
+a��\ K�����9s&<A}0��<B��4�.���ٳׯ_�w���������[��|������=p����10���$���Vڥ����)>Od�!`IA`mǎ,���/�袉'N�:u����󎞇13���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<B��4�. n��AX�F���\ K�� �a�!`IA 7�s� ,I#���y.��%i] �0���$����@��tp�<� �2� �A p�]���C���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!�Kŝ�� d���$_�3��]T��ztX�jk�y�@w���C��̙|�(=���`Ùc���1�\ �E�M�G�����7Dq���=$^����.��Ǐ�gd<���e�g7g�!������������#�(�]�����͛Fzzz~��&60��6Ƴ�3��]T��ztX�jk�y�@w���C���~���^x�M�FNl`��m�g7g�!�����谆�7�|���9s��ɓ�&r�UW-[���ѣjZ|�x�ݣ��Y��ɓ7�|s����.ھ}���W岕��g���jժ뮻.4�ĉ�O��p���_]&�Y֯_������o=w���MgW����?��ӦMK�o�馍7�9m-8v�@����X�kX={�(��׿~�ȑxZ�@�}I:�X����7�pC��K.y�7��!��e+��Ν;/��2]�V� G��M�4��wߕi��͛à��\��<���`G��A�.*nb=:�a5<�|�������������𸡞,O��� ��{t�R�?s����)S�}X�_�x�p���/�8�B���+�#��ݻnݺ�)2�8{OOϊ+������ر#<q�ṣL;x�`xb�ϟB�������W�����`��k�;�<Bt����牄^Ӯ����`|�x��o�|� ��.�ė$)<��#a|��ك���VR�]=�۲eK��+d�Xm���Y�5kք�y���H�;�<Bt���Rg	ZÓ�3f�����M�8�<->o<�#�B���r�-���4���Y��j<R������m�ta������/�8q"N�0AFB[��ݻw�f����qC�be�₝b�!�����谸�gϞⅠ��3�� �Ὠ������o���qCG��رCO_�x�P�hy��I]�8��3g����_2�����ӣ�8ꂝb�!�����谸z�w��uȖ-[>����堁��xf�@w���Cd�p��;wn�:O�'�y���H�� ԣ��ĉ��f��q��12��]T��ztX\-~��^�y뭷�UF Q�=�z)��ԩ�Q]Ȟ�^zi����x���K�z4/�v�r�g�;�<BtQq��aq�x�z�������UF Q�=�zQ��y��}�L|I�{~___y0X�lY�3gN��e�h4^�b��ť)�U\�S�s� D7�W�wJ�v�m��'�~��E��]�<�� ދ:+^_>em����֭��x�W^F�z�)�*��}���ߴi�����S��Zh�/�p\V�V7o�|�С������;w�\�jՌ3��q��12��]T��ztX\�.��K�.-�(Ϭ2�����{H��C�s�=ㆲp͚5�`<sŊr	U5�ԥ�^������b|׮]�_~��%F�i꿣���y.���&֣�VC��'N�4iRx�[<��gVDq���=����O����{���?�5���-_�|ڴi&L��G�Y�r�̙3CS���^u�U�/.�">K��cǎ��1k֬ɓ'���L�2�n�p� ������A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s� P���`�!���G� �\ ԟl8����A��d��$�<B �'�. �@�?�pt	0��@�Ɇ�H�y.� �O6]@�s�>o���� ��d��$ �@)>��txt�} PF \# ��  �B �k5�m۶}t�  ������M�: H
+A p�  �F \# ��  �B �k! �5� �A p�  �F \# ��  �B �k! �5� �A p�  �F \# ��  �B �k! �5� �A p�  �F \# ��  �B �k! �5� �A p�  �F \# ��  �B �k! �5� �A p�  �F \# ��  �B �k! �5� �A p�  �F \# ��  �B �k! �������Z�    IEND�B`�
+ 
+09:47:59.295 [LittleProxy-0-ClientToProxyWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Request: d61d5285-a4a1-4dfc-b766-11c3eb4c9f76 
+GET http://localhost:81/api/v1/row-meta/myexample5308/myexample5308/1101502
+ 
+09:47:59.299 [LittleProxy-0-ProxyToServerWorker-2] TRACE API_NO_LOGIN_LOGGER - 
+Response: ba03ae54-a191-4f52-a515-ce633efb4035 
+GET http://localhost:81/api/v1/file?id=a790dd2e-f58b-4eb2-bfba-63cf5f30222b&preview=true
+200 
+Response Body: �PNG
+
+   IHDR  X  X   1�  7�IDATx^�ݏ�T����#&�0L��8n&�3�fv�3ɜ��lf3����$gfg� 4*�DE�D!��8�@��EHDEP�(�- "��l���_-�]�w������[�����T���|�~��ܟU�S��n��  d���  d	A �4� �i!  �B @�� �L# �F 2�  dA �4� �i!  �B @�� �L# �F 2�  dA �4� �i!  �B @�� �L�L��P��)��(J�^;l�Q*��6��PEQ�j�t��Ge )���Z-���(��t�EQT�� �(��2]!EQ��")���LAHQEe�B��(*�EREQ�.���(��t�EQT�� �(��2]5��y:��EQW�~�Ύ��i-aEV 0�)g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A�>��
+^;�ǖ`Ě�kK���p~���_|��7����o[[�\�=6k>h���,��g���?iwHp�t0wk~'��~\57?�?_|�W���f�<�Ap���}Y��3� D��T{׋��s�rd���`̺����N{VY����W�c�|�x�6�=gF�Q�� O(g
+A��}r>�'�}��MSrR�sc��1{���&{?HIc2����=*����C9SB���ѧf�d�����w�W�.s�����6�W'��-�����3{��5�na����(�ճ~:����O�~�E�QƲj��Q��@��)!J�zOp�<��J}����#v������C����]�����p��J��;vSwl�{��Z��)cY5�ݨ�Vc Q��i=�a�ٹ����/�c�vg�]/�k���%m�wW��\C'�וvS[[�r]^�2�U܍
+o5�L!���j#������]�v�H]���y�����n{I[��D����@��v��ȷ���
+;Y˪	�0��G9SB�wu2�9�g�w��[[�m/u+���5�ߢ��g�����y�-��>�R�U�]Q�!@�P���m�o�B���r��[O][[�m��V�˪�=��L9SB�/��q4��a�,�W�u!�� ��r���X����/��E>q}��;g.�C�v�L����-�/E.ž�8��U�����r+��.��Kz�!�����W�/Y������7����$��S����jG��'�(���������g�o>|�����fV�{e�~}Y�>�Np�S{lwW��C4W(�r��(��`p�-��7ڝ�*|�cP��KNU?��K�B}����m��q�!Vrr��������s����I����G�܁nI7	˸���quռ|XO���;�hũ��
+զ�)!��U�Ϊ_6۝+B.���2{Y	�O�����Ub�N���U�
+X�>E+�����
+����vK��6�gR��/Z�*��B�)g
+A�"&<o�B�r���wO�`�گ���:����}�	��W�~;�]g�>:���;#�R%����S�R�#��/�;K]�p0ok�S��/���?p:k�u��0�?/ȿ�,s���ig����9�~�?^�k��c�������+T�r��(��A,��Sv�>�s�������#A��^��u����nc���cqWޔ������o�_1��9Y��+��!%w`��n�CwH������=���Wѿ��P��L����O�6�~��o��wH�:�U�q�*Q��E$�B�5�W;e���^�T�+��bw���q�Φ~���O~q-r��K
+ܱV�d������E��?�fw��P��8-g��J5��4;���7�K4՜��nSEU�q�*Q��E$|���G��#�I�R"߀����.����\��{��⷇.M-pZ���w;b�C��t�0���j�����.�@K���K4%g�nSɪ��B�(g
+A�"�>2*Օ����~��=SG��=��dݞ�7'��f$��������8s�R�w��!�;��p�s�!�;$n�o��}L-~��i��Q�<�8}�^��n�{���ӬCUW��L!QD�sL�k�
+�t�"ê�Qםg/�U+޵{nOSn�{�qǚJ�Xt�۹��7�΍vS����8�;�4�%���A��Lu��Y��>�P%ʙB��?�z��TeG��K�������첻�������4�)���H�XS)��w;b�C���Ny�TY�B�|�4���T��>�P%ʙB���O�~t������/����=[��i���3�;�TJ������E��_����g�X{�&�q��oȻ~Q>���1�n�C�*?�P%ʙB��������J#�=���W�ڳ5ܞ�ҿ��5��;��p�s�!�;$n`�'��¨/��߂����J�v.:$���
+U��)!�H�f�%o۝��"'��c�����T��c�ܱ�Rr�v.:�p���Fnm���f�J�v.:$���
+U��)!�8z.��9�P��/N�_d��T.}X�sgk*=wlIsp�v.:�p���{k�l�o�~r>��S�:��1���_���1���\tHP���D9SB��'�_\�������x�I����Se����ٚJ�[�܁E����1�!q��a���~X��7۳2u��vO���n�C�*?�P%ʙB��Ȼ�Mm?jwN6��+cg��פ�_FV���ٚJ�[�܁E����1�!q�z��c��b�Oĉ������Ը}L%p;T�q�*Q�������P_������+���{s�/�\�˞����f�k�Bϯ<fO-pgk*���~��,:��\t��������_�m�;v�&�AΧH>�О�)�O��G8(j%�;U}\�J�3� D*��9�W����B_�8�IГ�FvCF%�e�?zٞZ���Tz�,�ǚ�}�DN��ѽ�h*�۹��7�|g�����a+߻������O�=׫[���JP�!���
+U��)!�z���_w��\�}�|i�K.>
+���t�;��D�Sw�b�z��b.��//us/1��ٚJ�/�ǚ
+�ɺ�m����+��;�T�s�!�;$a�#o�ݤ�@8m�,���7{�7�RO���m�v�B%(�T�q�*Q��%X�'�**�쑠�}�sAw������#o�}�c��_d#'2�\�Yw��ȵv�0w��ҫ_c�5�F˕>�/�%�	�_i4܁����1�!	;r������\�%d��~��/�W���=S��B������9$�Y���CP���D9SB��ñ����!�W�v�egW�����r����锗�y��~8:k�mU������e�G���{}��E�<����������R�@.�dc�ޝ���4��gw�J�v.:�p�$lm�ɧ����_�=�������Ca��,��&�ߝ�[Ú�B%��!���
+U��)!J&g��^HzQW0/������@q��K">�h��*ٹ�ػ����W�*q��U�;)��ܩq�:�i��+Z�,6G�nX�$�;�L�������CPP���M9SB�i_[��/������֖�ݤ��|҆��	�ٹ�?�����PE�s,��)\���7V�⪌!�Q%�$ɱ��ػ���ύ����5��,�ܥ?c�N�*R� �R�+T�r����x�p�[��~|mip���������]�8����kǥ;��e8ޞ{˳�W�ȿ+���>�������J"��L�4�$޸;�t	�?�y~�������x<�����{}�1(e�U��d[[�9o��6�_?�?�W�>7?�����<�x5�vwQ򨐽tï�o-�!����5�`g�>�Z�\�R���+T�r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��  �(g
+A ��r��Vss�i����G�5k֬7�|��N]�=�	[9iŊ#F�xꩧ���?>���؁:{�/�3� �v��1dȐ�￿�����}�����$�Ou$li�$9=���^3򒟻��v�����^��L!��3gʓ�����3gθOTK䓹 yj?J�ҸIr��|�r��3?w{�@��)a/E�G�r���M7�$ϴ��{B��'g��~���	�j���a��R�g�r��Sϴ�!�S�Q%L�`����Tj�R��p`*㙖<$yj?JX��I�b lB�z�J�AʙB֒O>�dٲew�qG}���x�ԩp��H�p����}��Y}���_x����f�N���o��t��ӧ&M�$}�~뭷.^��������[j��p'��f�={�駟�1b����	f̘���d�|�70���3�
+>|���qڴicǎ:t�ȑ#���6�qw�8�9���L�;v̜9��o6l�ĉe�Ο?��= Jʙ�-��)w����m�=L�kV�<�����F�}�R���f�ٳG��rNٵkׅ;w�2eʨQ�d�չ�'L�3uѢE+V�hkk���j�7N�n��w���}�{�br��n/^|���gϞ-�͛S�Jmi���d4f̘����?|�ᇭ�}���
+b�3�
+��!C��!;~���<x�䥴̚5+�˅{��u�C,k%�=�:[���43Y�~���ܹs%�;;;?��c%7�H��$}{]��j,���ߖ����G����W_}�n��3� �r�$�p���Y/�.OQy,	y�n)*y��:��p�mۤq����R�s���d�BybK�ɵ˱c���
+niI�d�G��.W<��#��}���2"�3�
+�X�S��=����Y��j7˲�\���>Ć�b���39t�\f�5�uƗ8�������o�+}�Y�e�ˆH
+ʤ��z˚t��Qy�$ao�TʙBֆ�K�����_�'�K/�T���LK�<�L�.�$����o,��jĭ�<�e��J�	�UpKK�d�|ӦM�FCN���}���2��3�
+ȏr��w��i�<y��n�eby]R��ۋ�D�ۤ�}�T.���*c&���J�uVc��I&��'?����'�|�j��3� �r!O��Ǐ��@� ��($<��$1S�r$ܘ��Qf=[[[C�.1�i����[Z�$�mܚ��}S.�p׳�+`�Z}}��n�U������3�0a��x���P�<��sv�1�R�-ɻ�j,�=��uذaC�	b��9r�'B8�L!k�������HGG���Lx��Ib�����F��L��D,�Ғ&%,7���2������A.'M�4b�9�Z=Cs�3�EqBc���L�\_�d`ܜ]e�$}{��j,�ݘ?�Lmhh(�lذ��u��3� �	g�R�!N򐸩V�YO���UpKK��r�SvKP��^O�k�.�W�G�޸q�\^�w�;۸Ƹ�����ed����D������ڍ={��TYz�(O�<yǎ�{pʙBֆ
+�a'yH�T�ݼ�ח�p*��%M2�u�g�Tj�.�p�3�
+�y��3���6�1�=�1}{ܻ�gϞ�����������p��VjUw]B{�\�J��^{-��ŉ'���r�����!��<$n����� ?��C��Ғ&��nٲ%���]��g��������vsam�6�ZVB{dc�v���Nx�w���*c&拰��޽��_�]��^�~���˟��7o޺u���r�����Tp�m�Y���Q&I�p{�g��ܱk>����.�;vlaj��vy1>f�y=�~ç���ٳ�vK���Immm7�|��z����#���w�����rA����W�\U�~�t�fD-+�=�1}��Ç%l�;x���9�ʘ�=��#�۶m7Ν;��_�]{�	�`���G��	O��L!k�{�'10eʔ�m��S�JcI���y��e�+��"snll��?�装�q3t�����-�Ȋn�>r��pذa��~{�{��Jmi����@N:s�̑3l.����0��J�<x�Э��rAA�z�\���f�	Y�\^�8qB����u�ڵ��(�=��eŵG6�ԾaÆ!C���NKK�섏?�x�n&%+u&&�ƏoZ���'�4�o��Wu�Şkƒ%K�]r�kM��L!k�<o�.]*'��=�?�c��%�!��GN���:t�~����\���<7�5�y�z���[^��	E^����u�ֹ�5���ڭ=�&]�c���O<!���PYyY�e���B�}�.�^���r$-Z4q����z�I	�X���/�n-�sB{�s<s�L�%sr�f�s�d[�OQ�L�����m޼Y^C��|5��ɓ%�
+�	��Ʈ+�{��8p�,��LQ���/��������S��M�v�=�ح٠�)!�~ A�~���ʬY���R� �1c���h)g
+A�HP�\��j�7o^����e Ax�С1cƤ�at@R��@?��6l�3�<���&����s;D�/kM�F����붻��/^�8{������=2C9SB ����˖-�2e�\�:tԨQr�nl(���0����
+�p���z��7.2E9SB �_�3�  �E9SB �_�3�  �E9SB �_�3�  �E9SB �_�3�  �E9SB �_�3�  �E9SB �_�3�  �E9SB �_�3�  �E9SB �_�3�  �E9SB �_�3�  �E9SB �_�3�  �E9SB �_�3�  �E9SB �_�3�  �E9SB �_�3�  �E9SB �_�3�  �E9SB �_�3�  �E9SB �_�3�  �E9SB �_�3�  �E9SB �_�3�  �E9SB �_�3� ̢+V�1⩧��'Ԛ�{���6���{Ξ�ضm[x�=95�]���ӦM���5jԬY��|���I^�|�)g
+A�E�T�3��kO�M}<q+S^[���c�vtt��z�2eJE�͟G׎;�r���������/^���uq��Y��S��0�������	����w��K�<��'˚<yr]��B�<���*�n�<�fΜ)�s����3g
+[7ɟ��8�L!Q�J=}�ڿT��O�Zq���[�ʿ����.
+�O��i�&�u���n�I6'r�&�ʙB��z�.����<��̲��.�ϳ�>kO�{�����wuu)�[�%lN�$�@9SBԼROj��/U����V�Y�� L�E�Y�6l���[�%lN�$�@9S��1����G}4��	&6즛n�я~�r��Ç��'n�q������&M���>|���޺x�▖�[����3g�x��S���7�)�:&�a���+���O�-[v�w����ȏ�N�
+�&�=����7-���/����C���S�����9]�~�ĩ��g�E�u�zO>����c�vvv�� ����qڴi�y�С#G����{%>eC��.m�3�p{�m��� �W ��O
+��8{���O?-�=b�9��1cFSS�u8�~��g
+A�Q�}˖-���w�̙s��A�n8w�\ss��e����1��ǵ�ݻ�{��ޔ)S$�.\�p����������7�z��_�~Ȑ!s�Εӊ���=�`��y���L��Ϟ=r��S�]�.�عs��ۨQ�d��;F����S-Z�bŊ��6Y�,kܸqu=���L�g��\�3ƺ(��OZHǄ5�v����Ǐ�����ߥE�&s���9r>ֶ�?^vo��)� ŭFP�$y)#��p,d�?��Ç~��\�C�@=Sr��'N�ɶp�DN�[�>�;��vy�,'9�Y#�+��9���cǎ��C�Ʌ�\�X� r��[V���r�!'��o�]�_�vY7�p9Ֆt]h�^f��Uu�Ѥ����-��L����L]�B�39��7aͥ��,�c�=&�k֬����cڭm���������A���X�=�]�x�G
+�+u��g
+A�Q�]��Ҳ{��p�%MÝd��e��Ǘ_~9�咷�zK&ɩ��(����\��-+N\��K�ƭ�K/�Tw�����o���勜����o,���3��kR�(,��z衦��B��5���?��j<r�H]��V{�|L���ou��=N�(n5�'�c�iӦp�!��
+�+u��g
+A�Q������9�X��=�i���#��U������r�Ɇ;���8a����ɓ�{�s��8q���?~ܞ�Z>�2���o��r�n��r֨�{&��&��g�	z.��*�����k�2�]__o���Ǵ��8���ٖ4ɼ�y,�*u��g
+A�Q�]N%�,i��׬Y#��K�c�v��n.1N�Æ��g:º��MO�=A\�2�"DGGGxe����0S�7x���du��$|Q�p������T3�pK�z���4i҈#�^wHdc����)� %̶�I	���!C��)aF�g��(g�;v,X�@��L��C�.Y�$�;�4}���[����~��5���nu���d��KI��#G����'ŭۮ]�d�G��q�F��	��!��e�[J=@	�-iR�c���P��0��g{��V�y�ŋ����4}������A��7�N�8�-�Qw�E��/���8q�7�Z���L2wY۷o7�r?��nw�y��� {B̐��2�-���ٖ4�,�}�Y*u��g
+A�Q�=һ�[W�;�#��//�>ŷ{�nk��㫯���|-�-[�v�XI�-q�K�,F���qS���{&Y��=|���g
+n��i�6�0�a���2�-���ٖ4�,�}�Y*u��g
+A�Q�]~<r�H�%�|�%��4}�{�G�m�n�;w��ܳgώ3fҤI�7��O�Ϟ=��x��a9��O<���$3�3i>9���^����˟ο�۬�y�Gi�I��u��߈[[�=��I����{o�ƍv�����F�YwHdc�RP�lK����v��7O�>�z��ܹSz�w�}��J2�Bf��l��l"/{�l����.�z��>|�<���1�3�����g���O������߿��[n�:uj�d�����aÆ�~�����6l�0dȐy�浴��ҏ;�d���3ك>(�_y�Y�,H��裏�I�r>�2eJ�~m��,B����$�?���q���L��e�q��hnn�W!�ׯ?qℜ�[[[׮]k"��XF����0�R'�޽[6Μ9�L{�N��SY�$����*r��g
+A�9�yf���j�*I�q���1q�D�ۡ��)ؼy���MM�<YΡ�����\6�^����1b��p��I��֭[�'q;s�L�f��� }"�@RY�hr:t�~���<|�!S�.]*���=�?�c�kA#n������Z֞q��3����/�xѢE����Η�8,طo�5$�c����i�=�eL�2Ǟ��'�xB^�B�p�r�-[���/�ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB ���)! �/ʙB�w���䶮��s;�ͽ>�sӷ:��J�/v�����w��:�1߸�[�A�Ig"�Y��)!P��vX��>.x&��*.3�Y��e �r��@%u�ٛ�5����r#��%����"��r��@%\<ٵoq�Ư��U����d��j �r��@�tz$��]�?��U�k�geѲ�:5N9SB�L��>�m��c�`;��k�`YY{�����)!P��3��;V�3�k� Y%Y1{U���)!P��C+;����C~�������@�Q��H���P�+�q�Ƿ���U���ʙB�t���h��MO��Ya{���)!PLWG�y��4�P�ڲ��� �S��Ht�x���fL����l��Q�ߔ3� bu����ܗ�t���M����r��@��S;:�^��JM��kes�-|��)!��������qR���9�({;/)g
+A��ׂMW�A2 ��j�Q�3� z�>��#���k�}!���)!r���ٿ��c`�l�l���O�3� .���;%�W��
+�/�ǔ3� .�ѻ�˫������3� ��ߠ��70n}��`���3� ������=����kd��}x@9SB ���)Q������L!�u]�V�	�����CʙB"�:�z�WvuJ6_v��[�~��)!2-�|��Y+�	�~��r��Ȯ�su��C�j� �����r��Ȯ��	v$d�dW�{�?ʙB"��?=ұj�	�U�e����'ʙB"�ro�e�A�Kv����~��)!2��Ɏ�W�a��Z}��{G�A9SBdQ����Wv�������)!��s����d��{
+�ʙB"s���u3�2%;��_�:�L!�9��3� �L�α��N9SBdN��_v�2%;��_�:�L!�-ݟ��g*\����R����u`�{��%���k�.�L!�-����S?.�E�^t)g
+A�l�\�E��O�Kv��� ]ʙB"K.���}�-�Q��)g
+A��>��{ҧܒe�;@�r��Ȑ���ݓ>��({���3� D��v���)�dG��P��)!2$��p��O�%;��w�"�L!�!�/}�=�SnɎ���H9SBdH���qO��[���}(R���M�)�[	ѿ�3� D�t���{ҧ"j���}(R��ұj�}Ƨ"k�`{���3� D��i� D�R���[�i��Fѯ�3� D��a��Ňeп�3� D�p�D���	�/�L!�!�P�����K9SBd_�����5�/�L!�!|�v��K�ѿ�3� D��g�R�	�K9SBd�7e�yѿ�3� D�\lsO��[���](R���­�E����3� D�䶏sO�T�d�{Х�)!����
+��O�Kv��� ]ʙB"[�?mqO�T�d�{Х�)!2���/�gʔ�{�3� D��v�p�2%;��_�:�L!�9�g��@���c�/@�r��Ȣ΍_w3���b�)�?(g
+A�,��`���{O�A9SBd�œ��r� ӵ�*�-����r��Ȩ��w�I��b�#��(g
+A�����HǪ�nd�V�b�#��(g
+A���m�`�AVKv��w����)!����G+����Z9Hv��w����)!2-�|��
+�+�	�~��r��ȶγ�k��͆�l��{� �J9SBd]ס�n<d�d��=�7�L!����	�������L!����`G�5nN�j�F6����3� �Z�u4~Ǝ��\��M����L!�Kr�S���%ko?��L!�˺::_�73^�f��ڛxC9SB �Bk��&�@*�@�L{��(g
+A��}n��k�� ��Z�@{��(g
+AغO��h�ڎ�PMW˦�[�G9SB Bw��M�������s�Q�v^R�����.0��kA��L!�X���w>�%;Tj�d�� j�r��@��k��������M9SB������>�<��)g
+A�����>Ҧk�5�.�L!������ߩ���U���ʙB��:��ۿ�++��� ��)!P��3��;Vr���j� Y%Y1{U���)!P��s��ڱj��Iʵj������~@�R����O��޾�c�g�|R�՟�E�
+���8�L!�J�x�k��΍_���:%���B�� �L!�J�>�7�kf���W�Kf+3�E�K�L!���>������q���FZ���2����^0@)g
+AT�Ŷ�ۺ�/��7����M��|�+��\{ݥ�[{���o��-� ݤ������P�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L! ~Q�� ��L��o?��LQEQq%I��Gd�dREQT�� �(��2]!EQ��")���LAHQEe�B��(*�EREQ�.���(��t�EQT�� �(��2]!EQ��")���LAHQEe�<
+���׆�(��4Kҧ�*�  �(� �i!  �B @�� �L# �F 2�  dA �4� �i!  �B @�� �L# �F 2�  dA �4� �i!  �B @�� �L# ���7�/c�~	n    IEND�B`�
+ 
+09:47:59.303 [LittleProxy-0-ProxyToServerWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Response: cf5ebb67-c4e7-4623-8626-16e809b9ff27 
+GET http://localhost:81/api/v1/count/myexample5308/myexample5308
+200 
+Response Body: {"success":true,"data":6}
+ 
+09:47:59.307 [LittleProxy-0-ProxyToServerWorker-4] TRACE API_NO_LOGIN_LOGGER - 
+Response: 0578d459-a158-4831-bf8a-6a6382da46f2 
+GET http://localhost:81/api/v1/file?id=aca9f30d-4be4-4528-9339-1d273c629a54&preview=true
+200 
+Response Body: %PDF-1.4
+%����
+1 0 obj
+<<
+/Type /Catalog
+/Version /1.4
+/Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+3 0 obj
+<<
+/Type /Page
+/MediaBox [0.0 0.0 612.0 792.0]
+/Parent 2 0 R
+/Contents 4 0 R
+/Resources 5 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 164
+/Filter /FlateDecode
+>>
+stream
+x�s
+��w3T0�PI�27R0�4PI����+��LNU��W01�T�*3R04)3�>\!Z �៖R�����������ZP����Z� @�������g��õ(`ƨZ��
+RK�k12E�g��$�`Ձp�9�.��
+�y
+�
+)���z0q�. +�FJ
+endstream
+endobj
+5 0 obj
+<<
+/Font 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/F1 7 0 R
+/F2 8 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+>>
+endobj
+xref
+0 9
+0000000000 65535 f
+0000000015 00000 n
+0000000078 00000 n
+0000000135 00000 n
+0000000247 00000 n
+0000000485 00000 n
+0000000518 00000 n
+0000000559 00000 n
+0000000661 00000 n
+trailer
+<<
+/Root 1 0 R
+/ID [<3C68FB09D330CAA42C950498A27EA90AA2E339848D3B9A0BE60A4E6CFA6820D0> <3C68FB09D330CAA42C950498A27EA90AA2E339848D3B9A0BE60A4E6CFA6820D0>]
+/Size 9
+>>
+startxref
+758
+%%EOF
+
+ 
+09:47:59.314 [LittleProxy-0-ProxyToServerWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Response: ca5d5bb1-8ab2-4337-a6ca-f88585a01e27 
+GET http://localhost:81/api/v1/file?id=803c6bba-7dc2-4cde-b3fe-2aa6ba1d0731&preview=true
+200 
+Response Body: �PNG
+
+   IHDR  X  X   1�  >:IDATx^�݉w����7w�f�IrN�3�I2'ɜ�$3g�o�e� 	I����b0`���$��et1���b�}� IH`#���b�<��u�����%	TUz���;:��OU�Du?]����q  ����  ؄A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A ��0�g���]��(H �z�B�����-v�x����;��9{�9/^�+�&��.�o� z�xB-���|I_Ow�WwA~� =��3� ]�A�2f��͕�]��(HO��̵ @��xJ�9���k�5�]��(HO��̵ @��{�b�s�{}�p���a�Ζ ��(B��gN�烳ο���)y���'�_��DgK �W���s��}�7��uz2��X�3j��k�?\����@K�j�|v�)ߛ��?^���"�9��)��l��~R����ѻ����O���������⹟:U'�o��]�7
+ң\hu�q�nr����_����-s�|���?r�mw�qv^un=�is� !�� tR��Z�?���໶{O�~���o��e)_2䖞HN/s7�rur*�z�ҙ���K�E��3���乾l���5�i{���q�e �(f�P
+��_x���=hw��C�(�y��L����ޙ.���o�4;}#ǚ���2Wh������k���q�e �(f���m�9���mzE�����3�?��m�y�����Y�g�Y���Bsm��=����e^�! �8B9�ۍzs�����f��6Mާ�d�f���o/JN�Km����Sg�5篪������u{� =�Vo�ʶ+�C�����ι�·�8�����w��3 B�A(GE�wӞ5:��Y�f������Q�>JN��;��u��lȴ���~�f[�������`�����)9�~o������s��C��:j���:�ɰ�ڹ3榚����"�!ݛUڟ;�.&��MY� ��A<���ɴl�U�"�E������|tAoS�9��t���O�ۡ���A�:�����g�o�����Dw#��r��YY� ��Ah~�����f?���F(���{���ŏ4�=��v�3�S�'m%?3~#'@��Tm�f�ԭ��_pY� ��A��Y�fۺsz��\J��V����=���x���*}mA��1e�1dU~s���W:�w�3a�S��s厾���8 DJ,�?]�|Eʗ�|���c2�Ҙ��=z��d��������ڂ0�c�����_~������8�O;�^�kp\ �+��w'?���*��������� �\J� ���1AYI����Ό��?��;}�?N���1�  R�8��kk˺T�O���ؘ ��$H�"S��H��GY>Ug�q}Y� "�A��u)�l�q_�=������Ԙ ��FN�_2��N���/�7�U����k��� Lʺ�y����w6��m����ϡ�ZpL_|���\���	֓Y�}}��X��-����u靑 �0��.����8{�%ߧ�,�I+G[���v�~�cV����LT��#U�{���L�]cn�)k��q6_J~V@:�w�5��qj�?6�J-���|��^ �I¤ Ku�#��}�7��"g��Ή�ə��e�k�=g���i�7�oQ�]O@Y��	У�����Ys&��X�z�<���yr�Ɍ�3�#��O�A>� B� L
+�T7?t�A���Ӄ�k��'k�ِ5+N�+	��� "aR���%O�4�}c��aз�e^OA֓��lȜ�ݘ<��4���� �0)�R/^:��c�?]���o_2'K��Q�R��5A֓��lHuo~���ču�����1�:�T���+d�H���G˒c�:�b�S�-���GE�����W��hy���_,p�������{-��I�V�US�4��	�e������Yv��;�R߿� ���?�H����2���/ڞ����ng��䋬Y�|����g�^ �I�B  B�  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `��a�B!䧄�AH!$	��BH$!!��H$,BB!�HX��B"��0	!�D"aaB�D�� $����AH!$	��BH$!!��H$,BB!�HX��B"��0	!�D"aaB�D�� $����AH!$	��BH$�aͦ��#F���$R2׵��$:[�-!��%���Z��7~>�7,cL�N�2���Ϥn6��Nu���\�~�Dg���%�D<�\�n�����[8h���pj�[�>mʛ3�KJsrs��{�O�}q���Yr��u~EՐ�bi������6��S�=���{~uꂻWid"ʥZٸ	rѺO�4�y��V��$�Dg���%�D<���e�����d^o{�5���(�R��?`��7���c	K���K�(F��ƌ/ߺ�P]�ݦ{�/�|�m��q哤.�:sٻH^�~R7w�t�hF�f��+yoAŧ;�ɡago¥#FU��`��3g��j��~�� ��ϗ�T��������Qec�.��'��Y���R=v�\څΞLX�:��&;����]��|~@*R�K�KJ�ӭ����գ�xm-!D�+�	�L��-�-���x"u��}X/�KE���BgO&,q�j'1��;缑�\*=���ߒ湅u�G�+����f�t���˓k2t����}��()!���'O����c�z�%��}�*�5�p}�ʵe�&H�9�ju�\����c'L���o�5[O�iV�.+�s�l�4H�4oܺG���$�����Wo?L�����-���/j��6K}~EU:{2a�� �1�]�ג�N�"7o�-=o͙ے~��wڏ-��cӽ*���=R+���ŉ�����U�&���[_�~qʰ��o�7�ddvlL�U�ַ��f%Ȳ5��j=Bf����IH/�+���^��H�~Gx��t�q�D*�ԫH]��Ʉ%��pHQ��kɮ`^���՛�S4�ĭ�������0P*r����I9�j��~�J��{�F�\hj�C�3��sW��=>�������ː��;�Y��U��QV"Gҧ.�h��TV����b��-�f�����,_[#��mO�>]'����f�Yɺ� ���W��*W���mӽ��U�W�k�$������/Y�0쪓_̧y��H�ӅΞLX�:s���_K�y�����n%���^����|�T��6��=�-����7o���w盋h�f^K����5�Ȕ���#�E�~�����D�Gn�Yɺ�zZ��9�m���$����;�ֽ���#���z�����T�G�ٓ	��u���'ϛ�nF�#=G����r�'u�q�E�Y��U��Q���O���f.�c��C4o�j룄q�P�f%�%�#����ےzf�\'!�,��ɿ8|ZnMr�5�a
+>ނw�d��A��=ӳO�y���1}S�x�U��g.�&��[��
+x��.�Pϻ�2�o�?��Ӭd]V=�����&s����tg'�}��|��m�a���Ox��Ʉ%����'˨���փ*u����� �o1�*�5N�5'�z�q����n�S������� �:��؜.��2�ԑ\�������Ʉ%����o�PI���y�R���!0A��blU�kT'�hOZ��k���b�?C=Hŷ�S���tm'�;=u��G��0/U	�����=���u|C��t��Z�ju��8q�4�u7����eM���[��AX]�]o���Z��g����9Y�؜.���t�z�#�l����w�d��A������&n��b��2?.ݼ�����>b���w�t�_�������9t��퇍w��Pl���r�Z��Ys����qG&�6ْ55G�c^K��ߒ~�2_���L�9K�}���ƹ���Uy�f�?C=Hŷ�}bq�*���j�]!�&���׮�$�2�=#�F���s�N�ؘ�ഋ���F��}�>xgO&,1�-��8h�{��%u�9Fu����u�.��3��_�#�Z:�~���R�Q&�{�˝=޵��t� �t�u�lQE����7�g>���8F��;2��/�=�����w�X��A����4qʴ��|-�<5�ä���Y�|�����e�&�����>r��ŕڻ�{ ��O�\P�_�jHQ�Io�^�!��u��[�eʱfn^��Y�@�wmf%]=H%C]}Ě�5ǌ/�G��5�G4�@H��n�����aK���r�1xh��+�����J�;{&a�� $�){���[F�y!��',B�4��R��B,IX�$��O��yׁ�W��<������sS�͐)�/?�|c��O��	����u%''���2!6$,BN�>]�ނ���
+
+
+s��KJ�-�<y���$�X��0	!�D"aaB�D�� $����AH!$	��BH$!!��H$,BB!�HX��B"��0	!�D"aaB�D�� $����AH!$	��BH$!!��H$,BB!�HXB�  D� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jV�D�^�ױ��!:��-`������~��V_�`��c}��w���Yꥥ�n�u���u�����l	�477��ӧO�;�����N�6m�Νϟ?�[SZ[[������sss�|��֦7��Dq�r�m�6�^TT��XeW{�����[�J}ɒ%n�u���u�����l	𚨝�4iҤ�j͍���:��ƍ]�Dfq�{���s�z��nݒ����呑|����T����~o�S��^���l'������Ԝ>}��͛O�>�w�������ʕ+����}�رR�9sfCCC{{�|��2~�x�����*��PͼA�y���騞 ݵk�{���%)~��wn�u�ˀ��v��ٳg�68d�o�����+8O�<q��T�~���.t"��B�O566��%K�$Rϗ�ܹS�Y�h�{�z�pذan��n���'N���/,,�={��b�8s�̌3����@�e;~�/^��,{|NN�|�7o��˗�j��^�z�W�7n��ի��/s���?lܸqҤI������5j��q�\��6�n�<JX�bň#dYp���ǎ�zd#׮];a�i�ׯ��ѣ�����6w�Y���_V�:uJ���Wسg�<�1�	D��Ǐe/���[�����g�}�-�͛7K���ʭ�DV1�2���{ǎnE��k׮�tLt{2����.X���7.��mii�v��f�>}���+W�o�vJE���O���nE�y!߸E��v�K�.ɸ�\�O��GQ[[+�f������{��S�~��}�-�_R��J�e�����o'5uuu��˄ޢ<Ĕ��1�"���������*ƃP��{ϟ?_����&?�a���D��۷եr@&?��6�yw�*r�VSSs�֭'O���*�S��g�455I��/_.mϟ?��2����u�A��\�t�͛7�={&_Ց����ٯ��J*rУ~���D�9����7���o�-?<xP����ݻ�w��ɓ'�X������Y~w9`r۴픿�T%R��r�)�U[[[e0�1�/\��v�J���w�ƍ�O����X�(��[n��/�v�����߶o߾���o��V���XD['r�9q�<|����"u���T�a�J�Nd�A����
+���%���qΜ9��_~�x^ �{Uwq'�]�v���/))q+˖-K��8?^�w��P��*׬Y��c;�^�ԓ$�tj���Ջ��e�J������{W�����g�ԩ���V��TKiG�b���	ϣ_22�g�ȑޢZֿ�cl�[ɺ���Λ7�ӕ$s�@�=S)++;~��֠7�7^�H=77׭�DV1�b�С�O����3�~����"�,�L,����!��9FE�fE,��G�i;ֈ#�r��EOW�T�u�N9��t%�1���R�2f���=~��/?N\��رc�E|ɭK�Ο?�_Б�������=-IjB{�tr�(ү��+//ϳ\п�cl�[ɺ���j��:�g��uQ��LEn2�+���[�Nd�A�=;T �nQ�I�s9?�xϝQ��hV�3��Nك��xZ�ԓfg��/����VV�^-�6xOp�̀���G��k֬�i-~ԓ���|i۩�Zߔ>�Mnr�Ms�m���	���Pɺl�����CvQ�555r��׹s�܋�?��Y�{��r���ߗ{m��E'��Hݹ�E� K��:.�߱�V|��Bu2��i�ԩ��������G)�����\��k�Pmg�M=�;iҤ�g�޻wO����۽=�YIWR��W ��ԩS����?&x'��� ��':t�ѣG�7�z/U�-��$�ܼy�{�cܱ�V|�}j��4�}�������Aa��'u�_�\�~�<r��s(4]{jT�����iR'�hOZ�g��ks��g����yjq�Dz�A�M�;�U��P��={�|ݸq��"5Q�z�-�ZTT�H1�.͊o��'�H�ӕ�6X�Y��������RŃʏjM�<��﫺�:�:�4_<�ҶS�WA����C�ݽ{�[t���-��t� �:'� �;�H��ȭ�|�Nd�A8�|u��0�������z/R�E�+����F�J��+ܷO��u�o��K�Nu�}���n�:�x�>}�ݻ����Z]MM��ߗ���)S��:uJ� �Q���ݻ������R2�kkk�ܹ��ٳ��69���cƌQmjTϚ5K�}B��ҥjU޵9��3ԃT|���'V�Z�}B�Wm�k B1v�X9P�r�ܲdG}����}��z!�O>q;_�x��\�9s�ܾ��+_Փ[�ƍ�p�Y�~�رC������
+ދ�Z!�}��K]��������}C�t���է����D��u٭U]��tdz�7 ���G'uz�:ח��j�.���ͬ�����oٲE����|�������ŋ�'o��v�Nd�A�>D&�z�~��L�<Y]��ꗺ(s%C]��f̘QPP���_^^�{��t�>bM���;�W�^f���&�z�Q{s�z�Ҝ�ܿ���&LP�7z�h9��;�w;<x�i�&�����_6�����7�ذa��v%�P�5ecd�r�����J�z�J����5�_A^���ua�[��,�Qr��[��eeeK�.��/����*7آ�"u3�����J�;�A�!��(2e�� �!z9(�Ą��4 ��16u��477?}������Ν�1cF"u>zkk�� ~��1���&''����z+ �� D����UTT�����啖�VVV655�} �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X-�A��B�)aaB�D�� $����AH!$	��BH$!!��H$,BB!�HX��B"��0	!�D"aaB�D�� $����AH!$	��BH$!!��H$,BB!�HX��B"��0	!�D"aaB�D�� $����Aث�H1�=��l	!$.	K�a����[�L�5gHQqn^^AA���+��_�y�l������Ζzj�[�?�lʛ3�KJsrs���ƛ�l����f����N�����Ur�'�������6�-.	K��3������KJ���Ow�7�N�v����u��k�Ζz���$��zۓ���jO\l�����0���fs,�B��r(��r�yׁs�����ã箮�p��A�}w��D�f�;y�$�t3�#FU��`��3g�ݒ�)���Dy�.�֪5j�o��?�U6V:�@�D]��V���R=v�\j.��%�����g�%��O�`�rߧ��=��p�Y�N����X'!�u�����:�x�Vx+���qi��A�1�|��w<i.��%��P�C���w
+�9~��ҕk��M(,�ׯ�𑣫VW_���M��`��-��N���_зo_�[��1�<�+((��_���5����-\���t���5N�:}���+Ҙ��"��f��I��e��0S���W��jKeݘ�N�}�9����#���lY<]�Yɺ�dϡS��� ]�,s�˛�$$��z����9��Z=�~>oq��ɑ�V�ްY��+��E����u�|�=���*�ڷ4�J�_�u�l��L��O�>ދd��)Ұa�.�J����o�M��^�y{�+1s��Ҡ�C�eR��z�
+�1t�r��-f�Y	�lͦ�ZO���vߜ�v+������j?��ɳ�
+�ˣm�D�J��q��T���E����u-&��g�}k^�٫� ���w�ʁξ�g�*��_���]Pf[����{��.�/Y&{p����<�JNN����69��������z������7~.�YR���m��kϐ����~���Oʯ�x�����M��ʯ�n��7�S�}����_�zۓ�O�Ɂ��'��-	�� �Q�U��ߦ{��|���IH|#�$	�!iK�G��K��4�i�$R��h�X$,q��4�E##A�P2|������U��~uь��j���$R��G����{*�����K}ֻ�jm�V[>y��R7�:�o�����Y)+1;�J�e�>oϙ�m�H�\'!1�ֽ����������pǁ��n�#Wy�:���՞�����6yL)E�A*	�g\c���2��HnF����r�z�m�x�b��u��ڋZ]*	������|S���!��e��V���ˈQe������E�h��1���h�W[%���4+Y�-)!�Cg.{�ZR���$$���&��ܸ���d�������~�[d�Bq��zj����yE_�NUi���\�����Z]=�ׯ��Q��)}<���j+4��7��L�-GZ�uܘ��}�3��u���˪�8��Y*�:	�]v<);����?l^�3�W�-���+�Aة�eԳ���'�?v���{�1�M�w�fE�(��;��x�
+�+�M�a�����Ǭ�����G��:�۸u�yi�4}�,��at'˼Rq��z��:aD;|<Q�`ޱ��O���?�� }���t�р����YR���(魑{-u"�G��0/�u~�vD��'^��By��>\ma�
+�Y�}C�:Ȩk��mxoA�y�jV��ҝ,���e�G�� �G�5hQ[%�i^d�ju�4O�2�|I�m�nL��>f=Hŷ��2�W�W�nS�Jtv
+J���ڝo���:[<�6v���vy��Lǫ������z��ޏXS��6s�z{����s-U����Y�.J�o�H��K� ���s�R�js�� r�ںwd�.4��͚��#G�qW(��V�ik�'<��?iʞC���~�x�]�6m�+��ۦm�����Ǭ���ݷO,�Z�}B�Wm�k $�Y�~S"����ψ������r+���A��rS�����'�y;� @�������ɏX�ب>bmԘq��HXb<[R�P�5c��/p_A���!�r�[�+4+�EA�P/[5x�P���-_[��"��MBMw�ۣ��\*��t��cփT���}�E�ԉs��$��"��ܑ�����y~��ss�|����A���7Lo���&�cƗ���#�a��z9�Rr $R-~w�fE�Hg�ؓGm��E��i3�=c6ˣ9y8~����r�-�6a���m���~�nX鈜������[�WV��k���>r��ŕ�wG��'��t��cփT2��G��_S�A�X�7`� s�D<j'O�;O�5T���}^&���KJ�}�yF���r'0xh��i���7L]�A�cQ��Y'=��Gj��/#ܼ��;a�0C���b��`BHoJX�A� 챔O��yׁ�W��<������sS��H�����f?!�w$, a�XԟZ�����8!qLX�A���:y���t�{*F�*+((T��[\�A��[!!��H$,BB!�HX��B"��0	!�D"aaB�D�� $����AH!$	��BH$!!��H$,BB!�HX��B"��0	!�D"aaB�D�� $����AH!$	Kh� �(` ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X���D�^�E�_Ьd|��� 1��ٗ���2�/hV�
+�H�N �?~\RR�����ZUUU\\���+_����6�)%x'2`ƞ�����/���U�V���'�M���q���R���oܸ��Nd�A�W������d% ��t�L�+V���^�|9v�X�Ϝ9������]���R?~�\څNd� ��W���� ��ٳgeeeC�}�������R,--}��[��"��'Ov�YY:/^�8w��!C������y��]�|Y�	ئ�/��v��=q�Ă���}�j=^n��={�������q�ٳg���l@�Jmm��o�]\\���7r�ȅj�q9p���j�fϞ}��uo��Ӭd]V�:uj���� (i�?��)�u�҆dW?x��wS���R��ϴ��͛�^UU�V�w"+�]��'�]R�;�.�����˽=���q�q�Rr���Nm@�����=<K�z��k�vlIȸjii1;�J�e�nݪ�$<
+o'��ܸq#77W��}w�	&H�ʕ+Z]*R���n%x'��n�a�]Ie�ҥ7o�|��|]�d�T����ة6����|����~�ŋ�E�T�X�l٭[�d��U��5��rwv�͊:?M?����߾}��ѣo���O�������Fڞ<yRWW7j�()ʕ��f%��ɱ�W�\���>�\���jqm�@/����)S����Ov{U�����/?���V�J"u"�[	މ�b?M�m����w�y�Ӓ4k֬�����mΏ�_�j�OM��w�}W�ϙ3'�:�T?vv<-zEn{�����=-:�����ųg�JQ樷���.�~�y��y���b��e�o�.;��M�܊�n����D�.���[	މ���#F����Ӓt���˥�ǀmΏ���e��/^��ե"��#G�;���2u�T�q�ر�7o�|��zzM-�>VU=z�0nQ�.��72_�t钹N�7�}�vAAAYY�wn�����[�Nd�A�WZ[^^^"��	r�~������O��Ԕ�����V����aT���TQȚ�@�ܹs�%~��yʵ����˪���ťb��MfϞݧO�q��n�	���ȊA�k�pe���̓W�fE�������ƍ�N����r�E�ՃT|�BXK�����O�	މ����	:�IߧF��9���R��}�5ۂl�Y��S]]-eeen1�"f=Hŷ�S�����3p;��)"x'��n��gΜ9���ٳg{���m����T��e�-[�~����z3o���t� �:'� ^��}���DV�B�m	��ϟ?���>�����c�Y�~m��ZsSS�j��hu�L}}�������[ZZ��02V�����ݷO�Z��}��|��|� �b����/ƌ�H}p����+_���7��J|�Nde� ;w��F��m��d��������U~Z�Cf��Ç�-������e�U�R
+���N��S��^��Gi�Df6B�Ǐ.<x����W��ҥKZO�6��g���񚌽	&���̘1�̙3zkW7@�ȭ���fҤIr��9r�j�f�$]=H%C]}Ě�ʲ%���2���?��:��������VVV����X�O��+�D1�1�a�Smm��A�O��� �iB/92�Ą��4 �c�=��A8u��477?}������Ν�1c��5���[[[�n �f� T��&''�{� �0aOS��z�uuueee���yyy�������;F  B ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `��a�B!䧄�AH!$	��BH$!!��H$,BB!�HX��B"��0	!�D"aaB�D�� $����AH!$	��BH$!!��H$,BB!�HX��B"��0	!�D"aaB�D�� $����AH!$	��BH$+a"Ŭw9�|�=��lst����%ƃ��������*W���7l��ٝ���@�����Bz,�\�n�����[8h��7u��씜ol�_Q5��8'7W�����̶�$,�j޸�b��%R�ӧ��[vg�4+�J7%����l	!=��{�=�:������������|�l�E��{aӽ�ޝ/�����{����l��x(��6�kR4�����'���o��/u����Qec�sʛ3O�54�m���TF�/���D?a�%�Pv��o�#?�����)�9ò]H7%q�fBze2�3_�f�Wǥ����z��(�KE��4�~�����O�6C�/((��ԅ��5��+����f��I��s��JG���p��W�n�u`섉�����|k��׵�nI�6�p銒��������N���1��S+�M�m�&ȶ�6,]��l�i���G��Z]-W����-	��D��vJ�tI�ƭ{����NB"�̻k�K��[\)m��ի7l����*s��',����N��|3`ࠣ箚mn���ƽ�P�%��l��/O�]sm}��������&VV����b��&�6{��Զi���|���WPu�dٚM[�!�\}��$$�ɼ��K�A�<<�ǵSޜi><��cSi�>�U���ǌ/7�~��A���!E�^V��+*u�w�(ɡ��'帧�n��+͛���R[<''g�ښ��n�!�ק�� L�r�]hj�)Ι�H������[?���WI�{�p����6�?�6Yɧ;�ɟ���SY���g����݌࿂�%���ľ}�JqQ�ʳ׾m��\��'	k�$$�ɼ����W՚�6u���܌T�Sf�5G?a�� T2?!�z2WT*W} ���S�NּT[\;r�����hk{oA�����ۥ>����]�o:���RA�͌�L�)>�[�+h[|Y�\��s�y�$R1�IHd�yw�C���k�-O�A����W�_>�m��R4o�R�zNn����',���,)y���yQ�3sEeĨ2�y�y����x�W[%:�#G��ʑo���.�:���
+}өmv�mr�(��/?_�D���3��WP�f%�%�#�r��eo[K�as��D6��]V&�����;�"���� l��tꌷ�3e�>]g����+*�A�YX�Q��'(k�U��oJ�&�qgW�Nm��c�m;u��z�՗�� �B�J�ee�ʏ��=�ڤb���Ȧ���k�����"O��B��-��N���l�^���;��3CE�kC%]]�qg�n��uo����m��9�ԫ��t�z�)po���3ԃT|�B�;��ݵ��g���[8Y����%����l��������**]{�1]]���π+�M׶9ඩj�'-O�5�fV�ՃT|�<5JzG:����;"���P/�-�g�ߚ37���2�n��-��=��Y��Z��L3�y��\�o]�@�W�3�Y��tm�n��C�5���[Pan�YIWR�s�����*SM�g�~�[���P��-�OY�ӧϦ�{3t�)��M[�gݷ"��4eϡSWo?l��.�M��q�2�з�M�V����qG�\/4��̚��#G�I�`ֺ7]��ۦ�)1m�,����.Z�V�m�YIWR�o�X\��}��|��|�@H�aw-7a�g;dW���A��r{�����8��q��:�-�k��v�Q�<8j�8��X$,�j��f���Y�~��t���֨�˽H����k�*n��c���3���*:ʰ`準�ms�m���A�rg�wmf%]=H%]}�'[T�K�S���BH���en����?7�ɇn�*�m��(���bu����|;��Ӳ_�V:"'7׼���+���C����~���G������Ns�uyd'�1~����rg=��x¤7V����Y}�P7ӵm�m2�X37/O�,��P�\�YIWR�PW��~�1��7nݣN�0p��B"�3�㶝�k�Z]-;�L8����ʽ�yF���rK<�H�~�{��.�� $De�Z�+�n^D�Q�� $�N�/� 1a|0!$v	���)哧n�u����;O��=>p���G���ol5�	!1JX�$N�^YQrrr��?l6B╰0I�����T�UVPP�N%�����&�����AH!$	��BH$!!��H$,BB!�HX��B"��0	!�D"aaB�D�� $����AH!$	��BH$!!��H$,BB!�HX��B"��0	!�D"aaB�D��   
+�  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A �� `5! �jB ���  �1 Vc ��  X�A ���u �p�Q�    IEND�B`�
+ 
+09:47:59.323 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: fd4e18ca-cb0a-441c-b478-c832f2c66f45 
+GET http://localhost:81/api/v1/file?id=305435fa-96e5-4267-b0dd-014c16377c07&preview=true
+200 
+Response Body: Weekly sync: the cleaning schedule is approved.
+ 
+09:47:59.328 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: d61d5285-a4a1-4dfc-b766-11c3eb4c9f76 
+GET http://localhost:81/api/v1/row-meta/myexample5308/myexample5308/1101502
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"create","text":"Add","icon":"plus","showOnlyIcon":true,"scope":"bc","autoSaveBefore":false},{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true},{"type":"cancel-create","text":"Cancel","icon":"close","showOnlyIcon":true,"scope":"record","autoSaveBefore":false},{"type":"delete","text":"Delete","icon":"delete","showOnlyIcon":true,"scope":"record","autoSaveBefore":false}],"fields":[{"key":"customFieldDescription","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"Issued to the Main office","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"document","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"Certificate.png","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"documentId","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"a790dd2e-f58b-4eb2-bfba-63cf5f30222b","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1101502","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"customField","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":"Certificate","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+09:48:00.256 [LittleProxy-0-ClientToProxyWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Request: 4dba44d1-a13c-4758-8c89-de76b74d2565 
+GET http://localhost:81/api/v1/data/myexample5308/myexample5308?_page=1&_limit=5&_fullTextSearch=Invoice
+ 
+09:48:00.267 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: 4dba44d1-a13c-4758-8c89-de76b74d2565 
+GET http://localhost:81/api/v1/data/myexample5308/myexample5308?_page=1&_limit=5&_fullTextSearch=Invoice
+200 
+Response Body: {"success":true,"data":[{"id":"1101499","vstamp":0,"document":"Invoice.pdf","documentId":"aca9f30d-4be4-4528-9339-1d273c629a54","customField":"Invoice","customFieldDescription":"Due in 10 days"}],"hasNext":false}
+ 
+09:48:00.285 [LittleProxy-0-ClientToProxyWorker-6] TRACE API_NO_LOGIN_LOGGER - 
+Request: 2d7e060e-22b0-4add-949c-6d69df9bd481 
+GET http://localhost:81/api/v1/count/myexample5308/myexample5308?_fullTextSearch=Invoice
+ 
+09:48:00.285 [LittleProxy-0-ClientToProxyWorker-5] TRACE API_NO_LOGIN_LOGGER - 
+Request: 93111767-1af9-452c-a4f8-daf8792e5062 
+GET http://localhost:81/api/v1/row-meta/myexample5308/myexample5308/1101499
+ 
+09:48:00.296 [LittleProxy-0-ProxyToServerWorker-0] TRACE API_NO_LOGIN_LOGGER - 
+Response: 2d7e060e-22b0-4add-949c-6d69df9bd481 
+GET http://localhost:81/api/v1/count/myexample5308/myexample5308?_fullTextSearch=Invoice
+200 
+Response Body: {"success":true,"data":1}
+ 
+09:48:00.300 [LittleProxy-0-ProxyToServerWorker-3] TRACE API_NO_LOGIN_LOGGER - 
+Response: 93111767-1af9-452c-a4f8-daf8792e5062 
+GET http://localhost:81/api/v1/row-meta/myexample5308/myexample5308/1101499
+200 
+Response Body: {"success":true,"data":{"row":{"actions":[{"type":"create","text":"Add","icon":"plus","showOnlyIcon":true,"scope":"bc","autoSaveBefore":false},{"type":"save","text":"Save","icon":"save","showOnlyIcon":true,"scope":"record","autoSaveBefore":true},{"type":"cancel-create","text":"Cancel","icon":"close","showOnlyIcon":true,"scope":"record","autoSaveBefore":false},{"type":"delete","text":"Delete","icon":"delete","showOnlyIcon":true,"scope":"record","autoSaveBefore":false}],"fields":[{"key":"customFieldDescription","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"Due in 10 days","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"document","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"Invoice.pdf","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"documentId","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"aca9f30d-4be4-4528-9339-1d273c629a54","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"id","disabled":true,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":"1101499","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"vstamp","disabled":true,"forceActive":false,"ephemeral":true,"hidden":false,"required":false,"filterable":false,"sortable":false,"currentValue":0,"values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null},{"key":"customField","disabled":false,"forceActive":false,"ephemeral":false,"hidden":false,"required":false,"filterable":true,"sortable":false,"currentValue":"Invoice","values":[],"filterValues":[],"allValues":[],"options":{},"defaultGroupingHierarchy":null}]}}}
+ 
+09:48:10.334 [main] TRACE API_NO_LOGIN_LOGGER - ending test: Full text search. uuid: [engine:junit-jupiter]/[class:application.Samples.CardList.CardListPropertiesTest]/[method:fullTextSearch()] 
